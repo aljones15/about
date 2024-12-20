@@ -1,0 +1,30 @@
+{
+  "name": "aljones15-about-page",
+  "version": "1.0.0",
+  "description": "Basic TS React Homepage for aljones15",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aljones15/about.git"
+  },
+  "author": "aljones15",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aljones15/about/issues"
+  },
+  "homepage": "https://github.com/aljones15/about#readme",
+  "dependencies": {
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "react-scripts": "^5.0.1",
+    "typescript": "^5.7.2",
+    "webpack": "^5.97.1"
+  }
+}
