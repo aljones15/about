@@ -4,7 +4,7 @@
   "description": "Basic TS React Homepage for aljones15",
   "main": "src/index.tsx",
   "scripts": {
-    "run": "webpack-cli serve --mode=development --open --hot",
+    "serve": "webpack-cli serve --mode=development --open --hot",
     "build": "webpack --mode=production --env production --progress",
     "lint": "eslint './src/**/*.{ts,tsx,js,jsx}'"
   },
