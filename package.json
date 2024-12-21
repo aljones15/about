@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/aljones15/about#readme",
   "dependencies": {
+    "@blueprintjs/core": "^5.16.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
