@@ -2,7 +2,7 @@
   "name": "aljones15-about-page",
   "version": "1.0.0",
   "description": "Basic TS React Homepage for aljones15",
-  "main": "index.js",
+  "main": "src/index.tsx",
   "scripts": {
     "run": "webpack-cli serve --mode=development --open --hot",
     "build": "webpack --mode=production --env production --progress",
