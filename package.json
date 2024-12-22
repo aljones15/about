@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Basic TS React Homepage for aljones15",
   "main": "src/index.tsx",
+  "type": "module",
   "scripts": {
     "serve": "webpack-cli serve --mode=development --open --hot",
     "build": "webpack --mode=production --env production --progress",
@@ -30,6 +31,8 @@
     "@types/webpack": "^5.28.5",
     "@types/webpack-dev-server": "^4.7.2",
     "eslint": "^9.17.0",
+    "eslint-webpack-plugin": "^4.2.0",
+    "fork-ts-checker-webpack-plugin": "^9.0.2",
     "html-webpack-plugin": "^5.6.3",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
