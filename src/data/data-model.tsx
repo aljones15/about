@@ -1,8 +1,12 @@
 // contains types for the resume
 
-interface Address = {
+interface Address {
   name: string;
-  address: [string];
+  street: Array<string>;
+  city: string;
+  state: string;
+  zipcode: string | number;
+  country: string;
 }
 
 const address: Address = {
