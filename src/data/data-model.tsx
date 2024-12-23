@@ -44,7 +44,7 @@ const dbPosition: Position = {
   jobTitle: 'Fullstack Javascript Developer',
   company: {
     name: 'Digital Bazaar'
-  }
+  },
   languages: [javascript],
   skills: [management],
   tools: [git, docker]
@@ -56,7 +56,7 @@ const upPosition: Position = {
   jobTitle: 'Fullstack Javascript Developer',
   company: {
     name: 'Digital Bazaar'
-  }
+  },
   languages: [javascript],
   skills: [management],
   tools: [git, docker]
@@ -68,7 +68,7 @@ const agPosition: Position = {
   jobTitle: 'Fullstack Javascript Developer',
   company: {
     name: 'Digital Bazaar'
-  }
+  },
   languages: [javascript],
   skills: [management],
   tools: [git, docker]
@@ -80,7 +80,7 @@ const bonPosition: Position = {
   jobTitle: 'Fullstack Javascript Developer',
   company: {
     name: 'Digital Bazaar'
-  }
+  },
   languages: [javascript],
   skills: [management],
   tools: [git, docker]

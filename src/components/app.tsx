@@ -1,5 +1,7 @@
+import {andrewResume} from "../data/"
 import React from "react";
+import ResumeContainer from "./resume";
 
 export function App() {
-  return <div>APP</div>;
+  return <ResumeContainer resume={andrewResume} />;
 }
