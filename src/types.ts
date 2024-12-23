@@ -8,15 +8,15 @@ export interface Address {
 
 export interface Company {
   name: string;
-  homepage: URL;
-  github: URL | null;
-  linkedin: URL | null;
-  about: string | null
+  homepage?: URL;
+  github?: URL | null;
+  linkedin?: URL | null;
+  about?: string | null
 }
 
 export interface Skill {
   name: string;
-  about: string | null;
+  about?: string | null;
   experience: number;
 }
 
@@ -37,10 +37,10 @@ export interface Position {
   company: Company;
   languages: Array<Language>;
   skills: Array<Skill>;
-  tootls: Array<Tool>;
+  tools: Array<Tool>;
 }
 
-export interface Eduction {
+export interface Education {
   name: string;
   startDate: string;
   endDate: string | null;

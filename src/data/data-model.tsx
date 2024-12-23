@@ -3,7 +3,7 @@ import {
   Address, Position,
   Education, Tool,
   Skill, Language
-} from '../types.ts';
+} from '../types';
 
 export const name = "Andrew Lyle Jones";
 
@@ -19,19 +19,23 @@ export const address: Address = {
 };
 
 const javascript: Language = {
-
+  name: 'Javascript',
+  experience: 10
 };
 
 const git: Tool = {
-
+  name: 'git',
+  experience: 10
 };
 
 const docker: Tool = {
-
+  name: 'docker',
+  experience: 8
 };
 
 const management: Skill = {
-
+  name: 'Management',
+  experience: 3
 };
 
 const dbPosition: Position = {
@@ -94,4 +98,4 @@ const rollinsEducation: Education = {
   location: 'Winter Park, FL, U.S.A.'
 };
 
-export const: Array<Education> = [rollinsEducation];
+export const education: Array<Education> = [rollinsEducation];

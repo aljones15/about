@@ -1,7 +1,7 @@
-import {Resume} from "./resume.ts";
-import {name, address, positions, education} from "./data-model.ts";
+import {Resume} from "./resume";
+import {name, address, positions, education} from "./data-model";
 
-export andrewResume = new Resume({
+export const andrewResume = new Resume({
   name,
   address,
   positions,

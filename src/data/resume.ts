@@ -1,12 +1,11 @@
-import {Address, Position, Education} from '../types.ts';
+import {Address, Position, Education} from '../types';
 
 export class Resume {
-  constructor({
-    address: Address,
-    positions: Array<Position>,
-    education: Array<Education>,
-    name: string
-  }) {
+  name: string;
+  address: Address;
+  positions: Array<Position>;
+  education: Array<Education>;
+  constructor({name, address, positions, education}) {
     this.name = name;
     this.address = address;
     this.positions = positions;
