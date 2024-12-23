@@ -9,4 +9,4 @@ import "@blueprintjs/icons/lib/css/blueprint-icons.css";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
-root.render(<App/ >);
+root.render(<App/>);
