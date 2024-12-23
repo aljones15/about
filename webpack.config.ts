@@ -28,6 +28,9 @@ const webpackConfig = (env: NodeEnv): Configuration => ({
                     transpileOnly: true
                 },
                 exclude: /dist/
+            }, {
+              test: /\.css$/i,
+	      use: ['css-loader']
             }
         ]
     },
