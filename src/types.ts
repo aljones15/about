@@ -39,3 +39,10 @@ export interface Position {
   skills: Array<Skill>;
   tootls: Array<Tool>;
 }
+
+export interface Eduction {
+  name: string;
+  startDate: string;
+  endDate: string | null;
+  location: string;
+}
