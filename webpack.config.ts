@@ -30,7 +30,7 @@ const webpackConfig = (env: NodeEnv): Configuration => ({
                 exclude: /dist/
             }, {
               test: /\.css$/i,
-	      use: ['css-loader']
+	      use: ['style-loader', 'css-loader']
             }
         ]
     },
