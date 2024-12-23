@@ -2,7 +2,7 @@ import React from "react";
 import type {Resume} from "../data/resume";
 import {Section} from "@blueprintjs/core";
 
-export default function ResumeContainer({resume: Resume}) {
+export default function ResumeContainer({resume}: {resume: Resume}) {
   return <div>
     <Section> One </Section>
     <Section> Two </Section>
