@@ -1,13 +1,9 @@
 // contains types for the resume
-
-interface Address {
-  name: string;
-  street: Array<string>;
-  city: string;
-  state: string;
-  zipcode: string | number;
-  country: string;
-}
+import {
+  Address, Position,
+  Education, Tool,
+  Skill, Language
+} from '../types.ts';
 
 const address: Address = {
   name: 'Andrew Lyle Jones',
@@ -19,4 +15,44 @@ const address: Address = {
   state: 'Virginia',
   zipcode: '22206',
   country: 'U.S.A'
+};
+
+const javascript: Language = {
+
+};
+
+const git: Tool = {
+
+};
+
+const docker: Tool = {
+
+};
+
+const management: Skill = {
+
+};
+
+const dbPosition: Position = {
+  startDate: '2019-01-29',
+  endDate: '2024-11-12',
+  jobTitle: 'Fullstack Javascript Developer',
+  company: {
+    name: 'Digital Bazaar'
+  }
+  languages: [javascript],
+  skills: [management],
+  tools: [git, docker]
+};
+
+const upPosition: Position = {
+
+};
+
+const agPosition: Position = {
+
+};
+
+const bonPosition: Position = {
+
 };
