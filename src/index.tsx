@@ -6,6 +6,7 @@ import "normalize.css";
 import "@blueprintjs/core/lib/css/blueprint.css";
 // include blueprint-icons.css for icon font support
 import "@blueprintjs/icons/lib/css/blueprint-icons.css";
+import "orbitcss/css/orbit.css";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
