@@ -12,8 +12,12 @@ export default function PositionsElement({positions}: {positions: Array<Position
 
 function PositionElement({position}: {position: Position}): React.ReactElement {
   return <Card>
-      <H5>{position.company.name}</H5>
-      <H6>{position.jobTitle}</H6>
+    <div className="row">
+      <H5 className="col-xs-4">{position.company.name}</H5>
+      <H6 className="col-xs-8">{position.jobTitle}</H6>
+    </div>
+    <div className="row">
       {position.startDate}
+    </div>
   </Card>
 }
