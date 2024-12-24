@@ -12,7 +12,7 @@ export const address: Address = {
     '2300 24th Rd South',
     'Apartment 125'
   ],
-  city: 'Alrington',
+  city: 'Arlington',
   state: 'Virginia',
   zipcode: '22206',
   country: 'U.S.A'
