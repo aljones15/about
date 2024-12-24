@@ -4,20 +4,19 @@ import {Position} from '../types';
 
 export default function PositionsElement({positions}: {positions: Array<Position>}) {
   return <div>
-    <CardList>
     {positions.map(p => <PositionElement key={p.startDate} position={p} />)}
-    </CardList>
   </div>
 }
 
 function PositionElement({position}: {position: Position}): React.ReactElement {
-  return <Card>
-    <div className="row">
+  return  <CardList bordered={true} compact={true}>
+    <Card compact={true}>
       <H5 className="col-xs-4">{position.company.name}</H5>
       <H6 className="col-xs-8">{position.jobTitle}</H6>
-    </div>
-    <div className="row">
-      {position.startDate}
-    </div>
-  </Card>
+    </Card>
+    <Card compact={true}>
+      <div className="col-xs-4">From: {position.startDate}</div>
+      <div className="col-xs-8">To: {position.endDate}</div>
+    </Card>
+  </CardList>
 }
