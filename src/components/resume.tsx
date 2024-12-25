@@ -12,7 +12,7 @@ enum Sections {
 
 export default function ResumeContainer({resume}: {resume: Resume}) {
   const [section, setSection] = useState(Sections.Experience);
-  const sectionCase = (selection: Sections) => {
+  const sectionSelection = (selection: Sections) => {
     switch(selection) {
       case Sections.Experience: {
         return <Positions positions={resume.positions}/>
@@ -58,7 +58,7 @@ export default function ResumeContainer({resume}: {resume: Resume}) {
       </Navbar.Group>
     </Navbar>
     <SectionCard>
-      {sectionCase(section)}
+      {sectionSelection(section)}
     </SectionCard>
   </Section>
 }
