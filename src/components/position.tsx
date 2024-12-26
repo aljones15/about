@@ -1,7 +1,8 @@
 import React from "react";
-import {Card, CardList, Callout, Colors, Tag, H5, H6, UL} from "@blueprintjs/core";
+import {Card, CardList, Callout, Colors, Classes, Tag, H5, H6, UL} from "@blueprintjs/core";
 import {Position} from '../types';
 
+const callHeight = "8rem";
 export default function PositionsElement({positions}: {positions: Array<Position>}) {
   return <div>
     {positions.map(p => <PositionElement key={p.startDate} position={p} />)}
@@ -11,7 +12,7 @@ export default function PositionsElement({positions}: {positions: Array<Position
 function PositionElement({position}: {position: Position}): React.ReactElement {
   return  <CardList bordered={true} compact={true}>
     <Card compact={true}>
-      <Callout intent="primary">
+      <Callout className="col-xs-3" intent="primary" style={{height: callHeight}}>
         <H5>
 	  {position.company.name}
 	</H5>
@@ -22,17 +23,22 @@ function PositionElement({position}: {position: Position}): React.ReactElement {
 	<br />
         <Years from={position.startDate} to={position.endDate} />
       </Callout>
-      <Callout>
+      <Callout style={{height: callHeight}}>
         <H5>Languages</H5>
 	{position.languages.map(l => <Tag round={true} key={l.name}>{l.name}</Tag>)}
         <H5>Tools</H5>
           {position.tools.map(t => <Tag round={true} key={t.name}>{t.name}</Tag>)}
       </Callout>
-      <Callout>
+      <Callout style={{height: callHeight}}>
         <H5>Frameworks</H5>
 	{position.frameworks.map(l => <Tag key={l.name}>{l.name}</Tag>)}
         <H5>Skills</H5>
           {position.skills.map(t => <Tag key={t.name}>{t.name}</Tag>)}
+      </Callout>
+    </Card>
+    <Card>
+      <Callout intent="success">
+        <H5>Duties</H5>
       </Callout>
     </Card>
   </CardList>

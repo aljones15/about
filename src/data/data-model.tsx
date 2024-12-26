@@ -58,6 +58,16 @@ const docker: Tool = {
   experience: 8
 };
 
+const webdriver: Tool = {
+  name: 'WebDriver',
+  experience: 4
+}
+
+const appium: Tool = {
+  name: 'Appium',
+  experience: 2
+}
+
 const management: Skill = {
   name: 'Management',
   experience: 3
@@ -67,6 +77,21 @@ const architecture: Skill = {
   name: 'Architecture',
   experience: 3
 };
+
+const unitTesting: Skill = {
+  name: 'Unit Testing',
+  experience: 10
+}
+
+const integrationTesting: Skill = {
+  name: 'Integration Testing',
+  experience: 8
+}
+
+const endTesting: Skill = {
+  name: 'End Testing',
+  experience: 5
+}
 
 const vue: Framework = {
   name: 'Vue.JS',
@@ -83,6 +108,21 @@ const angular: Framework = {
   experience: 3
 }
 
+const capacitor: Framework = {
+  name: 'Capacitor.JS',
+  experience: 2
+}
+
+const xcode: Tool = {
+  name: 'xcode',
+  experience: 5
+}
+
+const androidStudio: Tool = {
+  name: 'Android Studio',
+  experience: 5
+}
+
 const dbPosition: Position = {
   startDate: '2019-01-29',
   endDate: '2024-11-12',
@@ -91,9 +131,9 @@ const dbPosition: Position = {
     name: 'Digital Bazaar'
   },
   languages: [javascript],
-  skills: [management, architecture],
-  frameworks: [vue],
-  tools: [git, docker]
+  skills: [management, architecture, unitTesting, integrationTesting],
+  frameworks: [vue, capacitor],
+  tools: [androidStudio, docker, git, xcode]
 };
 
 const upPosition: Position = {
@@ -104,9 +144,9 @@ const upPosition: Position = {
     name: 'Upwork'
   },
   languages: [javascript, java, typescript],
-  frameworks: [react],
-  skills: [architecture],
-  tools: [git, docker]
+  frameworks: [react, webdriver, appium],
+  skills: [architecture, integrationTesting, endTesting],
+  tools: [androidStudio, docker, git, xcode]
 };
 
 const agPosition: Position = {
