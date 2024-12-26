@@ -1,5 +1,5 @@
 import React from "react";
-import {Card, CardList, Callout, Tag, H5, H6} from "@blueprintjs/core";
+import {Card, CardList, Callout, Colors, Tag, H5, H6, UL} from "@blueprintjs/core";
 import {Position} from '../types';
 
 export default function PositionsElement({positions}: {positions: Array<Position>}) {
@@ -11,7 +11,7 @@ export default function PositionsElement({positions}: {positions: Array<Position
 function PositionElement({position}: {position: Position}): React.ReactElement {
   return  <CardList bordered={true} compact={true}>
     <Card compact={true}>
-      <Callout>
+      <Callout intent="primary">
         <H5>
 	  {position.company.name}
 	</H5>
@@ -24,15 +24,15 @@ function PositionElement({position}: {position: Position}): React.ReactElement {
       </Callout>
       <Callout>
         <H5>Languages</H5>
-	<ul>
-	{position.languages.map(l => <li key={l.name}>{l.name}</li>)}
-	</ul>
+	{position.languages.map(l => <Tag round={true} key={l.name}>{l.name}</Tag>)}
+        <H5>Tools</H5>
+          {position.tools.map(t => <Tag round={true} key={t.name}>{t.name}</Tag>)}
       </Callout>
       <Callout>
-        <H5>Tools</H5>
-	<ul>
-          {position.tools.map(t => <li key={t.name}>{t.name}</li>)}
-        </ul>
+        <H5>Frameworks</H5>
+	{position.frameworks.map(l => <Tag key={l.name}>{l.name}</Tag>)}
+        <H5>Skills</H5>
+          {position.skills.map(t => <Tag key={t.name}>{t.name}</Tag>)}
       </Callout>
     </Card>
   </CardList>
@@ -47,7 +47,22 @@ function MonthYear({date}: {date: string}): React.ReactElement {
 function Years({from, to}: {from: string, to: string}): React.ReactElement {
   const dates = {from: new Date(from), to: new Date(to)};
   const diff = dates.to.getTime() - dates.from.getTime();
+  const month = 30 * 24 * 60 * 60 * 1000;
   const year = 365 * 24 * 60 * 60 * 1000;
   const years = Math.floor(diff / year);
-  return <Tag>{years} years</Tag>
+  const months = Math.ceil((diff - years * year)/ month)
+  if(months <= 0) {
+    return <Tag><Plural text="year" num={years}/></Tag>
+  }
+  return <span>
+    <Tag><Plural text="year" num={years}/></Tag>
+    <Tag><Plural text="month" num={months}/></Tag>
+  </span>
+}
+
+function Plural({text, num}: {text: string, num: number}) {
+  if(num <= 1) {
+    return <span>{num} {text}</span>
+  }
+  return <span>{num} {text}s</span>
 }

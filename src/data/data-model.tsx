@@ -1,8 +1,8 @@
 // contains types for the resume
 import {
   Address, Position,
-  Education, Tool,
-  Skill, Language
+  Education, Framework,
+  Tool, Skill, Language
 } from '../types';
 
 export const name = "Andrew Lyle Jones";
@@ -23,6 +23,11 @@ const javascript: Language = {
   experience: 10
 };
 
+const typescript: Language = {
+  name: 'Typescript',
+  experience: 1
+}
+
 const csharp: Language = {
   name: 'C#',
   experience: 3
@@ -32,6 +37,11 @@ const python: Language = {
   name: 'Python',
   experience: 1
 }
+
+const java: Language = {
+  name: 'Java',
+  experience: 1
+};
 
 const php: Language = {
   name: 'PHP',
@@ -53,6 +63,26 @@ const management: Skill = {
   experience: 3
 };
 
+const architecture: Skill = {
+  name: 'Architecture',
+  experience: 3
+};
+
+const vue: Framework = {
+  name: 'Vue.JS',
+  experience: 5
+}
+
+const react: Framework = {
+  name: 'React.JS',
+  experience: 2
+}
+
+const angular: Framework = {
+  name: 'Angular.JS',
+  experience: 3
+}
+
 const dbPosition: Position = {
   startDate: '2019-01-29',
   endDate: '2024-11-12',
@@ -61,43 +91,47 @@ const dbPosition: Position = {
     name: 'Digital Bazaar'
   },
   languages: [javascript],
-  skills: [management],
+  skills: [management, architecture],
+  frameworks: [vue],
   tools: [git, docker]
 };
 
 const upPosition: Position = {
-  startDate: '2019-01-29',
-  endDate: '2024-11-12',
+  startDate: '2017-01-02',
+  endDate: '2019-02-01',
   jobTitle: 'Fullstack Javascript Developer',
   company: {
     name: 'Upwork'
   },
-  languages: [javascript],
-  skills: [management],
+  languages: [javascript, java, typescript],
+  frameworks: [react],
+  skills: [architecture],
   tools: [git, docker]
 };
 
 const agPosition: Position = {
-  startDate: '2019-01-29',
-  endDate: '2024-11-12',
+  startDate: '2015-11-01',
+  endDate: '2017-01-02',
   jobTitle: 'Fullstack Javascript Developer',
   company: {
     name: 'Agilitet'
   },
   languages: [javascript, csharp, php],
-  skills: [management],
+  frameworks: [angular],
+  skills: [architecture],
   tools: [git]
 };
 
 const bonPosition: Position = {
-  startDate: '2019-01-29',
-  endDate: '2024-11-12',
+  startDate: '2014-11-01',
+  endDate: '2015-11-01',
   jobTitle: 'Fullstack Javascript Developer',
   company: {
     name: 'Bonzai'
   },
   languages: [javascript, python, csharp],
-  skills: [management],
+  frameworks: [angular],
+  skills: [architecture],
   tools: [git]
 };
 

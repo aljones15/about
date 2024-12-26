@@ -30,12 +30,18 @@ export interface Tool {
   experience: number;
 }
 
+export interface Framework {
+  name: string;
+  experience: number;
+}
+
 export interface Position {
   startDate: string;
   endDate: string | null;
   jobTitle: string;
   company: Company;
   languages: Array<Language>;
+  frameworks: Array<Framework>;
   skills: Array<Skill>;
   tools: Array<Tool>;
 }
