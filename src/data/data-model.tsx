@@ -23,6 +23,21 @@ const javascript: Language = {
   experience: 10
 };
 
+const csharp: Language = {
+  name: 'C#',
+  experience: 3
+}
+
+const python: Language = {
+  name: 'Python',
+  experience: 1
+}
+
+const php: Language = {
+  name: 'PHP',
+  experience: 3
+}
+
 const git: Tool = {
   name: 'git',
   experience: 10
@@ -55,7 +70,7 @@ const upPosition: Position = {
   endDate: '2024-11-12',
   jobTitle: 'Fullstack Javascript Developer',
   company: {
-    name: 'Digital Bazaar'
+    name: 'Upwork'
   },
   languages: [javascript],
   skills: [management],
@@ -67,11 +82,11 @@ const agPosition: Position = {
   endDate: '2024-11-12',
   jobTitle: 'Fullstack Javascript Developer',
   company: {
-    name: 'Digital Bazaar'
+    name: 'Agilitet'
   },
-  languages: [javascript],
+  languages: [javascript, csharp, php],
   skills: [management],
-  tools: [git, docker]
+  tools: [git]
 };
 
 const bonPosition: Position = {
@@ -79,11 +94,11 @@ const bonPosition: Position = {
   endDate: '2024-11-12',
   jobTitle: 'Fullstack Javascript Developer',
   company: {
-    name: 'Digital Bazaar'
+    name: 'Bonzai'
   },
-  languages: [javascript],
+  languages: [javascript, python, csharp],
   skills: [management],
-  tools: [git, docker]
+  tools: [git]
 };
 
 export const positions: Array<Position> = [

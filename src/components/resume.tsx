@@ -62,4 +62,3 @@ export default function ResumeContainer({resume}: {resume: Resume}) {
     </SectionCard>
   </Section>
 }
-
