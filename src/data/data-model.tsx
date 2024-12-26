@@ -49,12 +49,12 @@ const php: Language = {
 }
 
 const git: Tool = {
-  name: 'git',
+  name: 'Git',
   experience: 10
 };
 
 const docker: Tool = {
-  name: 'docker',
+  name: 'Docker',
   experience: 8
 };
 
@@ -113,8 +113,13 @@ const capacitor: Framework = {
   experience: 2
 }
 
+const wordpress: Framework = {
+  name: 'Wordpress',
+  experience: 2
+}
+
 const xcode: Tool = {
-  name: 'xcode',
+  name: 'Xcode',
   experience: 5
 }
 
@@ -148,7 +153,7 @@ const upPosition: Position = {
     name: 'Upwork'
   },
   languages: [javascript, java, typescript],
-  frameworks: [react, webdriver, appium],
+  frameworks: [appium, react, webdriver],
   skills: [architecture, integrationTesting, endTesting],
   tools: [androidStudio, docker, git, xcode],
   duties: [
@@ -160,12 +165,12 @@ const upPosition: Position = {
 const agPosition: Position = {
   startDate: '2015-11-01',
   endDate: '2017-01-02',
-  jobTitle: 'Fullstack Javascript Developer',
+  jobTitle: 'Fullstack Developer',
   company: {
     name: 'Agilitet'
   },
-  languages: [javascript, csharp, php],
-  frameworks: [angular],
+  languages: [csharp, javascript, php],
+  frameworks: [angular, wordpress],
   skills: [architecture],
   tools: [git],
   duties: [
@@ -177,17 +182,17 @@ const agPosition: Position = {
 const bonPosition: Position = {
   startDate: '2014-11-01',
   endDate: '2015-11-01',
-  jobTitle: 'Fullstack Javascript Developer',
+  jobTitle: 'Fullstack Developer',
   company: {
     name: 'Bonzai'
   },
-  languages: [javascript, python, csharp],
+  languages: [csharp, javascript, python],
   frameworks: [angular],
-  skills: [architecture],
+  skills: [architecture, unitTesting, integrationTesting, endTesting],
   tools: [git],
   duties: [
-    "Created unit, integration, and end tests",
-    "Created fullstack applications on javascript and C#"
+    "Creation of unit, integration, and end tests",
+    "Creation of fullstack applications on javascript and C#"
   ]
 };
 
