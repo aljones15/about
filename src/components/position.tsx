@@ -22,6 +22,18 @@ function PositionElement({position}: {position: Position}): React.ReactElement {
 	<br />
         <Years from={position.startDate} to={position.endDate} />
       </Callout>
+      <Callout>
+        <H5>Languages</H5>
+	<ul>
+	{position.languages.map(l => <li key={l.name}>{l.name}</li>)}
+	</ul>
+      </Callout>
+      <Callout>
+        <H5>Tools</H5>
+	<ul>
+          {position.tools.map(t => <li key={t.name}>{t.name}</li>)}
+        </ul>
+      </Callout>
     </Card>
   </CardList>
 }
