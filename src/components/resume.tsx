@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import type {Resume} from "../data/resume";
 import Positions from "./position";
+import SkillsContainer from "./skills";
 import {Button, Section, SectionCard, Navbar} from "@blueprintjs/core";
 
 enum Sections {
@@ -18,7 +19,7 @@ export default function ResumeContainer({resume}: {resume: Resume}) {
         return <Positions positions={resume.positions}/>
       }
       case Sections.Skills: {
-        return <div>Skills</div>
+        return <SkillsContainer positions={resume.positions}/>
       }
       case Sections.Education: {
         return <div>Education</div>
