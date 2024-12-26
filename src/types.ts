@@ -44,6 +44,7 @@ export interface Position {
   frameworks: Array<Framework>;
   skills: Array<Skill>;
   tools: Array<Tool>;
+  duties: Array<string>;
 }
 
 export interface Education {

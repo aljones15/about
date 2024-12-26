@@ -1,5 +1,5 @@
 import React from "react";
-import {Card, CardList, Callout, Colors, Classes, Tag, H5, H6, UL} from "@blueprintjs/core";
+import {Card, CardList, Callout, Tag, H5, H6, UL} from "@blueprintjs/core";
 import {Position} from '../types';
 
 const callHeight = "8rem";
@@ -36,9 +36,12 @@ function PositionElement({position}: {position: Position}): React.ReactElement {
           {position.skills.map(t => <Tag key={t.name}>{t.name}</Tag>)}
       </Callout>
     </Card>
-    <Card>
+    <Card compact={true}>
       <Callout intent="success">
         <H5>Duties</H5>
+	<UL>
+          {position.duties.map(d => <li key={d}>{d}</li>)}
+        </UL>
       </Callout>
     </Card>
   </CardList>

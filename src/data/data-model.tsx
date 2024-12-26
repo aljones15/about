@@ -133,7 +133,11 @@ const dbPosition: Position = {
   languages: [javascript],
   skills: [management, architecture, unitTesting, integrationTesting],
   frameworks: [vue, capacitor],
-  tools: [androidStudio, docker, git, xcode]
+  tools: [androidStudio, docker, git, xcode],
+  duties: [
+    "Creation & maintenance of software from technical specifications.",
+    "Creation & maintenance of conformance test suites for software specifications."
+  ]
 };
 
 const upPosition: Position = {
@@ -146,7 +150,11 @@ const upPosition: Position = {
   languages: [javascript, java, typescript],
   frameworks: [react, webdriver, appium],
   skills: [architecture, integrationTesting, endTesting],
-  tools: [androidStudio, docker, git, xcode]
+  tools: [androidStudio, docker, git, xcode],
+  duties: [
+    "End Testing of Web and Mobile applications",
+    "High speed development of React.JS Applications"
+  ]
 };
 
 const agPosition: Position = {
@@ -159,7 +167,11 @@ const agPosition: Position = {
   languages: [javascript, csharp, php],
   frameworks: [angular],
   skills: [architecture],
-  tools: [git]
+  tools: [git],
+  duties: [
+    "Creation of Fullstack Web applications using C# and Javascript",
+    "Creation of Web applications using Wordpress and PHP"
+  ]
 };
 
 const bonPosition: Position = {
@@ -172,7 +184,11 @@ const bonPosition: Position = {
   languages: [javascript, python, csharp],
   frameworks: [angular],
   skills: [architecture],
-  tools: [git]
+  tools: [git],
+  duties: [
+    "Created unit, integration, and end tests",
+    "Created fullstack applications on javascript and C#"
+  ]
 };
 
 export const positions: Array<Position> = [
