@@ -14,13 +14,13 @@ function PositionElement({position}: {position: Position}): React.ReactElement {
     <Card compact={true}>
       <Callout className="col-xs-3" intent="primary" style={{height: callHeight}}>
         <H5>
-	  {position.company.name}
-	</H5>
+	    {position.company.name}
+	    </H5>
         <H6>
-	  {position.jobTitle}
-	</H6>
+	    {position.jobTitle}
+	    </H6>
         <MonthYear date={position.startDate}/> - <MonthYear date={position.endDate} />
-	<br />
+	    <br />
         <Years from={position.startDate} to={position.endDate} />
       </Callout>
       <Callout style={{height: callHeight}}>
