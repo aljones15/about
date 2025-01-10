@@ -7,10 +7,10 @@ import Education from "./education";
 
 const Router = () => {
   return <BrowserRouter>
-    <Route exact path={"/positions"} component={Positions} />
-    <Route exact path={"/skills"} component={SkillsContainer} />
-    <Route exact path={"/bio"} component={Bio} />
-    <Route exact path={"/education"} component={Education} />
+    <Route path={"/positions"} Component={Positions} />
+    <Route path={"/skills"} Component={SkillsContainer} />
+    <Route path={"/bio"} Component={Bio} />
+    <Route path={"/education"} Component={Education} />
   </BrowserRouter>
 }
 
