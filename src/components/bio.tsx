@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default function Education() {
+export default function Bio() {
   return <div>
-    Education
+    Biography
   </div>
 }
