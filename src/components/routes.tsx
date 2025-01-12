@@ -7,14 +7,12 @@ import Education from "./education";
 import type {Resume} from "../data/resume";
 
 export default function Router({resume}: {resume: Resume}) {
-  return <BrowserRouter>
-    <Routes>
+  return <Routes>
       <Route path={"/"} element={<Positions positions={resume.positions}/>} />
       <Route path={"/positions"} element={<Positions positions={resume.positions}/>} />
       <Route path={"/skills"} Component={SkillsContainer} />
       <Route path={"/bio"} Component={Bio} />
       <Route path={"/education"} Component={Education} />
-    </Routes>
-  </BrowserRouter>
+  </Routes>
 }
 
