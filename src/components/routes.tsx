@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { Routes, Route } from "react-router";
 import Positions from "./position";
 import SkillsContainer from "./skills";
 import Bio from "./bio";
@@ -8,11 +8,11 @@ import type {Resume} from "../data/resume";
 
 export default function Router({resume}: {resume: Resume}) {
   return <Routes>
-      <Route path={"/"} element={<Positions positions={resume.positions}/>} />
-      <Route path={"/positions"} element={<Positions positions={resume.positions}/>} />
-      <Route path={"/skills"} Component={SkillsContainer} />
-      <Route path={"/bio"} Component={Bio} />
-      <Route path={"/education"} Component={Education} />
+    <Route path={"/"} element={<Positions positions={resume.positions}/>} />
+    <Route path={"/experience"} element={<Positions positions={resume.positions}/>} />
+    <Route path={"/skills"} element={<SkillsContainer positions={resume.positions}/>} />
+    <Route path={"/bio"} Component={Bio} />
+    <Route path={"/education"} element={<Education />} />
   </Routes>
 }
 
