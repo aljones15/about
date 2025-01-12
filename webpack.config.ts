@@ -9,7 +9,7 @@ interface NodeEnv {
   development: boolean;
 }
 
-const webpackConfig = (env: NodeEnv): Configuration => ({
+const webpackConfig = (env: NodeEnv) => ({
     entry: "./src/index.tsx",
     ...(env.production || !env.development ? {} : {devtool: "eval-source-map"}),
     resolve: {
@@ -45,7 +45,10 @@ const webpackConfig = (env: NodeEnv): Configuration => ({
         }),
         new ForkTsCheckerWebpackPlugin(),
         new ESLintPlugin({files: "./src/**/*.{ts,tsx,js,jsx}"})
-    ]
+    ],
+    devServer: {
+      historyApiFallback: true,
+    }
 });
 
 export default webpackConfig;
