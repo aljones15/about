@@ -1,65 +1,49 @@
 import React, {useState} from "react";
+import { redirect } from "react-router";
 import type {Resume} from "../data/resume";
 import Positions from "./position";
 import SkillsContainer from "./skills";
+import Router from "./routes";
 import {Button, Section, SectionCard, Navbar} from "@blueprintjs/core";
 
-enum Sections {
-  Experience,
-  Skills,
-  Education,
-  Bio
+const Sections = {
+  Experience: '/experience',
+  Skills: '/skills',
+  Education: '/education',
+  Bio: '/bio'
 }
 
 export default function ResumeContainer({resume}: {resume: Resume}) {
-  const [section, setSection] = useState(Sections.Experience);
-  const sectionSelection = (selection: Sections) => {
-    switch(selection) {
-      case Sections.Experience: {
-        return <Positions positions={resume.positions}/>
-      }
-      case Sections.Skills: {
-        return <SkillsContainer positions={resume.positions}/>
-      }
-      case Sections.Education: {
-        return <div>Education</div>
-      }
-      case Sections.Bio: {
-        return <div>Bio</div>
-      }
-      default:
-        throw new Error(`Unknown Section ${selection} expected ${Sections}`);
-    }
-  }
   return <Section>
     <Navbar>
       <Navbar.Group>
       <Navbar.Heading>Andrew Lyle Jones</Navbar.Heading>
       <Navbar.Divider />
+      <a href="/skills">Skills</a>
       <Button
-        onClick={() => setSection(Sections.Experience)}
+        onClick={() => redirect(Sections.Experience)}
         className="bp5-minimal"
 	text="Experience"
 	icon="applications" />
       <Button
-        onClick={() => setSection(Sections.Skills)}
+        onClick={() => redirect("/skills")}
         className="bp5-minimal"
 	text="Skills"
 	icon="intelligence"/>
       <Button
-        onClick={() => setSection(Sections.Education)}
+        onClick={() => redirect(Sections.Education)}
         className="bp5-minimal"
 	text="Education"
 	icon="manual"/>
       <Button
-        onClick={() => setSection(Sections.Bio)}
+        onClick={() => redirect(Sections.Bio)}
         className="bp5-minimal"
 	text="Bio"
 	icon="user"/>
       </Navbar.Group>
     </Navbar>
     <SectionCard>
-      {sectionSelection(section)}
+      <Router resume={resume} />
     </SectionCard>
   </Section>
 }
