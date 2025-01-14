@@ -8,10 +8,10 @@ export default function Skills({positions}: {positions: Array<Position>}) {
   const tools = new Set(positions.flatMap(p => p.tools));
   const frameworks = new Set(positions.flatMap(p => p.frameworks));
   return <Card compact={true} className="row">
-    <SkillSection entries={languages} title="Languages" color={Colors.BLUE5}/>
-    <SkillSection entries={skills} title="Skills" color={Colors.GOLD5}/>
-    <SkillSection entries={tools} title="Tools" color={Colors.RED5}/>
-    <SkillSection entries={frameworks} title="Frameworks" color={Colors.ORANGE5}/>
+    <SkillSection entries={languages} title="Languages" color="BLUE"/>
+    <SkillSection entries={skills} title="Skills" color="GOLD"/>
+    <SkillSection entries={tools} title="Tools" color="RED"/>
+    <SkillSection entries={frameworks} title="Frameworks" color="GREEN"/>
   </Card>
 }
 
@@ -24,10 +24,17 @@ function SkillSection({
   title: string,
   color: string
 }) {
-  return <CardList className="col-xs-3" style={{background: color}}>
+  return <CardList
+    bordered={false}
+    className="col-xs-3"
+    style={{background: Colors[`${color}3`]}}>
     <h5>{title}</h5>
-      {[...entries].map(e => <Card key={e.name}>
-        <Callout title={e.name}>
+      {[...entries].map(e => <Card
+        style={{background: Colors[`${color}4`]}}
+        key={e.name}>
+        <Callout
+	  style={{background: Colors[`${color}5`]}}
+	  title={e.name}>
           {e.experience} years
 	</Callout>
       </Card>)}
