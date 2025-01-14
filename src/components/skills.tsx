@@ -1,5 +1,5 @@
 import React from "react";
-import {CardList, Card, Tree, TreeNode, Colors} from "@blueprintjs/core";
+import {Callout, CardList, Card, Colors} from "@blueprintjs/core";
 import {Position} from "../types";
 
 export default function Skills({positions}: {positions: Array<Position>}) {
@@ -24,8 +24,12 @@ function SkillSection({
   title: string,
   color: string
 }) {
-  return <CardList className="col-xs-5" style={{background: color}}>
+  return <CardList className="col-xs-3" style={{background: color}}>
     <h5>{title}</h5>
-      {[...entries].map(e => <Card key={e.name}>{e.name} {e.experience}</Card>)}
+      {[...entries].map(e => <Card key={e.name}>
+        <Callout title={e.name}>
+          {e.experience} years
+	</Callout>
+      </Card>)}
   </CardList>
 }
