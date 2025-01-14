@@ -28,7 +28,7 @@ function SkillSection({
     bordered={false}
     className="col-xs-3"
     style={{background: Colors[`${color}3`]}}>
-    <h5>{title}</h5>
+    <h4 style={{textAlign: 'center', color: Colors.WHITE}}>{title}</h4>
       {[...entries].map(e => <Card
         style={{background: Colors[`${color}4`]}}
         key={e.name}>
