@@ -23,11 +23,13 @@ export default function ResumeContainer({resume}: {resume: Resume}) {
         onClick={() => navigate(Sections.Experience)}
         className="bp5-minimal"
 	text="Experience"
+	outlined={true}
 	active={location.pathname === Sections.Experience}
 	icon="applications" />
       <Button
         onClick={() => navigate(Sections.Skills)}
         className="bp5-minimal"
+	outlined={true}
 	text="Skills"
 	active={location.pathname === Sections.Skills}
 	icon="intelligence"/>
@@ -35,12 +37,14 @@ export default function ResumeContainer({resume}: {resume: Resume}) {
         onClick={() => navigate(Sections.Education)}
         className="bp5-minimal"
 	text="Education"
+	outlined={true}
 	active={location.pathname === Sections.Education}
 	icon="manual"/>
       <Button
         onClick={() => navigate(Sections.Bio)}
         className="bp5-minimal"
 	text="Bio"
+	outlined={true}
 	active={location.pathname === Sections.Bio}
 	icon="user"/>
       </Navbar.Group>
