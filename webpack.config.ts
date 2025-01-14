@@ -31,6 +31,9 @@ const webpackConfig = (env: NodeEnv) => ({
             }, {
               test: /\.css$/i,
 	      use: ['style-loader', 'css-loader']
+            }, {
+              test: /\.sass$/i,
+	      use: ['style-loader', 'css-loader', 'sass-loader']
             }
         ]
     },

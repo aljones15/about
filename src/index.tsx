@@ -8,6 +8,7 @@ import "@blueprintjs/core/lib/css/blueprint.css";
 // include blueprint-icons.css for icon font support
 import "@blueprintjs/icons/lib/css/blueprint-icons.css";
 import "flexboxgrid/css/flexboxgrid.css";
+import "./project.sass"
 
 const container = document.getElementById("root");
 const root = createRoot(container);

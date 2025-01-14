@@ -15,7 +15,7 @@ export default function ResumeContainer({resume}: {resume: Resume}) {
   const navigate = useNavigate();
   const location = useLocation();
   return <Section>
-    <Navbar>
+    <Navbar fixedToTop={true}>
       <Navbar.Group>
       <Navbar.Heading>Andrew Lyle Jones</Navbar.Heading>
       <Navbar.Divider />
