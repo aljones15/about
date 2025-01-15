@@ -5,10 +5,11 @@ import Router from "./routes";
 import {Button, Section, SectionCard, Navbar} from "@blueprintjs/core";
 
 const Sections = {
-  Experience: '/experience',
-  Skills: '/skills',
+  Bio: '/bio',
   Education: '/education',
-  Bio: '/bio'
+  Experience: '/experience',
+  Projects: '/projects',
+  Skills: '/skills'
 }
 
 export default function ResumeContainer({resume}: {resume: Resume}) {
@@ -25,14 +26,21 @@ export default function ResumeContainer({resume}: {resume: Resume}) {
 	text="Experience"
 	outlined={true}
 	active={location.pathname === Sections.Experience}
-	icon="applications" />
+	icon="inherited-group" />
       <Button
         onClick={() => navigate(Sections.Skills)}
         className="bp5-minimal"
 	outlined={true}
 	text="Skills"
 	active={location.pathname === Sections.Skills}
-	icon="intelligence"/>
+	icon="lightbulb"/>
+      <Button
+        onClick={() => navigate(Sections.Projects)}
+	className="bp5-minimal"
+	text="Projects"
+	outlined={true}
+	active={location.pathname === Sections.Projects}
+	icon="build" />
       <Button
         onClick={() => navigate(Sections.Education)}
         className="bp5-minimal"
