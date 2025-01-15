@@ -24,16 +24,17 @@ function SkillSection({
   title: string,
   color: string
 }) {
+  const skills = [...entries].sort((a, b) => b.experience - a.experience);
   return <CardList
     bordered={false}
     className="col-xs-3"
-    style={{background: Colors[`${color}3`]}}>
+    style={{background: Colors[`${color}3`] + '80'}}>
     <h4 style={{textAlign: 'center', color: Colors.WHITE}}>{title}</h4>
-      {[...entries].map(e => <Card
-        style={{background: Colors[`${color}4`]}}
+      {skills.map(e => <Card
+        style={{background: Colors[`${color}4`] + '0f'}}
         key={e.name}>
         <Callout
-	  style={{background: Colors[`${color}5`]}}
+	  style={{background: Colors[`${color}5`] + 'ff'}}
 	  title={e.name}>
           {e.experience} years
 	</Callout>
