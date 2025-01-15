@@ -2,7 +2,8 @@
 import {
   Address, Position,
   Education, Framework,
-  Tool, Skill, Language
+  Tool, Skill,
+  Language, Project
 } from '../types';
 
 export const name = "Andrew Lyle Jones";
@@ -209,3 +210,5 @@ const rollinsEducation: Education = {
 };
 
 export const education: Array<Education> = [rollinsEducation];
+
+export const projects: Array<Project> = [];

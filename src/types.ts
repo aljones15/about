@@ -53,3 +53,10 @@ export interface Education {
   endDate: string | null;
   location: string;
 }
+
+export interface Project {
+  name: string;
+  student: boolean;
+  link: URL,
+  languages: Set<Language>
+}
