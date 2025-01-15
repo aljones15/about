@@ -21,20 +21,24 @@ const webpackConfig = (env: NodeEnv) => ({
     },
     module: {
         rules: [
-            {
-                test: /\.tsx?$/,
-                loader: "ts-loader",
-                options: {
-                    transpileOnly: true
-                },
-                exclude: /dist/
-            }, {
-              test: /\.css$/i,
-	      use: ['style-loader', 'css-loader']
-            }, {
-              test: /\.sass$/i,
-	      use: ['style-loader', 'css-loader', 'sass-loader']
-            }
+	  {
+            test: /\.(png|jpe?g|gif)$/,
+	    loader: "file-loader"
+          },
+          {
+            test: /\.tsx?$/,
+            loader: "ts-loader",
+            options: {
+              transpileOnly: true
+            },
+            exclude: /dist/
+          }, {
+            test: /\.css$/i,
+	    use: ['style-loader', 'css-loader']
+          }, {
+            test: /\.sass$/i,
+	    use: ['style-loader', 'css-loader', 'sass-loader']
+          }
         ]
     },
     plugins: [
