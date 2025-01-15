@@ -8,10 +8,10 @@ export default function Skills({positions}: {positions: Array<Position>}) {
   const tools = new Set(positions.flatMap(p => p.tools));
   const frameworks = new Set(positions.flatMap(p => p.frameworks));
   return <Card compact={true} className="row">
-    <SkillSection entries={languages} title="Languages" color="BLUE"/>
-    <SkillSection entries={skills} title="Skills" color="GOLD"/>
-    <SkillSection entries={tools} title="Tools" color="RED"/>
     <SkillSection entries={frameworks} title="Frameworks" color="GREEN"/>
+    <SkillSection entries={skills} title="Skills" color="GOLD"/>
+    <SkillSection entries={languages} title="Languages" color="BLUE"/>
+    <SkillSection entries={tools} title="Tools" color="RED"/>
   </Card>
 }
 
