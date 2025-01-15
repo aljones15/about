@@ -28,13 +28,13 @@ function SkillSection({
   return <CardList
     bordered={false}
     className="col-xs-3"
-    style={{background: Colors[`${color}3`] + '80'}}>
-    <h4 style={{textAlign: 'center', color: Colors.WHITE}}>{title}</h4>
+    style={{background: Colors[`${color}3`] + '08'}}>
+    <h4 style={{textAlign: 'center', color: Colors.BLACK}}>{title}</h4>
       {skills.map(e => <Card
         style={{background: Colors[`${color}4`] + '0f'}}
         key={e.name}>
         <Callout
-	  style={{background: Colors[`${color}5`] + 'ff'}}
+	  style={{background: Colors[`${color}5`] + '80'}}
 	  title={e.name}>
           {e.experience} years
 	</Callout>
