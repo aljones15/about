@@ -49,6 +49,11 @@ const php: Language = {
   experience: 3
 }
 
+const r: Language = {
+  name: "R",
+  experience: 5
+}
+
 const git: Tool = {
   name: 'Git',
   experience: 10
@@ -203,12 +208,26 @@ export const positions: Array<Position> = [
 ];
 
 const rollinsEducation: Education = {
-  name: 'Rollins College',
-  startDate: '1997-04-01',
-  endDate: '2001-04-01',
-  location: 'Winter Park, FL, U.S.A.'
+  name: "Rollins College",
+  startDate: "1997-04-01",
+  endDate: "2001-05-01",
+  location: 'Winter Park, FL',
+  field: "English Literature",
+  degree: "Bachelors of the Arts"
 };
 
-export const education: Array<Education> = [rollinsEducation];
+const gmEducation: Education = {
+  name: "George Mason University",
+  startDate: "2019-09-01",
+  endDate: null,
+  location: "Fairfax, VA",
+  field: "Statistics",
+  degree: "Non-Degree"
+}
 
+export const education: Array<Education> = [gmEducation, rollinsEducation];
+export const languages: Array<Language> = [
+  r, php, csharp, javascript,
+  python, typescript
+];
 export const projects: Array<Project> = [];

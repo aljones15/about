@@ -11,7 +11,7 @@ export default function Router({resume}: {resume: Resume}) {
   return <Routes>
     <Route path={"/"} element={<Positions positions={resume.positions}/>} />
     <Route path={"/bio"} Component={Bio} />
-    <Route path={"/education"} element={<Education />} />
+    <Route path={"/education"} element={<Education education={resume.education}/>} />
     <Route path={"/experience"} element={<Positions positions={resume.positions}/>} />
     <Route path={"/projects"} element={<Projects projects={resume.projects} />} />
     <Route path={"/skills"} element={<SkillsContainer positions={resume.positions}/>} />

@@ -52,6 +52,8 @@ export interface Education {
   startDate: string;
   endDate: string | null;
   location: string;
+  field: string;
+  degree: string;
 }
 
 export interface Project {
