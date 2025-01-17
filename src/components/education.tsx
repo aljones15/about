@@ -1,6 +1,6 @@
 import React from 'react';
 import {Education} from "../types";
-import {Classes, Section, SectionCard} from "@blueprintjs/core";
+import {CompoundTag, Classes, Section, SectionCard} from "@blueprintjs/core";
 
 export default function Education({education}: {education: Array<Education>}) {
   return <div className="row" style={{justifyContent: 'center'}}>
@@ -15,8 +15,11 @@ export function School({school}: {school: Education}) {
       icon="book"
       elevation={1}
       collapsible={true}
-      className=""
-      rightElement={<span>{`${school.degree} ${school.field}`}</span>}
+      rightElement={<CompoundTag
+        intent="primary"
+        leftContent={school.degree}>
+	  {school.field}
+	</CompoundTag>}
     >
       <SectionCard>
         {school.startDate}
