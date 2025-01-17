@@ -9,9 +9,9 @@ export default function Education({
   certificates: Array<Education>
 }) {
   return <div className="education">
-    <h3>Colleges & Universities</h3>
+    <h3 style={{textAlign: "center"}}>Colleges & Universities</h3>
     <SchoolSection schools={schools} />
-    <h3>Certificates</h3>
+    <h3 style={{textAlign: "center"}}>Certificates</h3>
     <SchoolSection schools={certificates} />
   </div>
 }
