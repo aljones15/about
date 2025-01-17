@@ -50,10 +50,12 @@ export interface Position {
 export interface Education {
   name: string;
   startDate: string;
+  link: string;
   endDate: string | null;
   location: string;
   field: string;
   degree: string;
+  accomplishments: Array<string>;
 }
 
 export interface Project {

@@ -198,7 +198,7 @@ const bonPosition: Position = {
   tools: [git],
   duties: [
     "Creation of unit, integration, and end tests",
-    "Creation of fullstack applications on javascript and C#"
+    "Creation of fullstack applications in javascript & C#"
   ]
 };
 
@@ -207,25 +207,66 @@ export const positions: Array<Position> = [
   agPosition, bonPosition
 ];
 
-const rollinsEducation: Education = {
+const rollinsCollege: Education = {
   name: "Rollins College",
+  link: "https://www.rollins.edu/",
   startDate: "1997-04-01",
   endDate: "2001-05-01",
-  location: 'Winter Park, FL',
+  location: "Winter Park, FL",
   field: "English Literature",
-  degree: "Bachelors of the Arts"
+  degree: "Bachelors of the Arts",
+  accomplishments: [
+    "Completed a degree in English Literature with an emphasis on post-modern authors."
+  ]
 };
 
-const gmEducation: Education = {
+const georgeMasonUniversity: Education = {
   name: "George Mason University",
+  link: "https://www.gmu.edu/",
   startDate: "2019-09-01",
   endDate: null,
   location: "Fairfax, VA",
   field: "Statistics",
-  degree: "Non-Degree"
+  degree: "Non-Degree",
+  accomplishments: [
+    "Finished Math and Stat courses up to 300 Level"
+  ]
 }
 
-export const education: Array<Education> = [gmEducation, rollinsEducation];
+const dataCamp: Education = {
+  name: "Data Camp",
+  link: "https://datacamp.com/",
+  location: "Online",
+  field: "Data Science",
+  degree: "Certificate",
+  startDate: "2016-10-01",
+  endDate: "2018-10-01",
+  accomplishments: [
+    "Finished 21 Courses in Data Science"
+  ]
+}
+
+const udacity: Education = {
+  name: "Udacity",
+  link: "https://udacity.com",
+  location: "Online",
+  field: "Computer Science",
+  degree: "Certificate",
+  startDate: "2013-02-01",
+  endDate: "2022-02-01",
+  accomplishments: [
+    "Finished 3 Courses in Computer Science"
+  ]
+}
+
+export const education: Array<Education> = [
+  georgeMasonUniversity,
+  rollinsCollege
+];
+
+export const certificates: Array<Education> = [
+  dataCamp, udacity
+]
 export const languages: Array<Language> = [
   r, php, csharp, javascript,
   python, typescript
