@@ -2,9 +2,23 @@ import React from 'react';
 import {Education} from "../types";
 import {CompoundTag, Classes, Section, SectionCard} from "@blueprintjs/core";
 
-export default function Education({education}: {education: Array<Education>}) {
+export default function Education({
+  schools, certificates
+}: {
+  schools: Array<Education>,
+  certificates: Array<Education>
+}) {
+  return <div className="education">
+    <h3>Colleges & Universities</h3>
+    <SchoolSection schools={schools} />
+    <h3>Certificates</h3>
+    <SchoolSection schools={certificates} />
+  </div>
+}
+
+export function SchoolSection({schools}: {schools: Array<Education>}) {
   return <div className="row" style={{justifyContent: 'center'}}>
-    {education.map(ed => <School key={ed.name} school={ed} />)}
+    {schools.map(sch => <School key={sch.name} school={sch} />)}
   </div>
 }
 
