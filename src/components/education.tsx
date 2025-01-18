@@ -7,8 +7,8 @@ export default function Education({education}: {
   education: iEducation,
 }) {
   return <div className="education">
-    <h3 style={{textAlign: "center"}}>Degrees</h3>
-      <div className="row" style={{justifyContent: 'center'}}>
+    <h3 className="text-center">Degrees</h3>
+      <div className="row content-center">
         <DegreeSection degrees={education.degrees} />
       </div>
     <h3 style={{textAlign: "center"}}>Certificates</h3>
@@ -18,7 +18,7 @@ export default function Education({education}: {
 
 export function DegreeSection({degrees}: {degrees: Array<Degree>}) {
   return degrees.map(degree => <div
-      key={`${degree.type}${degree.field}`}
+      key={degree.type + degree.field}
       className="col-xs-5">
       <Section
         title={degree.provider.name}
