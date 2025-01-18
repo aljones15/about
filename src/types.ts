@@ -58,7 +58,11 @@ export interface School {
 }
 
 export interface Certificate {
-
+  provider: School;
+  issued: string;
+  link: string;
+  skills: Array<string>;
+  title: string;
 }
 
 export interface Degree {
