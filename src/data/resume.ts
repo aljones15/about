@@ -1,4 +1,4 @@
-import {Address, Certificate, Position, Project, Degree, School} from '../types';
+import {Address, Certificate, Degree, Position, Project, School} from '../types';
 import Education from "./Education";
 
 export class Resume {
@@ -8,13 +8,14 @@ export class Resume {
   schools: Array<School>;
   certificates: Array<Certificate>;
   projects: Array<Project>;
+  degrees: Array<Degree>;
   education: Education;
-  constructor({name, address, positions, schools, certificates, projects}) {
+  constructor({name, address, degrees, positions, schools, certificates, projects}) {
     this.name = name;
     this.address = address;
     this.positions = positions;
     this.education = new Education({
-      schools, certificates
+      schools, certificates, degrees,
     });
     this.projects = projects;
     this.certificates = certificates;

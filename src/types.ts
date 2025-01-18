@@ -53,7 +53,6 @@ export interface School {
   link: string;
   endDate: string | null;
   location: string;
-  degree: Array<Degree>;
   accomplishments: Array<string>;
 }
 
@@ -62,6 +61,7 @@ export interface Certificate {
   issued: string;
   link: string;
   skills: Array<string>;
+  description: string;
   title: string;
 }
 
@@ -69,6 +69,10 @@ export interface Degree {
   field: string;
   type: string;
   description: string;
+  skills: Array<string>;
+  provider: School;
+  startDate: string;
+  endDate: string;
 }
 
 export interface Project {

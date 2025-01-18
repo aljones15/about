@@ -1,10 +1,12 @@
-import {School, Certificate} from "../types";
+import {Certificate, Degree, School} from "../types";
 
 export default class Education {
   schools: Array<School>;
   certificates: Array<Certificate>;
-  constructor({schools, certificates}) {
+  degrees: Array<Degree>;
+  constructor({schools, certificates, degrees}) {
     this.schools = schools;
     this.certificates = certificates;
+    this.degrees = degrees;
   }
 }
