@@ -47,15 +47,24 @@ export interface Position {
   duties: Array<string>;
 }
 
-export interface Education {
+export interface School {
   name: string;
   startDate: string;
   link: string;
   endDate: string | null;
   location: string;
-  field: string;
-  degree: string;
+  degree: Array<Degree>;
   accomplishments: Array<string>;
+}
+
+export interface Certificate {
+
+}
+
+export interface Degree {
+  field: string;
+  type: string;
+  description: string;
 }
 
 export interface Project {

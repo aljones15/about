@@ -1,11 +1,11 @@
 import {Resume} from "./resume";
-import {name, address, certificates, positions, education, projects} from "./data-model";
+import {name, address, certificates, positions, schools, projects} from "./data-model";
 
 export const andrewResume = new Resume({
   name,
   address,
   positions,
-  education,
+  schools,
   certificates,
   projects
 });

@@ -1,9 +1,9 @@
 // contains types for the resume
 import {
-  Address, Position,
-  Education, Framework,
-  Tool, Skill,
-  Language, Project
+  Address, Certificate,
+  Degree, Position,
+  School, Framework, Tool,
+  Skill, Language, Project
 } from '../types';
 
 export const name = "Andrew Lyle Jones";
@@ -207,38 +207,39 @@ export const positions: Array<Position> = [
   agPosition, bonPosition
 ];
 
-const rollinsCollege: Education = {
+const bachelorsEnglish: Degree = {
+  field: "English Literature",
+  type: "Bachelors in the Arts",
+  description: "Completed a degree in English Literature with an emphasis on post-modern authors"
+};
+
+const rollinsCollege: School = {
   name: "Rollins College",
   link: "https://www.rollins.edu/",
   startDate: "1997-04-01",
   endDate: "2001-05-01",
   location: "Winter Park, FL",
-  field: "English Literature",
-  degree: "Bachelors of the Arts",
-  accomplishments: [
-    "Completed a degree in English Literature with an emphasis on post-modern authors."
-  ]
+  degree: [bachelorsEnglish],
+  accomplishments: []
 };
 
-const georgeMasonUniversity: Education = {
+const georgeMasonUniversity: School = {
   name: "George Mason University",
   link: "https://www.gmu.edu/",
   startDate: "2019-09-01",
   endDate: null,
   location: "Fairfax, VA",
-  field: "Statistics",
-  degree: "Non-Degree",
+  degree: [],
   accomplishments: [
     "Finished Math and Stat courses up to 300 Level"
   ]
 }
 
-const dataCamp: Education = {
+const dataCamp: School = {
   name: "Data Camp",
   link: "https://datacamp.com/",
   location: "Online",
-  field: "Data Science",
-  degree: "Certificate",
+  degree: [],
   startDate: "2016-10-01",
   endDate: "2018-10-01",
   accomplishments: [
@@ -246,12 +247,11 @@ const dataCamp: Education = {
   ]
 }
 
-const udacity: Education = {
+const udacity: School = {
   name: "Udacity",
   link: "https://udacity.com",
   location: "Online",
-  field: "Computer Science",
-  degree: "Certificate",
+  degree: [],
   startDate: "2013-02-01",
   endDate: "2022-02-01",
   accomplishments: [
@@ -259,14 +259,23 @@ const udacity: Education = {
   ]
 }
 
-export const education: Array<Education> = [
+const ucertificate: Certificate = {
+  provider: udacity,
+  issued: "2017-01-01",
+  link: "https://udacity.com",
+  skills: ["R", "Data Science"],
+  title: "Intro to Statistics"
+};
+
+export const schools: Array<School> = [
   georgeMasonUniversity,
   rollinsCollege
 ];
 
-export const certificates: Array<Education> = [
-  dataCamp, udacity
+export const certificates: Array<Certificate> = [
+  ucertificate
 ]
+
 export const languages: Array<Language> = [
   r, php, csharp, javascript,
   python, typescript
