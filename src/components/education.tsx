@@ -9,16 +9,19 @@ export default function Education({education}: {
   return <div className="education">
     <h3 className="text-center">Degrees</h3>
       <div className="row content-center">
-        <DegreeSection degrees={education.degrees} />
+        {education.degrees.map(degree => <DegreeSection
+	  key={degree.type + degree.field}
+	  degree={degree} />)}
       </div>
     <h3 style={{textAlign: "center"}}>Certificates</h3>
-    <CertificateSection certificates={education.certificates} />
+      {education.certificates.map(certificate => <CertificateSection
+        key={certificate.title + certificate.provider.name}
+	certificate={certificate} />)}
   </div>
 }
 
-export function DegreeSection({degrees}: {degrees: Array<Degree>}) {
-  return degrees.map(degree => <div
-      key={degree.type + degree.field}
+export function DegreeSection({degree}: {degree: Degree}) {
+  return <div
       className="col-xs-5">
       <Section
         title={degree.provider.name}
@@ -35,12 +38,25 @@ export function DegreeSection({degrees}: {degrees: Array<Degree>}) {
           {degree.startDate}
         </SectionCard>
       </Section>
-    </div>);
+    </div>;
 }
 
-export function CertificateSection({certificates}: {certificates: Array<Certificate>}) {
-  return certificates.map(certificate => <div
-    key={certificate.title + certificate.provider.name}>
+export function CertificateSection({certificate}: {certificate: Certificate}) {
+  return <div className="col-xs-3">
+    <Section
+      title={certificate.provider.name}
+      icon="book"
+      elevation={1}
+      collapsible={true}
+      rightElement={<CompoundTag
+        intent="success"
+	leftContent="Certificate">
+	  {certificate.title}
+	</CompoundTag>}
+      >
+    <SectionCard>
       {certificate.title}
-    </div>);
+    </SectionCard>
+    </Section>
+  </div>;
 }
