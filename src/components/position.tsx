@@ -1,6 +1,8 @@
 import React from "react";
 import {Card, CardList, Callout, Colors, Tag, H5, H6, UL} from "@blueprintjs/core";
 import {Position} from '../types';
+import MonthYear from "./monthYear";
+import Years from "./Years";
 
 const callHeight = "8rem";
 export default function PositionsElement({positions}: {positions: Array<Position>}) {
@@ -63,33 +65,4 @@ function PositionElement({position}: {position: Position}): React.ReactElement {
       </Callout>
     </Card>
   </CardList>
-}
-
-function MonthYear({date}: {date: string}): React.ReactElement {
-  const month = new Date(date).toLocaleString('default', {month: 'long'});
-  const year = new Date(date).getFullYear();
-  return <span>{month} {year}</span>
-}
-
-function Years({from, to}: {from: string, to: string}): React.ReactElement {
-  const dates = {from: new Date(from), to: new Date(to)};
-  const diff = dates.to.getTime() - dates.from.getTime();
-  const month = 30 * 24 * 60 * 60 * 1000;
-  const year = 365 * 24 * 60 * 60 * 1000;
-  const years = Math.floor(diff / year);
-  const months = Math.ceil((diff - years * year)/ month)
-  if(months <= 0) {
-    return <Tag><Plural text="year" num={years}/></Tag>
-  }
-  return <span>
-    <Tag><Plural text="year" num={years}/></Tag>
-    <Tag><Plural text="month" num={months}/></Tag>
-  </span>
-}
-
-function Plural({text, num}: {text: string, num: number}) {
-  if(num <= 1) {
-    return <span>{num} {text}</span>
-  }
-  return <span>{num} {text}s</span>
 }
