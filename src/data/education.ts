@@ -85,6 +85,15 @@ const udacityCerts: Array<Certificate> = [{
   }
 ];
 
+const dataCampCerts: Array<Certificate> = [{
+    provider: dataCamp,
+    issued: "2022-08-04",
+    link: "https://datacamp.com",
+    skills: ["HTML", "CSS", "UI Design"],
+    description: "Completed a basic HTML course on the box-object model, css selectors, and responsive web design.",
+    title: "Intro to R"
+}];
+
 export const certificates: Array<Certificate> = [
-  ...udacityCerts
+  ...udacityCerts, ...dataCampCerts
 ];
