@@ -46,7 +46,7 @@ const bachelorsEnglish: Degree = {
   field: "English Literature",
   type: "Bachelors in the Arts",
   provider: rollinsCollege,
-  issued: "2001-05-01",
+  issued: "2001-05-11",
   skills: ["Proof Reading", "Criticism", "Time Management"],
   description: "Completed a degree in English Literature"
 };

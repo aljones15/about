@@ -36,15 +36,23 @@ export function DegreeSection({degree}: {degree: Degree}) {
           leftContent={degree.type}>
 	    {degree.field}
 	  </CompoundTag>}
-      >
-        <SectionCard>
-          {degree.issued}
+        >
+          <SectionCard>
+	    <div className="row">
+              <div className="col-xs-6">
+                <Issued issued={degree.issued} />
+              </div>
+              <div className="col-xs-6">
+                {degree.skills.map(s => <div key={s}>
+		  <Tag round={false} style={{margin: '0.1rem'}}>{s}</Tag>
+		</div>)}
+              </div>
+            </div>
         </SectionCard>
     </Section>;
 }
 
 export function CertificateSection({certificate}: {certificate: Certificate}) {
-console.log(certificate);
   return <div className="col-xs-6" style={{marginBottom: "1rem"}}>
     <Section
       title={certificate.provider.name}
@@ -60,17 +68,26 @@ console.log(certificate);
       <p>{certificate.title}</p>
       <div className="row">
         <div className="col-xs-6">
-          <CompoundTag
-            intent="success"
-            leftContent="Issued">
-            <MonthYear date={certificate.issued}/>
-          </CompoundTag>
+          <Issued issued={certificate.issued} />
         </div>
         <div className="col-xs-6">
-          {certificate.skills.map(s => <Tag key={s} round={true}>{s}</Tag>)}
+          {certificate.skills.map(s => <Tag
+	    key={s}
+	    style={{margin: '0.1rem'}}
+	    round={true}>
+	    {s}
+	  </Tag>)}
         </div>
       </div>
     </SectionCard>
     </Section>
   </div>;
+}
+
+function Issued({issued}: {issued: string}) {
+  return <CompoundTag
+           intent="warning"
+           leftContent="Issued">
+             <MonthYear date={issued}/>
+         </CompoundTag>
 }
