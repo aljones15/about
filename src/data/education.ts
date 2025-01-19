@@ -63,13 +63,27 @@ export const schools: Array<School> = [
 export const degrees: Array<Degree> = [bachelorsEnglish];
 
 const udacityCerts: Array<Certificate> = [{
-  provider: udacity,
-  issued: "2017-01-01",
-  link: "https://udacity.com",
-  skills: ["Data Science"],
-  description: "",
-  title: "Intro to Statistics"
-  },
+    provider: udacity,
+    issued: "2017-01-01",
+    link: "https://udacity.com",
+    skills: ["Data Science"],
+    description: "",
+    title: "Intro to Statistics"
+  }, {
+    provider: udacity,
+    issued: "2017-01-01",
+    link: "https://udacity.com",
+    skills: ["Data Science"],
+    description: "",
+    title: "Intro to Statistics"
+  }, {
+    provider: udacity,
+    issued: "2017-01-01",
+    link: "https://udacity.com",
+    skills: ["Data Science"],
+    description: "",
+    title: "Intro to Statistics"
+  }
 ];
 
 export const certificates: Array<Certificate> = [
