@@ -1,5 +1,5 @@
 import React from 'react';
-import iEducation from "../data/Education";
+import iEducation from "../classes/Education";
 import {Certificate, Degree} from "../types";
 import {CompoundTag, Classes, Section, SectionCard} from "@blueprintjs/core";
 

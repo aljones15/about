@@ -1,9 +1,12 @@
-import {Resume} from "./Resume";
+import {Resume} from "../classes/Resume";
 import {
-  name, address, degrees,
-  certificates, positions, schools,
-  projects
+  name, address, positions, projects
 } from "./data-model";
+import {
+  schools,
+  degrees,
+  certificates
+} from "./education";
 
 export const andrewResume = new Resume({
   name,
