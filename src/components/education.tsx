@@ -6,24 +6,24 @@ import {CompoundTag, Classes, Section, SectionCard} from "@blueprintjs/core";
 export default function Education({education}: {
   education: iEducation,
 }) {
-  return <div className="education">
-    <h3 className="text-center">Degrees</h3>
-      <div className="row content-center">
+  return <div className="row education">
+    <div className="col-x-5">
+    <h3>Degrees</h3>
         {education.degrees.map(degree => <DegreeSection
 	  key={degree.type + degree.field}
 	  degree={degree} />)}
-      </div>
-    <h3 style={{textAlign: "center"}}>Certificates</h3>
+    </div>
+    <div className="col-xs-7">
+    <h3>Certificates</h3>
       {education.certificates.map(certificate => <CertificateSection
         key={certificate.title + certificate.provider.name}
 	certificate={certificate} />)}
+    </div>
   </div>
 }
 
 export function DegreeSection({degree}: {degree: Degree}) {
-  return <div
-      className="col-xs-5">
-      <Section
+  return <Section
         title={degree.provider.name}
         icon="book"
         elevation={1}
@@ -37,12 +37,11 @@ export function DegreeSection({degree}: {degree: Degree}) {
         <SectionCard>
           {degree.startDate}
         </SectionCard>
-      </Section>
-    </div>;
+    </Section>;
 }
 
 export function CertificateSection({certificate}: {certificate: Certificate}) {
-  return <div className="col-xs-3">
+  return <div className="col-xs-5">
     <Section
       title={certificate.provider.name}
       icon="book"
