@@ -1,8 +1,7 @@
 // contains types for the resume
 import {
-  Address, Certificate,
-  Degree, Position,
-  School, Framework, Tool,
+  Address, Position,
+  Framework, Tool,
   Skill, Language, Project
 } from '../types';
 
