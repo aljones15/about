@@ -10,7 +10,10 @@ export class Resume {
   projects: Array<Project>;
   degrees: Array<Degree>;
   education: Education;
-  constructor({name, address, degrees, positions, schools, certificates, projects}) {
+  constructor({
+    name, address, degrees, positions,
+    schools, certificates, projects
+  }) {
     this.name = name;
     this.address = address;
     this.positions = positions;

@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router";
-import type {Resume} from "../data/resume";
+import type {Resume} from "../data/Resume";
 import Router from "./routes";
 import {Button, Section, SectionCard, Navbar} from "@blueprintjs/core";
 

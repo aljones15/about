@@ -5,7 +5,7 @@ import SkillsContainer from "./skills";
 import Bio from "./bio";
 import Education from "./education";
 import Projects from "./projects";
-import type {Resume} from "../data/resume";
+import type {Resume} from "../data/Resume";
 
 export default function Router({resume}: {resume: Resume}) {
   return <Routes>
