@@ -1,24 +1,24 @@
 import React from 'react';
 import iEducation from "../classes/Education";
 import {Certificate, Degree} from "../types";
-import {CompoundTag, Classes, Section, SectionCard} from "@blueprintjs/core";
+import {Card, CompoundTag, Classes, Section, SectionCard} from "@blueprintjs/core";
 
 export default function Education({education}: {
   education: iEducation,
 }) {
   return <div className="row education">
-    <div className="col-x-5">
+    <Card className="col-xs-4">
     <h3>Degrees</h3>
         {education.degrees.map(degree => <DegreeSection
 	  key={degree.type + degree.field}
 	  degree={degree} />)}
-    </div>
-    <div className="col-xs-7">
+    </Card>
+    <Card className="col-xs-8">
     <h3>Certificates</h3>
       {education.certificates.map(certificate => <CertificateSection
         key={certificate.title + certificate.provider.name}
 	certificate={certificate} />)}
-    </div>
+    </Card>
   </div>
 }
 
@@ -41,7 +41,7 @@ export function DegreeSection({degree}: {degree: Degree}) {
 }
 
 export function CertificateSection({certificate}: {certificate: Certificate}) {
-  return <div className="col-xs-5">
+  return <div className="col-xs-4">
     <Section
       title={certificate.provider.name}
       icon="book"
