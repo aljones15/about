@@ -71,8 +71,7 @@ export interface Degree {
   description: string;
   skills: Array<string>;
   provider: School;
-  startDate: string;
-  endDate: string;
+  issued: string;
 }
 
 export interface Project {

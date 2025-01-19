@@ -37,7 +37,7 @@ export function DegreeSection({degree}: {degree: Degree}) {
 	  </CompoundTag>}
       >
         <SectionCard>
-          {degree.startDate}
+          {degree.issued}
         </SectionCard>
     </Section>;
 }

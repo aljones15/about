@@ -46,10 +46,9 @@ const bachelorsEnglish: Degree = {
   field: "English Literature",
   type: "Bachelors in the Arts",
   provider: rollinsCollege,
-  startDate: "1997-04-01",
-  endDate: "2001-05-01",
-  skills: [],
-  description: "Completed a degree in English Literature with an emphasis on post-modern authors"
+  issued: "2001-05-01",
+  skills: ["Proof Reading", "Criticism", "Time Management"],
+  description: "Completed a degree in English Literature"
 };
 
 
@@ -66,23 +65,23 @@ const udacityCerts: Array<Certificate> = [{
     provider: udacity,
     issued: "2017-01-01",
     link: "https://udacity.com",
-    skills: ["Data Science"],
-    description: "",
+    skills: ["Data Science", "Statistics"],
+    description: "Completed a basic intro to Statistics course",
     title: "Intro to Statistics"
   }, {
     provider: udacity,
-    issued: "2017-01-01",
-    link: "https://udacity.com",
+    issued: "2023-09-02",
+    link: "https://www.udacity.com/certificate/e/9432c73a-076e-11ed-b38b-ffb26054068f",
     skills: ["Data Science"],
-    description: "",
-    title: "Intro to Statistics"
+    description: "Completed an AWS Reinforcement Learning Program",
+    title: "AWS Machine Learning Foundations"
   }, {
     provider: udacity,
-    issued: "2017-01-01",
+    issued: "2022-08-04",
     link: "https://udacity.com",
-    skills: ["Data Science"],
-    description: "",
-    title: "Intro to Statistics"
+    skills: ["HTML", "CSS", "UI Design"],
+    description: "Completed a basic HTML course on the box-object model, css selectors, and responsive web design.",
+    title: "Intro to HTML and CSS"
   }
 ];
 
