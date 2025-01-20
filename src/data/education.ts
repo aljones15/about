@@ -87,11 +87,67 @@ const udacityCerts: Array<Certificate> = [{
 
 const dataCampCerts: Array<Certificate> = [{
     provider: dataCamp,
-    issued: "2022-08-04",
-    link: "https://datacamp.com",
-    skills: ["HTML", "CSS", "UI Design"],
-    description: "Completed a basic HTML course on the box-object model, css selectors, and responsive web design.",
-    title: "Intro to R"
+    issued: "2016-10-16",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/92844e7c3e4b7ca53e98513b2bb5aa75cabf68b4?raw=1",
+    skills: ["Python", "Data Science"],
+    description: "Completed basic Python course with emphasis on NumPy.",
+    title: "Introduction to Python"
+}, {
+    provider: dataCamp,
+    issued: "2016-10-01",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/641a1fb702e48fce8184ae34727f74314aa7d141?raw=1",
+    skills: ["R", "Data Science"],
+    description: "Completed basic R course with emphasis on Vectors, Matrices, & Data Frames.",
+    title: "Introduction to R"
+}, {
+    provider: dataCamp,
+    issued: "2016-11-22",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/6a6805d10c7a63883892747e99acec8cc2ca8ce7?raw=1",
+    skills: ["Python", "Data Science", "Pandas"],
+    description: "Completed Python course with emphasis on Pandas & Matplotlib.",
+    title: "Intermediate Python"
+}, {
+    provider: dataCamp,
+    issued: "2016-10-12",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/cca032866fd150edccb03b19a4d397199a6fd0ad?raw=1",
+    skills: ["R", "Data Science"],
+    description: "Completed R course with emphasis on Functions and apply.",
+    title: "Intermediate R"
+}, {
+    provider: dataCamp,
+    issued: "2017-05-04",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/b1244481407a157097e355a9d279e2ab8b3c59f7?raw=1",
+    skills: ["R", "Data Science", "dplyr"],
+    description: "Completed R course in %>% dplyr.",
+    title: "Data Manipulation in R with dplyr"
+}, {
+    provider: dataCamp,
+    issued: "2016-10-25",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/546adde255b6421f6bacb412d206f59da992f071?raw=1",
+    skills: ["R", "Data Science"],
+    description: "Completed R course in Functions",
+    title: "Writing Functions in R"
+}, {
+    provider: dataCamp,
+    issued: "2017-07-11",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/51659074145a83b8a15f7fe88d35f2b076307c04?raw=1",
+    skills: ["R", "Data Science"],
+    description: "Completed R course in visualization with plot",
+    title: "Data Visualization in R"
+}, {
+    provider: dataCamp,
+    issued: "2017-07-22",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/9773fdedcdc449b1afef481bd8ece8a1b0edf47b?raw=1",
+    skills: ["R", "Data Science", "ggplot2"],
+    description: "Completed R course in ggplot2",
+    title: "Data Visualization with ggplot2 (Part 1)"
+}, {
+    provider: dataCamp,
+    issued: "2017-11-11",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/49ec6d186da9e5297ceebda813841b97fde040e3?raw=1",
+    skills: ["R", "Data Science", "Markdown"],
+    description: "Completed R course in R Markdown",
+    title: "Reporting with R Markdown"
 }];
 
 export const certificates: Array<Certificate> = [
