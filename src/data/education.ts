@@ -183,6 +183,132 @@ const dataCampCerts: Array<Certificate> = [{
     skills: ["R", "Data Science", "dplyr", "Sets"],
     description: "Completed R course in basic Set operations with dplyr.",
     title: "Joining Data in R with dplyr"
+}, {
+    provider: dataCamp,
+    issued: "2017-08-21",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/6bc3bbe9b81455536231400d6f30dab8b440257b?raw=1",
+    skills: ["R", "Data Science"],
+    description: "Completed course in Exploring Data via Charts & Summaries",
+    title: "Exploratory Data Analysis in R"
+}, {
+    provider: dataCamp,
+    issued: "2016-10-20",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/0db6b7dc5f2c19c190956e2d6d478362c4fa335d?raw=1",
+    skills: ["R", "Data Science"],
+    description: "Completed practice in intermediate R concepts.",
+    title: "Intermediate R: Practice"
+}, {
+    provider: dataCamp,
+    issued: "2017-11-24",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/08e708de498d8e225f6fdce48e8ecee86be93339?raw=1",
+    skills: ["R", "Data Science"],
+    description: "Completed course in using Data Frames in a financial context.",
+    title: "Introduction to R for Finance"
+}, {
+    provider: dataCamp,
+    issued: "2017-07-30",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/ba1a97c009ea568ee8f1a8754093469f65c1d959?raw=1",
+    skills: ["R", "Data Science", "ggplot2"],
+    description: "Completed second course in ggplot2.",
+    title: "Data Visualization with ggplot2 (Part 2)"
+}, {
+    provider: dataCamp,
+    issued: "2017-04-30",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/0edb1355b2ade43d245796f3d95a302eefcc86f1?raw=1",
+    skills: ["R", "Data Science", "Statistics", "Correlation", "Regression"],
+    description: "Completed course in correlation & regression in R.",
+    title: "Correlation and Regression in R"
+}, {
+    provider: dataCamp,
+    issued: "2017-01-12",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/f6512e0bb9e2dfe7a81a6a38e9b5627a8a78567f?raw=1",
+    skills: ["R", "Data Science", "databases"],
+    description: "Completed intermediate course in importing data in R",
+    title: "Intermediate Importing Data in R"
+}, {
+    provider: dataCamp,
+    issued: "2017-11-05",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/2567ddf6aa95c46c38bc0bf23f1143d5b0d65ccd?raw=1",
+    skills: ["R", "Data Science", "PCA", "Clustering"],
+    description: "Completed course in clustering & PCA in R.",
+    title: "Unsupervised Learning in R"
+}, {
+    provider: dataCamp,
+    issued: "2017-08-16",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/1688e4d3640e1e25bc8024b7f7a461f2f2d7c04e?raw=1",
+    skills: ["R", "Data Science", "ggplot2"],
+    description: "Completed third course in ggplot2.",
+    title: "Data Visualization with ggplot2 (Part 3)"
+}, {
+    provider: dataCamp,
+    issued: "2017-05-01",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/70e886688cc33602dc4a4965c3313c883f67accc?raw=1",
+    skills: ["R", "Data Science"],
+    description: "Completed Case Study in Data Cleaning in R",
+    title: "Importing & Cleaning Data in R: Case Studies"
+}, {
+    provider: dataCamp,
+    issued: "2017-08-30",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/2f6a6605ee6788259c4b3227a67cfe77f285945c?raw=1",
+    skills: ["R", "Data Science", "dpylr", "ggplot2"],
+    description: "Completed Case Study in Data Analysis w/ dpylr & ggplot2.",
+    title: "Case Study: Exploratory Data Analysis in R"
+}, {
+    provider: dataCamp,
+    issued: "2017-10-24",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/b5fca009dcc9cbab0cc11887af32a8828592656a?raw=1",
+    skills: ["R", "Data Science", "Statistics"],
+    description: "Completed course in Inference in R",
+    title: "Foundations of Inference in R"
+}, {
+    provider: dataCamp,
+    issued: "2018-05-14",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/d93b98d7db935720bb1de1ae25c75227af6abe9e?raw=1",
+    skills: ["R", "Data Science", "Time Series"],
+    description: "Completed course in Time Series Data in R.",
+    title: "Manipulating Time Series Data with xts and zoo in R"
+}, {
+    provider: dataCamp,
+    issued: "2017-10-03",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/2dca44017be943e80f139c01d6cb78dad5238670?raw=1",
+    skills: ["R", "Data Science", "caret"],
+    description: "Completed course using caret in R.",
+    title: "Machine Learning with caret in R"
+}, {
+    provider: dataCamp,
+    issued: "2017-12-06",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/6aabdf3842dc951bf0535e7fe7c699ee83878aaa?raw=1",
+    skills: ["R", "Data Science"],
+    description: "Completed course in using intermediate R functions for finance.",
+    title: "Intermediate R for Finance"
+}, {
+    provider: dataCamp,
+    issued: "2017-04-25",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/d3f75b8d50416bf4870ffffc0c3bac9fc3f13758?raw=1",
+    skills: ["R", "Data Science"],
+    description: "Completed course in R with Bag-of-Words.",
+    title: "Text Mining with Bag-of-Words in R"
+}, {
+    provider: dataCamp,
+    issued: "2018-08-20",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/88c6765ecdc851712fdc0150e8ad4f487dbcfab7?raw=1",
+    skills: ["R", "Data Science"],
+    description: "Completed course in importing financial data in R",
+    title: "Importing and Managing Financial Data in R"
+}, {
+    provider: dataCamp,
+    issued: "2016-12-27",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/c01d561a078f23fef8d72dfcc66be50ba406cd0a?raw=1",
+    skills: ["R", "Data Science", "Statistics", "T-Test"],
+    description: "Completed course in T-test in R",
+    title: "Intro to Statistics with R: Student's T-test"
+}, {
+    provider: dataCamp,
+    issued: "2016-11-19",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/4c6f35b0eafbd401b65c34ea7c2b1aaef7d9d04a?raw=1",
+    skills: ["R", "Data Science", "Statistics"],
+    description: "Completed course in Statistics with R.",
+    title: "Intro to Statistics with R: Introduction"
 }];
 
 export const certificates: Array<Certificate> = [
