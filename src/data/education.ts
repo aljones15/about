@@ -148,6 +148,41 @@ const dataCampCerts: Array<Certificate> = [{
     skills: ["R", "Data Science", "Markdown"],
     description: "Completed R course in R Markdown",
     title: "Reporting with R Markdown"
+}, {
+    provider: dataCamp,
+    issued: "2017-04-29",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/ad6ffb903ff32b427e71489c75c85ff41d4d8b0f?raw=1",
+    skills: ["R", "Data Science", "tidyr"],
+    description: "Completed R course in Cleaning Data.",
+    title: "Cleaning Data in R"
+}, {
+    provider: dataCamp,
+    issued: "2017-08-01",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/75a2309cabd9f7decbd57eb836c4bdcd1f2e413c?raw=1",
+    skills: ["R", "Data Science"],
+    description: "Completed Introduction to Data in R.",
+    title: "Introduction to Data in R"
+}, {
+    provider: dataCamp,
+    issued: "2016-11-05",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/713e7f46e783d4d37ee44fb380b12b8b3f7da17a?raw=1",
+    skills: ["R", "Data Science", "readr"],
+    description: "Completed course in importing data into R",
+    title: "Introduction to Importing Data in R"
+}, {
+    provider: dataCamp,
+    issued: "2017-03-14",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/698b4e45ebc2c205334ae94420c2a2a2226e4954?raw=1",
+    skills: ["R", "Data Science", "Clustering", "Regression", "Classification"],
+    description: "Finish overview of ML Clustering, Regression, & Classification.",
+    title: "Introduction to Machine Learning"
+}, {
+    provider: dataCamp,
+    issued: "2017-05-24",
+    link: "https://www.datacamp.com/statement-of-accomplishment/course/59b3390544b797f92083448d152b1efc1f41f63a?raw=1",
+    skills: ["R", "Data Science", "dplyr", "Sets"],
+    description: "Completed R course in basic Set operations with dplyr.",
+    title: "Joining Data in R with dplyr"
 }];
 
 export const certificates: Array<Certificate> = [
