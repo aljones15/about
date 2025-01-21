@@ -7,18 +7,17 @@ import MonthYear from "./monthYear";
 export default function Education({education}: {
   education: iEducation,
 }) {
-  const certs = education.certificates.slice();
-  const degrees = education.degrees.slice();
   return <div className="row education">
-    <DegreeSection degrees={degrees} />
-    <CertificateSection certificates={certs} />
+    <DegreeSection degrees={education.degrees} />
+    <CertificateSection certificates={education.certificates} />
   </div>
 }
 
-export function DegreeSection({degrees}) {
+export function DegreeSection({degrees}: {degrees: Array<Degree>}) {
+    const _degrees = degrees.slice();
     return <Card className="col-xs-4">
     <h3>Degrees</h3>
-        {degrees.map(degree => <DegreeCard
+        {_degrees.map(degree => <DegreeCard
 	  key={degree.type + degree.field}
 	  degree={degree} />)}
     </Card>
@@ -52,10 +51,12 @@ export function DegreeCard({degree}: {degree: Degree}) {
 }
 
 export function CertificateSection({certificates}) {
+  // copy latest certificates
+  const _certs = certificates.slice();
   return <Card className="col-xs-8">
     <h3>Certificates</h3>
     <div className="row">
-      {certificates.map(certificate => <CertificateCard
+      {_certs.map(certificate => <CertificateCard
         key={certificate.title + certificate.provider.name}
 	certificate={certificate} />)}
     </div>
@@ -73,8 +74,8 @@ export function CertificateCard({certificate}: {certificate: Certificate}) {
       onClick={() => setOpen(!isOpen)}
       collapseProps={{isOpen}}
       rightElement={<Tag
-        intent="success"
-	> Certificate
+        intent="success">
+	  Certificate
 	</Tag>}
       >
     <SectionCard>
