@@ -10,21 +10,18 @@ export default function Education({education}: {
   const certs = education.certificates.slice();
   const degrees = education.degrees.slice();
   return <div className="row education">
-    <Card className="col-xs-4">
+    <DegreeSection degrees={degrees} />
+    <CertificateSection certificates={certs} />
+  </div>
+}
+
+export function DegreeSection({degrees}) {
+    return <Card className="col-xs-4">
     <h3>Degrees</h3>
         {degrees.map(degree => <DegreeCard
 	  key={degree.type + degree.field}
 	  degree={degree} />)}
     </Card>
-    <Card className="col-xs-8">
-    <h3>Certificates</h3>
-    <div className="row">
-      {certs.map(certificate => <CertificateCard
-        key={certificate.title + certificate.provider.name}
-	certificate={certificate} />)}
-    </div>
-    </Card>
-  </div>
 }
 
 export function DegreeCard({degree}: {degree: Degree}) {
@@ -52,6 +49,17 @@ export function DegreeCard({degree}: {degree: Degree}) {
             </div>
         </SectionCard>
     </Section>;
+}
+
+export function CertificateSection({certificates}) {
+  return <Card className="col-xs-8">
+    <h3>Certificates</h3>
+    <div className="row">
+      {certificates.map(certificate => <CertificateCard
+        key={certificate.title + certificate.provider.name}
+	certificate={certificate} />)}
+    </div>
+    </Card>
 }
 
 export function CertificateCard({certificate}: {certificate: Certificate}) {
