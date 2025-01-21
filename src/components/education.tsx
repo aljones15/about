@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import iEducation from "../classes/Education";
 import {Certificate, Degree} from "../types";
 import {Card, CompoundTag, Tag, Section, SectionCard, Icon} from "@blueprintjs/core";
@@ -53,12 +53,15 @@ export function DegreeSection({degree}: {degree: Degree}) {
 }
 
 export function CertificateSection({certificate}: {certificate: Certificate}) {
+  const [isOpen, setOpen] = useState(false);
   return <div className="col-xs-6" style={{marginBottom: "1rem"}}>
     <Section
-      title={certificate.provider.name}
+      title={certificate.title}
       icon="confirm"
       elevation={1}
       collapsible={true}
+      onClick={() => setOpen(!isOpen)}
+      collapseProps={{isOpen}}
       rightElement={<Tag
         intent="success"
 	> Certificate
@@ -67,7 +70,7 @@ export function CertificateSection({certificate}: {certificate: Certificate}) {
     <SectionCard>
       <div className="row">
         <span className="col-xs-6">
-          {certificate.title}
+          {certificate.provider.name}
         </span>
         <span className="col-xs-6">
           <a target="_blank" rel="noreferrer" href={certificate.link}>
