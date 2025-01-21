@@ -7,17 +7,19 @@ import MonthYear from "./monthYear";
 export default function Education({education}: {
   education: iEducation,
 }) {
+  const certs = education.certificates.slice();
+  const degrees = education.degrees.slice();
   return <div className="row education">
     <Card className="col-xs-4">
     <h3>Degrees</h3>
-        {education.degrees.map(degree => <DegreeSection
+        {degrees.map(degree => <DegreeCard
 	  key={degree.type + degree.field}
 	  degree={degree} />)}
     </Card>
     <Card className="col-xs-8">
     <h3>Certificates</h3>
     <div className="row">
-      {education.certificates.map(certificate => <CertificateSection
+      {certs.map(certificate => <CertificateCard
         key={certificate.title + certificate.provider.name}
 	certificate={certificate} />)}
     </div>
@@ -25,7 +27,7 @@ export default function Education({education}: {
   </div>
 }
 
-export function DegreeSection({degree}: {degree: Degree}) {
+export function DegreeCard({degree}: {degree: Degree}) {
   return <Section
         title={degree.provider.name}
         icon="book"
@@ -52,7 +54,7 @@ export function DegreeSection({degree}: {degree: Degree}) {
     </Section>;
 }
 
-export function CertificateSection({certificate}: {certificate: Certificate}) {
+export function CertificateCard({certificate}: {certificate: Certificate}) {
   const [isOpen, setOpen] = useState(false);
   return <div className="col-xs-6" style={{marginBottom: "1rem"}}>
     <Section
