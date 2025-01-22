@@ -1,12 +1,13 @@
 import {Resume} from "../classes/Resume";
 import {
-  name, address, positions, projects
+  name, address, positions
 } from "./data-model";
 import {
   schools,
   degrees,
   certificates
 } from "./education";
+import {projects} from "./projects";
 
 export const andrewResume = new Resume({
   name,

@@ -2,8 +2,17 @@
 import {
   Address, Position,
   Framework, Tool,
-  Skill, Language, Project
+  Skill, Language
 } from '../types';
+import {
+  R, php, csharp, javascript,
+  python, typescript
+} from "./languages"
+import {
+  git, docker,
+  webdriver, appium,
+  xcode, androidStudio
+} from "./tools";
 
 export const name = "Andrew Lyle Jones";
 
@@ -17,61 +26,6 @@ export const address: Address = {
   zipcode: '22206',
   country: 'U.S.A'
 };
-
-const javascript: Language = {
-  name: 'Javascript',
-  experience: 10
-};
-
-const typescript: Language = {
-  name: 'Typescript',
-  experience: 1
-}
-
-const csharp: Language = {
-  name: 'C#',
-  experience: 3
-}
-
-const python: Language = {
-  name: 'Python',
-  experience: 1
-}
-
-const java: Language = {
-  name: 'Java',
-  experience: 1
-};
-
-const php: Language = {
-  name: 'PHP',
-  experience: 3
-}
-
-const r: Language = {
-  name: "R",
-  experience: 5
-}
-
-const git: Tool = {
-  name: 'Git',
-  experience: 10
-};
-
-const docker: Tool = {
-  name: 'Docker',
-  experience: 8
-};
-
-const webdriver: Tool = {
-  name: 'WebDriver',
-  experience: 4
-}
-
-const appium: Tool = {
-  name: 'Appium',
-  experience: 2
-}
 
 const management: Skill = {
   name: 'Management',
@@ -121,16 +75,6 @@ const capacitor: Framework = {
 const wordpress: Framework = {
   name: 'Wordpress',
   experience: 2
-}
-
-const xcode: Tool = {
-  name: 'Xcode',
-  experience: 5
-}
-
-const androidStudio: Tool = {
-  name: 'Android Studio',
-  experience: 5
 }
 
 const dbPosition: Position = {
@@ -207,7 +151,6 @@ export const positions: Array<Position> = [
 ];
 
 export const languages: Array<Language> = [
-  r, php, csharp, javascript,
+  R, php, csharp, javascript,
   python, typescript
 ];
-export const projects: Array<Project> = [];
