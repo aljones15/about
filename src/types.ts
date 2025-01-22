@@ -8,26 +8,28 @@ export interface Address {
 
 export interface Company {
   name: string;
-  homepage?: URL;
-  github?: URL | null;
-  linkedin?: URL | null;
-  about?: string | null
+  homepage?: string;
+  github?: string;
+  linkedin?: string;
+  about?: string
 }
 
 export interface Skill {
   name: string;
-  about?: string | null;
+  about?: string;
   experience: number;
 }
 
 export interface Language {
   name: string;
   experience: number;
+  homepage?: string;
 }
 
 export interface Tool {
   name: string;
   experience: number;
+  homepage?: string;
 }
 
 export interface Framework {

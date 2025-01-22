@@ -1,4 +1,3 @@
-
 import { Language } from "../types";
 
 export const javascript: Language = {
@@ -36,7 +35,13 @@ export const R: Language = {
   experience: 5
 }
 
+export const css: Language = {
+  name: "css",
+  experience: 10
+}
+
 export const languages: Array<Language> = [
   R, php, csharp, java,
-  javascript, python, typescript
+  javascript, python, typescript,
+  css
 ];

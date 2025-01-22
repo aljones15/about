@@ -25,6 +25,16 @@ export const wordpress: Framework = {
   experience: 2
 }
 
+export const jquery: Framework = {
+  name: "jQuery",
+  experience: 5
+}
+
+export const node: Framework = {
+  name: "Node.JS",
+  experience: 10
+}
+
 export const frameworks: Array<Framework> = [
-  vue, react, angular, capacitor, wordpress
+  vue, react, angular, capacitor, wordpress, jquery, node
 ];

@@ -25,7 +25,18 @@ export const endTesting: Skill = {
   experience: 5
 }
 
+export const rest: Skill = {
+  name: "REST",
+  experience: 9
+}
+
+export const apis: Skill = {
+  name: "API",
+  experience: 9
+}
+
 export const skills: Array<Skill> = [
   management, architecture,
-  unitTesting, integrationTesting, endTesting
+  unitTesting, integrationTesting, endTesting,
+  rest, apis
 ]
