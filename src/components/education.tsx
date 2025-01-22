@@ -53,6 +53,8 @@ export function DegreeCard({degree}: {degree: Degree}) {
 export function CertificateSection({certificates}) {
   // copy latest certificates
   const _certs = certificates.slice();
+  // latest first
+  _certs.sort((a,b) => new Date(b.issued).getTime() - new Date(a.issued).getTime());
   return <Card className="col-xs-8">
     <h3>Certificates</h3>
     <div className="row">
