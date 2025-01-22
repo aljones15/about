@@ -76,7 +76,17 @@ export interface Degree {
 
 export interface Project {
   name: string;
+  position?: Position;
   student: boolean;
-  link: URL,
-  languages: Set<Language>
+  lead: boolean:
+  developers: number;
+  startDate: string;
+  endDate: string;
+  description: Array<string>;
+  link?: string;
+  repo?: string;
+  languages: Array<Language>;
+  skills: Array<Skill>;
+  frameworks: Array<Framework>;
+  tools: Array<Tool>;
 }
