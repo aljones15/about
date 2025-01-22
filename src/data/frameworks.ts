@@ -25,6 +25,6 @@ export const wordpress: Framework = {
   experience: 2
 }
 
-export const frameworks: Array<Framework> = {
+export const frameworks: Array<Framework> = [
   vue, react, angular, capacitor, wordpress
-}
+];

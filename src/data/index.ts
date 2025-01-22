@@ -1,7 +1,6 @@
 import {Resume} from "../classes/Resume";
-import {
-  name, address, positions
-} from "./data-model";
+import { name, address } from "./address";
+import { positions } from "./positions";
 import {
   schools,
   degrees,

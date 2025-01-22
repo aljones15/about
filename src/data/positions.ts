@@ -1,7 +1,7 @@
 import { Position } from "../types";
 import {
-  R, php, csharp, javascript,
-  python, typescript
+  php, csharp, java,
+  javascript, python, typescript
 } from "./languages"
 import {
   git, docker,

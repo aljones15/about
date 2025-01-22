@@ -1,6 +1,6 @@
 import { Project } from "../types";
 import {
-  R, php, csharp, javascript,
+  php, csharp, javascript,
   python, typescript
 } from "./languages";
 import {bonPosition} from "./positions";
@@ -15,6 +15,9 @@ export const projects: Array<Project> = [{
   endDate: "2015-08-12",
   position: bonPosition,
   link: "https://www.converdiant.com/",
+  skills: [],
+  frameworks: [],
+  tools: [],
   description: [
     "My first official job as a junior developer was on a heat map site.",
     "Converdiant allowed an Angular service to run in the background keeping track of clicks on a page.",

@@ -1,42 +1,42 @@
 
 import { Language } from "../types";
 
-const javascript: Language = {
+export const javascript: Language = {
   name: 'Javascript',
   experience: 10
 };
 
-const typescript: Language = {
+export const typescript: Language = {
   name: 'Typescript',
   experience: 1
 }
 
-const csharp: Language = {
+export const csharp: Language = {
   name: 'C#',
   experience: 3
 }
 
-const python: Language = {
+export const python: Language = {
   name: 'Python',
   experience: 1
 }
 
-const java: Language = {
+export const java: Language = {
   name: 'Java',
   experience: 1
 };
 
-const php: Language = {
+export const php: Language = {
   name: 'PHP',
   experience: 3
 }
 
-const R: Language = {
+export const R: Language = {
   name: "R",
   experience: 5
 }
 
 export const languages: Array<Language> = [
-  R, php, csharp, javascript,
-  python, typescript
+  R, php, csharp, java,
+  javascript, python, typescript
 ];
