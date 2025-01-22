@@ -80,7 +80,7 @@ export interface Project {
   name: string;
   position?: Position;
   student: boolean;
-  lead: boolean:
+  lead: boolean;
   developers: number;
   startDate: string;
   endDate: string;

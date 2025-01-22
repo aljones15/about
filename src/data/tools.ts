@@ -66,8 +66,34 @@ export const vim: Tool = {
   homepage: "https://www.vim.org/"
 }
 
+export const mssql: Tool = {
+  name: "Microsoft SQL",
+  experience: 3,
+  homepage: "https://www.microsoft.com/en-us/sql-server"
+}
+
+export const mongoDB: Tool = {
+  name: "Mongo DB",
+  experience: 8,
+  homepage: "https://www.mongodb.com/"
+}
+
+export const mariaDB: Tool = {
+  name: "Maria DB",
+  experience: 1,
+  homepage: "https://mariadb.org/"
+}
+
+export const mysql: Tool = {
+  name: "My SQL",
+  experience: 2,
+  homepage: "https://www.mysql.com/"
+}
+
 export const tools: Array<Tool> = [
   git, docker, webdriver, appium,
   xcode, androidStudio, npm,
-  visualStudio, rollup, vim
+  visualStudio, rollup, vim,
+  mssql, mongoDB, mariaDB,
+  mysql
 ]
