@@ -1,9 +1,4 @@
-// contains types for the resume
-import {
-  Address, Position,
-  Framework, Tool,
-  Skill, Language
-} from '../types';
+import { Position } from "../types";
 import {
   R, php, csharp, javascript,
   python, typescript
@@ -13,71 +8,16 @@ import {
   webdriver, appium,
   xcode, androidStudio
 } from "./tools";
+import {
+  management, architecture,
+  unitTesting, integrationTesting, endTesting
+} from "./skills";
+import {
+  vue, react, angular,
+  capacitor, wordpress
+} from "./frameworks";
 
-export const name = "Andrew Lyle Jones";
-
-export const address: Address = {
-  street: [
-    '2300 24th Rd South',
-    'Apartment 125'
-  ],
-  city: 'Arlington',
-  state: 'Virginia',
-  zipcode: '22206',
-  country: 'U.S.A'
-};
-
-const management: Skill = {
-  name: 'Management',
-  experience: 3
-};
-
-const architecture: Skill = {
-  name: 'Architecture',
-  experience: 3
-};
-
-const unitTesting: Skill = {
-  name: 'Unit Testing',
-  experience: 10
-}
-
-const integrationTesting: Skill = {
-  name: 'Integration Testing',
-  experience: 8
-}
-
-const endTesting: Skill = {
-  name: 'End Testing',
-  experience: 5
-}
-
-const vue: Framework = {
-  name: 'Vue.JS',
-  experience: 5
-}
-
-const react: Framework = {
-  name: 'React.JS',
-  experience: 2
-}
-
-const angular: Framework = {
-  name: 'Angular.JS',
-  experience: 3
-}
-
-const capacitor: Framework = {
-  name: 'Capacitor.JS',
-  experience: 2
-}
-
-const wordpress: Framework = {
-  name: 'Wordpress',
-  experience: 2
-}
-
-const dbPosition: Position = {
+export const dbPosition: Position = {
   startDate: '2019-01-29',
   endDate: '2024-11-12',
   jobTitle: 'Fullstack Javascript Developer',
@@ -94,7 +34,7 @@ const dbPosition: Position = {
   ]
 };
 
-const upPosition: Position = {
+export const upPosition: Position = {
   startDate: '2017-01-02',
   endDate: '2019-02-01',
   jobTitle: 'Fullstack Javascript Developer',
@@ -111,7 +51,7 @@ const upPosition: Position = {
   ]
 };
 
-const agPosition: Position = {
+export const agPosition: Position = {
   startDate: '2015-11-01',
   endDate: '2017-01-02',
   jobTitle: 'Fullstack Developer',
@@ -128,7 +68,7 @@ const agPosition: Position = {
   ]
 };
 
-const bonPosition: Position = {
+export const bonPosition: Position = {
   startDate: '2014-11-01',
   endDate: '2015-11-01',
   jobTitle: 'Fullstack Developer',
@@ -148,9 +88,4 @@ const bonPosition: Position = {
 export const positions: Array<Position> = [
   dbPosition, upPosition,
   agPosition, bonPosition
-];
-
-export const languages: Array<Language> = [
-  R, php, csharp, javascript,
-  python, typescript
 ];

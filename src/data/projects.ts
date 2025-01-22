@@ -3,6 +3,7 @@ import {
   R, php, csharp, javascript,
   python, typescript
 } from "./languages";
+import {bonPosition} from "./positions";
 
 export const projects: Array<Project> = [{
   name: "Converdiant",
@@ -12,7 +13,7 @@ export const projects: Array<Project> = [{
   developers: 2,
   startDate: "2014-11-14",
   endDate: "2015-08-12",
-  position: Bonzai,
+  position: bonPosition,
   link: "https://www.converdiant.com/",
   description: [
     "My first official job as a junior developer was on a heat map site.",
