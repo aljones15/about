@@ -9,7 +9,7 @@ interface NodeEnv {
   development: boolean;
 }
 
-const webpackConfig = (env: NodeEnv): Configuration => ({
+const webpackConfig = (env: NodeEnv) => ({
     entry: "./src/index.tsx",
     ...(env.production || !env.development ? {} : {devtool: "eval-source-map"}),
     resolve: {
@@ -21,17 +21,24 @@ const webpackConfig = (env: NodeEnv): Configuration => ({
     },
     module: {
         rules: [
-            {
-                test: /\.tsx?$/,
-                loader: "ts-loader",
-                options: {
-                    transpileOnly: true
-                },
-                exclude: /dist/
-            }, {
-              test: /\.css$/i,
-	      use: ['style-loader', 'css-loader']
-            }
+	  {
+            test: /\.(png|jpe?g|gif)$/,
+	    loader: "file-loader"
+          },
+          {
+            test: /\.tsx?$/,
+            loader: "ts-loader",
+            options: {
+              transpileOnly: true
+            },
+            exclude: /dist/
+          }, {
+            test: /\.css$/i,
+	    use: ['style-loader', 'css-loader']
+          }, {
+            test: /\.sass$/i,
+	    use: ['style-loader', 'css-loader', 'sass-loader']
+          }
         ]
     },
     plugins: [
@@ -45,7 +52,10 @@ const webpackConfig = (env: NodeEnv): Configuration => ({
         }),
         new ForkTsCheckerWebpackPlugin(),
         new ESLintPlugin({files: "./src/**/*.{ts,tsx,js,jsx}"})
-    ]
+    ],
+    devServer: {
+      historyApiFallback: true,
+    }
 });
 
 export default webpackConfig;

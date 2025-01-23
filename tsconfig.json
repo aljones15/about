@@ -4,6 +4,11 @@
     "noImplicitAny": false,
     "module": "commonjs",
     "target": "es5",
+    "typeRoots": [
+      "node_modules/@types",
+      "src/types.ts",
+      "src/images.d.ts"
+    ],
     "lib": [
       "esnext",
       "dom",

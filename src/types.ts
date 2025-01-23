@@ -8,24 +8,31 @@ export interface Address {
 
 export interface Company {
   name: string;
-  homepage: URL;
-  github: URL | null;
-  linkedin: URL | null;
-  about: string | null
+  homepage?: string;
+  github?: string;
+  linkedin?: string;
+  about?: string
 }
 
 export interface Skill {
   name: string;
-  about: string | null;
+  about?: string;
   experience: number;
 }
 
 export interface Language {
   name: string;
   experience: number;
+  homepage?: string;
 }
 
 export interface Tool {
+  name: string;
+  experience: number;
+  homepage?: string;
+}
+
+export interface Framework {
   name: string;
   experience: number;
 }
@@ -36,13 +43,52 @@ export interface Position {
   jobTitle: string;
   company: Company;
   languages: Array<Language>;
+  frameworks: Array<Framework>;
   skills: Array<Skill>;
-  tootls: Array<Tool>;
+  tools: Array<Tool>;
+  duties: Array<string>;
 }
 
-export interface Eduction {
+export interface School {
   name: string;
   startDate: string;
+  link: string;
   endDate: string | null;
   location: string;
+  accomplishments: Array<string>;
+}
+
+export interface Certificate {
+  provider: School;
+  issued: string;
+  link: string;
+  skills: Array<string>;
+  description: string;
+  title: string;
+}
+
+export interface Degree {
+  field: string;
+  type: string;
+  description: string;
+  skills: Array<string>;
+  provider: School;
+  issued: string;
+}
+
+export interface Project {
+  name: string;
+  position?: Position;
+  student: boolean;
+  lead: boolean;
+  developers: number;
+  startDate: string;
+  endDate: string;
+  description: Array<string>;
+  link?: string;
+  repo?: string;
+  languages: Array<Language>;
+  skills: Array<Skill>;
+  frameworks: Array<Framework>;
+  tools: Array<Tool>;
 }
