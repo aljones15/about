@@ -11,12 +11,12 @@ import {
 import {
   git, docker, webdriver, appium,
   xcode, androidStudio, webpack,
-  rollup, npm, visualStudio
+  rollup, npm, visualStudio, vim
 } from "./tools";
 import {
   management, architecture,
   unitTesting, integrationTesting, endTesting,
-  rest, apis
+  rest, apis, plugins
 } from "./skills";
 
 import {
@@ -61,5 +61,23 @@ export const projects: Array<Project> = [{
     "Mecenant is mass communication tool using sendgrid for students",
     "It was written as an MVC app in C# using jQuery and sendgrid",
     "This was my first time actually designing a fullstack system"
+  ]
+}, {
+  name: "Sunbirdie",
+  languages: [php, javascript, css],
+  frameworks: [wordpress],
+  tools: [vim, git],
+  skills: [plugins],
+  lead: false,
+  student: false,
+  developers: 2,
+  startDate: "",
+  endDate: "",
+  position: agPosition,
+  link: "https://sunbirdie.se",
+  description: [
+    "Sunbirdie is a booking site for golf lesson",
+    "It was written in Wordpress and WooCommerce using plugins",
+    "The site included booking and payment APIs using Brain Tree"
   ]
 }];

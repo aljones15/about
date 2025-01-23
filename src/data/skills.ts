@@ -35,8 +35,13 @@ export const apis: Skill = {
   experience: 9
 }
 
+export const plugins: Skill = {
+  name: "Plugins",
+  experience: 9
+}
+
 export const skills: Array<Skill> = [
   management, architecture,
   unitTesting, integrationTesting, endTesting,
-  rest, apis
+  rest, apis, plugins
 ]
