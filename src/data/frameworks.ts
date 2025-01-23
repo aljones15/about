@@ -35,6 +35,11 @@ export const node: Framework = {
   experience: 10
 }
 
+export const express: Framework = {
+  name: "Express.JS",
+  experience: 8
+}
+
 export const frameworks: Array<Framework> = [
-  vue, react, angular, capacitor, wordpress, jquery, node
+  vue, react, angular, capacitor, express, wordpress, jquery, node
 ];

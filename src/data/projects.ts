@@ -5,12 +5,12 @@ import {
 } from "./languages";
 import {
   vue, react, angular,
-  capacitor, wordpress,
+  capacitor, express, wordpress,
   jquery, node
 } from "./frameworks";
 import {
-  git, docker, webdriver, appium,
-  xcode, androidStudio, webpack,
+  git, docker, eslint, webdriver, appium,
+  xcode, androidStudio, webpack, mongoDB,
   rollup, npm, visualStudio, vim
 } from "./tools";
 import {
@@ -21,7 +21,9 @@ import {
 
 import {
   agPosition,
-  bonPosition
+  bonPosition,
+  dbPosition,
+  upPosition
 } from "./positions";
 
 export const projects: Array<Project> = [{
@@ -34,7 +36,7 @@ export const projects: Array<Project> = [{
   endDate: "2015-08-12",
   position: bonPosition,
   link: "https://www.converdiant.com/",
-  skills: [],
+  skills: [rest],
   frameworks: [angular],
   tools: [npm, visualStudio, git],
   description: [
@@ -79,5 +81,23 @@ export const projects: Array<Project> = [{
     "Sunbirdie is a booking site for golf lesson",
     "It was written in Wordpress and WooCommerce using plugins",
     "The site included booking and payment APIs using Brain Tree"
+  ]
+}, {
+  name: "Kanban Zone",
+  languages: [javascript, css],
+  frameworks: [react, express, node],
+  tools: [vim, git, eslint, webpack, mongoDB],
+  skills: [architecture, rest],
+  lead: false,
+  student: false,
+  developers: 3,
+  startDate: "",
+  endDate: "",
+  position: upPosition,
+  link: "https://kanbanzone.com",
+  description: [
+    "Kanban Zone is a zone for Kanban related management.",
+    "It is written in React with Express and MongoDB.",
+    "I did a lot of integration tests especially with Mongo DB."
   ]
 }];

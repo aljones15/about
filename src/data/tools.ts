@@ -90,10 +90,15 @@ export const mysql: Tool = {
   homepage: "https://www.mysql.com/"
 }
 
+export const eslint: Tool = {
+  name: "Eslint",
+  experience: 10,
+  homepage: "https://eslint.org/"
+}
+
 export const tools: Array<Tool> = [
-  git, docker, webdriver, appium,
-  xcode, androidStudio, npm,
-  visualStudio, rollup, vim,
-  mssql, mongoDB, mariaDB,
-  mysql
+  git, docker, eslint, webdriver,
+  appium, xcode, androidStudio, npm,
+  visualStudio, rollup, vim, mssql,
+  mongoDB, mariaDB, mysql
 ]
