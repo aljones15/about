@@ -40,8 +40,13 @@ export const css: Language = {
   experience: 10
 }
 
+export const jsonld: Language = {
+  name: "JSON-LD",
+  experience: 5
+}
+
 export const languages: Array<Language> = [
-  R, php, csharp, java,
+  R, php, csharp, java, jsonld,
   javascript, python, typescript,
   css
 ];

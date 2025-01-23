@@ -1,6 +1,6 @@
 import { Project } from "../types";
 import {
-  php, css, csharp,
+  php, css, csharp, jsonld,
   javascript, python, typescript
 } from "./languages";
 import {
@@ -36,8 +36,8 @@ export const projects: Array<Project> = [{
   endDate: "2015-08-12",
   position: bonPosition,
   link: "https://www.converdiant.com/",
-  skills: [rest],
-  frameworks: [angular],
+  skills: [rest, endTesting],
+  frameworks: [angular, webdriver],
   tools: [npm, visualStudio, git],
   description: [
     "My first official job as a junior developer was on a heat map site.",
@@ -51,7 +51,7 @@ export const projects: Array<Project> = [{
   languages: [javascript, csharp],
   frameworks: [jquery],
   tools: [npm, visualStudio, git],
-  skills: [architecture, rest, apis],
+  skills: [architecture, rest, apis, unitTesting, integrationTesting],
   lead: false,
   student: false,
   developers: 2,
@@ -87,7 +87,7 @@ export const projects: Array<Project> = [{
   languages: [javascript, css],
   frameworks: [react, express, node],
   tools: [vim, git, eslint, webpack, mongoDB],
-  skills: [architecture, rest],
+  skills: [architecture, rest, integrationTesting],
   lead: false,
   student: false,
   developers: 3,
@@ -99,5 +99,21 @@ export const projects: Array<Project> = [{
     "Kanban Zone is a zone for Kanban related management.",
     "It is written in React with Express and MongoDB.",
     "I did a lot of integration tests especially with Mongo DB."
+  ]
+}, {
+  name: "TruAge",
+  languages: [javascript, css, jsonld],
+  frameworks: [vue, express, node, capacitor],
+  tools: [vim, git, eslint, webpack, mongoDB, androidStudio, xcode],
+  skills: [architecture, rest],
+  lead: false,
+  student: false,
+  developers: 5,
+  startDate: "",
+  endDate: "",
+  position: dbPosition,
+  link: "https://www.mytruage.org/",
+  description: [
+    "TruAge is an age verification application."
   ]
 }];
