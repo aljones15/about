@@ -1,6 +1,18 @@
 import React from "react";
 import {Card, Tree, TreeNodeInfo} from "@blueprintjs/core";
 
+type NodePath = number[];
+
+type ProjectAction =
+  {
+    type: "EXPAND_PROJECT";
+    payload: {
+      path: NodePath;
+      isExpanded: boolean
+    }
+  }
+
+
 export default function Projects({projects}) {
   const initialNodes = projects.map(project => ({
     id: project.name,
@@ -19,6 +31,7 @@ export default function Projects({projects}) {
   </Card>
 }
 
-function projectReducer(state: TreeNodeInfo[]) {
+function projectReducer(state: TreeNodeInfo[], action: ProjectAction) {
+console.log({action});
   return state;
 }
