@@ -34,7 +34,7 @@ export default function Projects({projects}) {
         id: d,
 	key: d,
 	label: d,
-	icon: "circle"
+	icon: "symbol-circle"
       }))
     }]
   }));

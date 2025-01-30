@@ -116,4 +116,23 @@ export const projects: Array<Project> = [{
   description: [
     "TruAge is an age verification application."
   ]
+}, {
+  name: "Dine in the Dark",
+  languages: [javascript, php, css],
+  frameworks: [react, node],
+  tools: [vim, git, webpack],
+  skills: [architecture, rest],
+  lead: true,
+  developers: 1,
+  student: false,
+  startDate: "",
+  endDate: "",
+  position: upPosition,
+  link: "https://www.didexperience.com/",
+  description: [
+    "My first React website.",
+    "Dine in the Dark is a restaurant that employs the blind",
+    "The CSS flashlight feature was accomplished using an oversized box and CSS animations",
+    "The backend is a PHP instance using Laravel"
+  ]
 }];
