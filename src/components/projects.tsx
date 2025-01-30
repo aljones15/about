@@ -8,14 +8,12 @@ type ProjectAction =
     type: "EXPAND_PROJECT";
     payload: {
       path: NodePath;
-      isExpanded: boolean
     }
   }
   | {
     type: "COLLAPSE_PROJECT";
     payload: {
       path: NodePath;
-      isExpanded: boolean
     }
   };
 
@@ -31,7 +29,13 @@ export default function Projects({projects}) {
       key: project.description.join(""),
       isExpanded: false,
       label: "Description",
-      icon: "comment"
+      icon: "comment",
+      childNodes: project.description.map(d => ({
+        id: d,
+	key: d,
+	label: d,
+	icon: "circle"
+      }))
     }]
   }));
   const [nodes, dispatch] = React.useReducer(projectReducer, initialNodes);
@@ -39,17 +43,11 @@ export default function Projects({projects}) {
     <Tree
       onNodeExpand={(n, path: NodePath) => dispatch({
         type: "EXPAND_PROJECT",
-	payload: {
-	  isExpanded: true,
-	  path
-	}
+	payload:{path}
       })}
       onNodeCollapse={(n, path: NodePath) => dispatch({
         type: "COLLAPSE_PROJECT",
-	payload: {
-          isExpanded: false,
-	  path
-        }
+	payload: {path}
       })}
       contents={nodes} />
   </Card>
