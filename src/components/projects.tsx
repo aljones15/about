@@ -60,9 +60,13 @@ function projectReducer(state: TreeNodeInfo[], action: ProjectAction) {
   const newState = structuredClone(state);
   switch(action.type) {
     case "COLLAPSE_PROJECT": {
+      const node = visitor(newState, action.payload.path);
+      node.isExpanded = false;
       return newState;
     }
     case "EXPAND_PROJECT": {
+      const node = visitor(newState, action.payload.path);
+      node.isExpanded = true;
       return newState;
     }
     default:
@@ -71,5 +75,10 @@ function projectReducer(state: TreeNodeInfo[], action: ProjectAction) {
 }
 
 function visitor(state: TreeNodeInfo[], path: NodePath) {
-
+  const [head, ...tail] = path;
+  const node = state[head];
+  if(tail.length <= 0) {
+    return node;
+  }
+  return visitor(node.childNodes, tail);
 }
