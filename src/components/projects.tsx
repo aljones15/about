@@ -27,7 +27,7 @@ export default function Projects({projects}) {
     childNodes: [{
       id: "project-description",
       key: project.description.join(""),
-      isExpanded: false,
+      isExpanded: true,
       label: "Description",
       icon: "comment",
       childNodes: project.description.map(d => ({
@@ -39,8 +39,14 @@ export default function Projects({projects}) {
     }, {
       id: "project-skills",
       key: project.name + project.skills.join(""),
-      isExpanded: true,
-      label: <Breadcrumbs items={project.skills.map(skill => ({text: skill.name}))} />,
+      isExpanded: false,
+      label: "Skills",
+      childNodes: project.skills.map(skill => ({
+        id: project.name + skill.name,
+	key: project.name + skill.name,
+	label: skill.name,
+	icon: "symbol-circle"
+      })),
       icon: "exchange"
     }]
   }));
