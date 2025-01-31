@@ -18,7 +18,7 @@ type ProjectAction =
   };
 
 export default function Projects({projects}) {
-  const initialNodes = projects.map(project => ({
+  const initialNodes = structuredClone(projects).map(project => ({
     id: project.name,
     key: project.name,
     isExpanded: true,
@@ -61,7 +61,7 @@ export default function Projects({projects}) {
 
 function projectReducer(state: TreeNodeInfo[], action: ProjectAction) {
   // copy the state
-  const newState = structuredClone(state);
+  const newState = [...state];
   switch(action.type) {
     case "COLLAPSE_PROJECT": {
       const node = visitor(newState, action.payload.path);
