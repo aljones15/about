@@ -4,7 +4,6 @@ import {iPosition} from '../types';
 import MonthYear from "./monthYear";
 import Years from "./Years";
 
-const callHeight = "8rem";
 export default function PositionsElement({positions}: {positions: Array<iPosition>}) {
   return <div>
     {positions.map(p => <PositionElement key={p.startDate} position={p} />)}
@@ -14,7 +13,7 @@ export default function PositionsElement({positions}: {positions: Array<iPositio
 function PositionElement({position}: {position: iPosition}): React.ReactElement {
   return  <CardList bordered={true} compact={true}>
     <Card compact={true}>
-      <Callout className="col-xs-3" intent="primary" style={{height: callHeight}}>
+      <Callout className="col-xs-3 position-call-height" intent="primary">
         <H5>
 	    {position.company.name}
 	    </H5>
@@ -25,7 +24,7 @@ function PositionElement({position}: {position: iPosition}): React.ReactElement 
 	    <br />
         <Years from={position.startDate} to={position.endDate} />
       </Callout>
-      <Callout style={{height: callHeight}}>
+      <Callout className="position-call-height">
         <H5>Languages</H5>
 	{position.languages.map(l => <Tag
 	  round={true}
@@ -41,7 +40,7 @@ function PositionElement({position}: {position: iPosition}): React.ReactElement 
 	    {t.name}
 	  </Tag>)}
       </Callout>
-      <Callout style={{height: callHeight}}>
+      <Callout className="position-call-height">
         <H5>Frameworks</H5>
 	{position.frameworks.map(l => <Tag
 	  style={{background: Colors.BLUE3}}

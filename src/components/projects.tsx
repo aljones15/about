@@ -1,5 +1,6 @@
 import React from "react";
 import {Breadcrumbs, Card, Tree, TreeNodeInfo} from "@blueprintjs/core";
+import { Skill } from "./skills";
 
 type NodePath = number[];
 
@@ -41,12 +42,14 @@ export default function Projects({projects}) {
       key: project.name + project.skills.join(""),
       isExpanded: false,
       label: "Skills",
-      childNodes: project.skills.map(skill => ({
-        id: project.name + skill.name,
-	key: project.name + skill.name,
-	label: skill.name,
-	icon: "symbol-circle"
-      })),
+      childNodes: [{
+        id: project.name + "skills",
+	key: project.name + "skills",
+	label: <div>{project.skills.map(skill => <Skill
+	  key={project.name + skill.name}
+	  skill={skill} />
+	)}</div>
+      }],
       icon: "exchange"
     }]
   }));

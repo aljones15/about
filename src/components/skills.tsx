@@ -1,5 +1,5 @@
 import React from "react";
-import {Callout, CardList, Card, Colors} from "@blueprintjs/core";
+import {Callout, CardList, Card, Colors, Tag} from "@blueprintjs/core";
 import {iPosition, iSkill} from "../types";
 
 export default function Skills({positions}: {positions: Array<iPosition>}) {
@@ -43,5 +43,5 @@ function SkillSection({
 }
 
 export function Skill({skill}: {skill: iSkill}) {
-
+  return <Tag className="margin-lr-1px" round={true}>{skill.name}</Tag>
 }
