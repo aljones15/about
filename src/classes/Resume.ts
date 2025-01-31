@@ -1,14 +1,14 @@
-import {Address, Certificate, Degree, Position, Project, School} from '../types';
+import {iAddress, iCertificate, iDegree, iPosition, iProject, iSchool} from '../types';
 import Education from "./Education";
 
 export class Resume {
   name: string;
-  address: Address;
-  positions: Array<Position>;
-  schools: Array<School>;
-  certificates: Array<Certificate>;
-  projects: Array<Project>;
-  degrees: Array<Degree>;
+  address: iAddress;
+  positions: Array<iPosition>;
+  schools: Array<iSchool>;
+  certificates: Array<iCertificate>;
+  projects: Array<iProject>;
+  degrees: Array<iDegree>;
   education: Education;
   constructor({
     name, address, degrees, positions,

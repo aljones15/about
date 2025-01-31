@@ -1,17 +1,17 @@
 import React from "react";
 import {Card, CardList, Callout, Colors, Tag, H5, H6, UL} from "@blueprintjs/core";
-import {Position} from '../types';
+import {iPosition} from '../types';
 import MonthYear from "./monthYear";
 import Years from "./Years";
 
 const callHeight = "8rem";
-export default function PositionsElement({positions}: {positions: Array<Position>}) {
+export default function PositionsElement({positions}: {positions: Array<iPosition>}) {
   return <div>
     {positions.map(p => <PositionElement key={p.startDate} position={p} />)}
   </div>
 }
 
-function PositionElement({position}: {position: Position}): React.ReactElement {
+function PositionElement({position}: {position: iPosition}): React.ReactElement {
   return  <CardList bordered={true} compact={true}>
     <Card compact={true}>
       <Callout className="col-xs-3" intent="primary" style={{height: callHeight}}>

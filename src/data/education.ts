@@ -1,6 +1,6 @@
-import {Certificate, Degree, School} from '../types';
+import {iCertificate, iDegree, iSchool} from '../types';
 
-const rollinsCollege: School = {
+const rollinsCollege: iSchool = {
   name: "Rollins College",
   link: "https://www.rollins.edu/",
   startDate: "1997-04-01",
@@ -9,7 +9,7 @@ const rollinsCollege: School = {
   accomplishments: []
 };
 
-const georgeMasonUniversity: School = {
+const georgeMasonUniversity: iSchool = {
   name: "George Mason University",
   link: "https://www.gmu.edu/",
   startDate: "2019-09-01",
@@ -20,7 +20,7 @@ const georgeMasonUniversity: School = {
   ]
 }
 
-const dataCamp: School = {
+const dataCamp: iSchool = {
   name: "Data Camp",
   link: "https://datacamp.com/",
   location: "Online",
@@ -31,7 +31,7 @@ const dataCamp: School = {
   ]
 }
 
-const udacity: School = {
+const udacity: iSchool = {
   name: "Udacity",
   link: "https://udacity.com",
   location: "Online",
@@ -42,7 +42,7 @@ const udacity: School = {
   ]
 }
 
-const bachelorsEnglish: Degree = {
+const bachelorsEnglish: iDegree = {
   field: "English Literature",
   type: "Bachelors in the Arts",
   provider: rollinsCollege,
@@ -52,16 +52,16 @@ const bachelorsEnglish: Degree = {
 };
 
 
-export const schools: Array<School> = [
+export const schools: Array<iSchool> = [
   dataCamp,
   georgeMasonUniversity,
   rollinsCollege,
   udacity
 ];
 
-export const degrees: Array<Degree> = [bachelorsEnglish];
+export const degrees: Array<iDegree> = [bachelorsEnglish];
 
-const udacityCerts: Array<Certificate> = [{
+const udacityCerts: Array<iCertificate> = [{
     provider: udacity,
     issued: "2017-01-01",
     link: "https://udacity.com",
@@ -85,7 +85,7 @@ const udacityCerts: Array<Certificate> = [{
   }
 ];
 
-const dataCampCerts: Array<Certificate> = [{
+const dataCampCerts: Array<iCertificate> = [{
     provider: dataCamp,
     issued: "2016-10-16",
     link: "https://www.datacamp.com/statement-of-accomplishment/course/92844e7c3e4b7ca53e98513b2bb5aa75cabf68b4?raw=1",
@@ -311,6 +311,6 @@ const dataCampCerts: Array<Certificate> = [{
     title: "Intro to Statistics with R: Introduction"
 }];
 
-export const certificates: Array<Certificate> = [
+export const certificates: Array<iCertificate> = [
   ...udacityCerts, ...dataCampCerts
 ];

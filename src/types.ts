@@ -1,4 +1,4 @@
-export interface Address {
+export interface iAddress {
   street: Array<string>;
   city: string;
   state: string;
@@ -6,7 +6,7 @@ export interface Address {
   country: string;
 }
 
-export interface Company {
+export interface iCompany {
   name: string;
   homepage?: string;
   github?: string;
@@ -14,42 +14,42 @@ export interface Company {
   about?: string
 }
 
-export interface Skill {
+export interface iSkill {
   name: string;
   about?: string;
   experience: number;
 }
 
-export interface Language {
+export interface iLanguage {
   name: string;
   experience: number;
   homepage?: string;
 }
 
-export interface Tool {
+export interface iTool {
   name: string;
   experience: number;
   homepage?: string;
 }
 
-export interface Framework {
+export interface iFramework {
   name: string;
   experience: number;
 }
 
-export interface Position {
+export interface iPosition {
   startDate: string;
   endDate: string | null;
   jobTitle: string;
-  company: Company;
-  languages: Array<Language>;
-  frameworks: Array<Framework>;
-  skills: Array<Skill>;
-  tools: Array<Tool>;
+  company: iCompany;
+  languages: Array<iLanguage>;
+  frameworks: Array<iFramework>;
+  skills: Array<iSkill>;
+  tools: Array<iTool>;
   duties: Array<string>;
 }
 
-export interface School {
+export interface iSchool {
   name: string;
   startDate: string;
   link: string;
@@ -58,8 +58,8 @@ export interface School {
   accomplishments: Array<string>;
 }
 
-export interface Certificate {
-  provider: School;
+export interface iCertificate {
+  provider: iSchool;
   issued: string;
   link: string;
   skills: Array<string>;
@@ -67,18 +67,18 @@ export interface Certificate {
   title: string;
 }
 
-export interface Degree {
+export interface iDegree {
   field: string;
   type: string;
   description: string;
   skills: Array<string>;
-  provider: School;
+  provider: iSchool;
   issued: string;
 }
 
-export interface Project {
+export interface iProject {
   name: string;
-  position?: Position;
+  position?: iPosition;
   student: boolean;
   lead: boolean;
   developers: number;
@@ -87,8 +87,8 @@ export interface Project {
   description: Array<string>;
   link?: string;
   repo?: string;
-  languages: Array<Language>;
-  skills: Array<Skill>;
-  frameworks: Array<Framework>;
-  tools: Array<Tool>;
+  languages: Array<iLanguage>;
+  skills: Array<iSkill>;
+  frameworks: Array<iFramework>;
+  tools: Array<iTool>;
 }

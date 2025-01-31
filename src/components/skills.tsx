@@ -1,8 +1,8 @@
 import React from "react";
 import {Callout, CardList, Card, Colors} from "@blueprintjs/core";
-import {Position} from "../types";
+import {iPosition, iSkill} from "../types";
 
-export default function Skills({positions}: {positions: Array<Position>}) {
+export default function Skills({positions}: {positions: Array<iPosition>}) {
   const languages = new Set(positions.flatMap(p => p.languages));
   const skills = new Set(positions.flatMap(p => p.skills));
   const tools = new Set(positions.flatMap(p => p.tools));
@@ -40,4 +40,8 @@ function SkillSection({
 	</Callout>
       </Card>)}
   </CardList>
+}
+
+export function Skill({skill}: {skill: iSkill}) {
+
 }

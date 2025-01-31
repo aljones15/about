@@ -36,6 +36,12 @@ export default function Projects({projects}) {
 	label: d,
 	icon: "symbol-circle"
       }))
+    }, {
+      id: "project-skills",
+      key: project.name + project.skills.join(""),
+      isExpanded: true,
+      label: <div>{project.skills.map(skill => <span>{skill.name}</span>)}</div>,
+      icon: "comment"
     }]
   }));
   const [nodes, dispatch] = React.useReducer(projectReducer, initialNodes);
@@ -72,6 +78,7 @@ function projectReducer(state: TreeNodeInfo[], action: ProjectAction) {
   }
 }
 
+// visits nodes and returns the final node in the NodePath
 function visitor(state: TreeNodeInfo[], path: NodePath) {
   const [head, ...tail] = path;
   const node = state[head];

@@ -1,4 +1,4 @@
-import { Project } from "../types";
+import { iProject } from "../types";
 import {
   php, css, csharp, jsonld,
   javascript, python, typescript
@@ -26,7 +26,7 @@ import {
   upPosition
 } from "./positions";
 
-export const projects: Array<Project> = [{
+export const projects: Array<iProject> = [{
   name: "Converdiant",
   languages: [javascript, csharp, css],
   student: false,
