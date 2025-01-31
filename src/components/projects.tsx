@@ -1,5 +1,5 @@
 import React from "react";
-import {Card, Tree, TreeNodeInfo} from "@blueprintjs/core";
+import {Breadcrumbs, Card, Tree, TreeNodeInfo} from "@blueprintjs/core";
 
 type NodePath = number[];
 
@@ -40,8 +40,8 @@ export default function Projects({projects}) {
       id: "project-skills",
       key: project.name + project.skills.join(""),
       isExpanded: true,
-      label: <div>{project.skills.map(skill => <span>{skill.name}</span>)}</div>,
-      icon: "comment"
+      label: <Breadcrumbs items={project.skills.map(skill => ({text: skill.name}))} />,
+      icon: "exchange"
     }]
   }));
   const [nodes, dispatch] = React.useReducer(projectReducer, initialNodes);
