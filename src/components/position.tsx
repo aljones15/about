@@ -4,6 +4,7 @@ import {iPosition} from '../types';
 import MonthYear from "./monthYear";
 import Years from "./Years";
 import Tool from "./tools";
+import Language from "./languages";
 
 export default function PositionsElement({positions}: {positions: Array<iPosition>}) {
   return <div className="positions">
@@ -27,12 +28,7 @@ function PositionElement({position}: {position: iPosition}): React.ReactElement 
       </Callout>
       <Callout className="position-call-height">
         <H5>Languages</H5>
-	{position.languages.map(l => <Tag
-	  round={true}
-	  style={{background: Colors.BLUE3}}
-	  key={l.name}>
-	    {l.name}
-	  </Tag>)}
+	{position.languages.map(l => <Language key={l.name} language={l} />)}
         <H5>Tools</H5>
           {position.tools.map(t => <Tool key={t.name} tool={t} />)}
       </Callout>
