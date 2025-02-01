@@ -3,9 +3,10 @@ import {Card, CardList, Callout, Colors, Tag, H5, H6, UL} from "@blueprintjs/cor
 import {iPosition} from '../types';
 import MonthYear from "./monthYear";
 import Years from "./Years";
+import Tool from "./tools";
 
 export default function PositionsElement({positions}: {positions: Array<iPosition>}) {
-  return <div>
+  return <div className="positions">
     {positions.map(p => <PositionElement key={p.startDate} position={p} />)}
   </div>
 }
@@ -33,12 +34,7 @@ function PositionElement({position}: {position: iPosition}): React.ReactElement 
 	    {l.name}
 	  </Tag>)}
         <H5>Tools</H5>
-          {position.tools.map(t => <Tag
-	    round={true}
-	    style={{background: Colors.GOLD2}}
-	    key={t.name}>
-	    {t.name}
-	  </Tag>)}
+          {position.tools.map(t => <Tool key={t.name} tool={t} />)}
       </Callout>
       <Callout className="position-call-height">
         <H5>Frameworks</H5>
