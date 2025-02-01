@@ -9,7 +9,7 @@ const Sections = {
   Education: '/education',
   Positions: '/positions',
   Projects: '/projects',
-  Skills: '/skills'
+  Abilities: '/abilities'
 }
 
 export default function ResumeContainer({resume}: {resume: Resume}) {
@@ -28,11 +28,11 @@ export default function ResumeContainer({resume}: {resume: Resume}) {
 	active={location.pathname === Sections.Positions}
 	icon="inherited-group" />
       <Button
-        onClick={() => navigate(Sections.Skills)}
+        onClick={() => navigate(Sections.Abilities)}
         className="bp5-minimal"
 	outlined={true}
-	text="Skills"
-	active={location.pathname === Sections.Skills}
+	text="Abilities"
+	active={location.pathname === Sections.Abilities}
 	icon="lightbulb"/>
       <Button
         onClick={() => navigate(Sections.Projects)}
