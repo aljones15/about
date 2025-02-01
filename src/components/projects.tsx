@@ -77,11 +77,24 @@ export default function Projects({projects}) {
       icon: "translate",
       childNodes: [{
         id: project.name + "languages",
-	key: project.name + "languages",
+	key: project.name + project.languages.join(""),
 	label: <div>{project.languages.map(l => <Language
 	  key={project.name + l.name}
 	  language={l} />
 	)}</div>
+      }]
+    }, {
+      id: project.name + "tools",
+      key: project.name + project.tools.join(""),
+      isExpanded: false,
+      label: "Tools",
+      icon: "wrench",
+      childNodes: [{
+        id: project.name + "tools",
+	key: project.name + project.tools.join(""),
+	label: <div>
+	  {project.tools.map(t => <Tool key={project.name + t.name} tool={t} />)}
+	</div>
       }]
     }
   ]
