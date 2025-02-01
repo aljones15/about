@@ -8,13 +8,13 @@ import Tool from "./tools";
 import Language from "./languages";
 import {Skill} from "./skills";
 
-export default function PositionsElement({positions}: {positions: Array<iPosition>}) {
+export default function Positions({positions}: {positions: Array<iPosition>}) {
   return <div className="positions">
-    {positions.map(p => <PositionElement key={p.startDate} position={p} />)}
+    {positions.map(p => <Position key={p.startDate} position={p} />)}
   </div>
 }
 
-function PositionElement({position}: {position: iPosition}): React.ReactElement {
+function Position({position}: {position: iPosition}): React.ReactElement {
   return  <CardList bordered={true} compact={true}>
     <Card compact={true}>
       <Callout className="col-xs-3 position-call-height" intent="primary">
