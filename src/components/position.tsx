@@ -1,5 +1,6 @@
 import React from "react";
 import {Card, CardList, Callout, Colors, Tag, H5, H6, UL} from "@blueprintjs/core";
+import { Framework } from "./frameworks";
 import {iPosition} from '../types';
 import MonthYear from "./monthYear";
 import Years from "./Years";
@@ -35,11 +36,7 @@ function PositionElement({position}: {position: iPosition}): React.ReactElement 
       </Callout>
       <Callout className="position-call-height">
         <H5>Frameworks</H5>
-	{position.frameworks.map(l => <Tag
-	  style={{background: Colors.BLUE3}}
-	  key={l.name}>
-	  {l.name}
-	</Tag>)}
+	{position.frameworks.map(f => <Framework framework={f} key={f.name} />)}
         <H5>Skills</H5>
           {position.skills.map(s => <Skill key={s.name} skill={s} />)}
       </Callout>
