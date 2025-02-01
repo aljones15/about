@@ -92,3 +92,6 @@ export interface iProject {
   frameworks: Array<iFramework>;
   tools: Array<iTool>;
 }
+
+export type iAbility = iLanguage|iSkill|iFramework|iTool;
+export type iAbilities = iAbility[];

@@ -4,6 +4,7 @@ import { Framework } from "./frameworks";
 import { Language } from "./languages";
 import { Skill } from "./skills";
 import { Tool } from "./tools";
+import { iAbilities } from "../types";
 
 type NodePath = number[];
 
@@ -45,6 +46,7 @@ export default function Projects({projects}) {
       key: project.name + project.skills.join(""),
       isExpanded: false,
       label: "Skills",
+      icon: "exchange",
       childNodes: [{
         id: project.name + "skills",
 	key: project.name + "skills",
@@ -52,13 +54,13 @@ export default function Projects({projects}) {
 	  key={project.name + skill.name}
 	  skill={skill} />
 	)}</div>
-      }],
-      icon: "exchange"
+      }]
     }, {
       id: "project-frameworks",
       key: project.name + project.frameworks.join(""),
       isExpanded: false,
       label: "Frameworks",
+      icon: "package",
       childNodes: [{
         id: project.name + "fws",
 	key: project.name + "fws",
@@ -66,9 +68,23 @@ export default function Projects({projects}) {
 	  key={project.name + fw.name}
 	  framework={fw} />
 	)}</div>
-      }],
-      icon: "package"
-    }]
+      }]
+    }, {
+      id: project.name + "languages",
+      key: project.name + project.languages.join(""),
+      isExpanded: false,
+      label: "Languages",
+      icon: "translate",
+      childNodes: [{
+        id: project.name + "languages",
+	key: project.name + "languages",
+	label: <div>{project.languages.map(l => <Language
+	  key={project.name + l.name}
+	  language={l} />
+	)}</div>
+      }]
+    }
+  ]
   }));
   const [nodes, dispatch] = React.useReducer(projectReducer, initialNodes);
   return <Card className="projects">
