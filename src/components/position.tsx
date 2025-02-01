@@ -4,9 +4,9 @@ import { Framework } from "./frameworks";
 import {iPosition} from '../types';
 import MonthYear from "./monthYear";
 import Years from "./Years";
-import Tool from "./tools";
-import Language from "./languages";
-import {Skill} from "./skills";
+import { Tool } from "./tools";
+import { Language } from "./languages";
+import { Skill } from "./skills";
 
 export default function Positions({positions}: {positions: Array<iPosition>}) {
   return <div className="positions">

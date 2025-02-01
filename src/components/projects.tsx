@@ -1,6 +1,9 @@
 import React from "react";
 import {Breadcrumbs, Card, Tree, TreeNodeInfo} from "@blueprintjs/core";
+import { Framework } from "./frameworks";
+import { Language } from "./languages";
 import { Skill } from "./skills";
+import { Tool } from "./tools";
 
 type NodePath = number[];
 
@@ -24,7 +27,7 @@ export default function Projects({projects}) {
     key: project.name,
     isExpanded: true,
     label: project.name,
-    icon: "archive",
+    icon: "application",
     childNodes: [{
       id: "project-description",
       key: project.description.join(""),
@@ -51,6 +54,20 @@ export default function Projects({projects}) {
 	)}</div>
       }],
       icon: "exchange"
+    }, {
+      id: "project-frameworks",
+      key: project.name + project.frameworks.join(""),
+      isExpanded: false,
+      label: "Frameworks",
+      childNodes: [{
+        id: project.name + "fws",
+	key: project.name + "fws",
+	label: <div>{project.frameworks.map(fw => <Framework
+	  key={project.name + fw.name}
+	  framework={fw} />
+	)}</div>
+      }],
+      icon: "package"
     }]
   }));
   const [nodes, dispatch] = React.useReducer(projectReducer, initialNodes);
