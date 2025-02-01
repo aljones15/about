@@ -5,6 +5,7 @@ import MonthYear from "./monthYear";
 import Years from "./Years";
 import Tool from "./tools";
 import Language from "./languages";
+import {Skill} from "./skills";
 
 export default function PositionsElement({positions}: {positions: Array<iPosition>}) {
   return <div className="positions">
@@ -40,11 +41,7 @@ function PositionElement({position}: {position: iPosition}): React.ReactElement 
 	  {l.name}
 	</Tag>)}
         <H5>Skills</H5>
-          {position.skills.map(t => <Tag
-	    style={{background: Colors.GOLD2}}
-	    key={t.name}>
-	    {t.name}
-	  </Tag>)}
+          {position.skills.map(s => <Skill key={s.name} skill={s} />)}
       </Callout>
     </Card>
     <Card compact={true}>

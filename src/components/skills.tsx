@@ -43,5 +43,10 @@ function SkillSection({
 }
 
 export function Skill({skill}: {skill: iSkill}) {
-  return <Tag className="margin-lr-1px" round={true}>{skill.name}</Tag>
+  return <Tag
+    className="margin-lr-1px"
+    style={{background: Colors.GOLD2}}
+    round={false}>
+    {skill.name}
+  </Tag>
 }
