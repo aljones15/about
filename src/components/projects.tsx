@@ -23,10 +23,10 @@ type ProjectAction =
 
 export default function Projects({projects}) {
   return <div className="row">
-    {projects.map(project => <div className="col-xs-6">
-      <ProjectCard
-        key={project.name}
-        project={project} />
+    {projects.map(project => <div
+      key={project.name}
+      className="col-xs-6">
+        <ProjectCard project={project} />
     </div>)}
   </div>
 }
