@@ -22,16 +22,18 @@ type ProjectAction =
   };
 
 export default function Projects({projects}) {
-  return <div>
-    {projects.map(project => <ProjectCard
-      key={project.name}
-      project={project} />)}
+  return <div className="row">
+    {projects.map(project => <div className="col-xs-6">
+      <ProjectCard
+        key={project.name}
+        project={project} />
+    </div>)}
   </div>
 }
 
 function ProjectCard({project}) {
   const [nodes, dispatch] = React.useReducer(projectReducer, [createInitialNode(project)]);
-  return <Card className="projects">
+  return  <Card className="projects">
     <Tree
       onNodeExpand={(n, path: NodePath) => dispatch({
         type: "EXPAND_PROJECT",
