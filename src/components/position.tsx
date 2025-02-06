@@ -1,5 +1,5 @@
 import React from "react";
-import {Card, CardList, Callout, Colors, Tag, H5, H6, UL} from "@blueprintjs/core";
+import {Card, CardList, Callout, H5, H6, UL} from "@blueprintjs/core";
 import { Framework } from "./frameworks";
 import {iPosition} from '../types';
 import MonthYear from "./monthYear";
