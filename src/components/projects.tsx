@@ -1,5 +1,5 @@
 import React from "react";
-import {Breadcrumbs, Card, Tree, TreeNodeInfo} from "@blueprintjs/core";
+import { Breadcrumbs, Card, Tree, TreeNodeInfo } from "@blueprintjs/core";
 import { Framework } from "./frameworks";
 import { Language } from "./languages";
 import { Skill } from "./skills";
