@@ -25,7 +25,7 @@ export default function Projects({projects}) {
   return <div className="row">
     {projects.map(project => <div
       key={project.name}
-      className="col-xs-6">
+      className="col-xs-6 full-height">
         <ProjectCard project={project} />
     </div>)}
   </div>
