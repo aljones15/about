@@ -1,6 +1,11 @@
 import React from "react";
-import {Callout, CardList, Card, Colors, Tag} from "@blueprintjs/core";
-import {iPosition, iSkill} from "../types";
+import {
+  Callout, CardList,
+  Card, Colors,
+  PanelStack2, type PanelProps,
+  Tag
+ } from "@blueprintjs/core";
+import {iPosition, iSkill, iFramework, iLanguage, iTool} from "../types";
 
 export default function Skills({positions}: {positions: Array<iPosition>}) {
   const languages = new Set(positions.flatMap(p => p.languages));
@@ -12,7 +17,22 @@ export default function Skills({positions}: {positions: Array<iPosition>}) {
     <SkillSection entries={skills} title="Skills" color="GOLD"/>
     <SkillSection entries={languages} title="Languages" color="BLUE"/>
     <SkillSection entries={tools} title="Tools" color="RED"/>
+    <AbilityPanel<iFramework> entries={frameworks} title="Frameworks" color="GREEN" />
   </Card>
+}
+
+interface iPanel<T> {
+  entries: Set<T>;
+  title: string;
+  color: string;
+};
+
+function AbilityPanel<T>({
+  entries,
+  title,
+  color
+}: iPanel<T>) {
+  return <PanelStack2 />
 }
 
 function SkillSection({
