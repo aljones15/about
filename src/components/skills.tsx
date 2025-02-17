@@ -19,7 +19,7 @@ export default function Skills({positions}: {positions: Array<iPosition>}) {
     <SkillSection entries={skills} title="Skills" color="GOLD"/>
     <SkillSection entries={languages} title="Languages" color="BLUE"/>
     <SkillSection entries={tools} title="Tools" color="RED"/>
-    <AbilityPanel<iFramework> entries={frameworks} title="Frameworks" color="GREEN" />
+    <AbilityPanels<iFramework> entries={frameworks} title="Frameworks" color="GREEN" />
   </Card>
 }
 
@@ -29,14 +29,18 @@ interface iPanel<T extends object>{
   color: string;
 };
 
-function AbilityPanel<T extends object>({
+const AbilityPanel: React.FC<PanelProps<object>> = props => {
+  return (<div>Panel Test</div>);
+}
+
+function AbilityPanels<T extends object>({
   entries,
   title,
   color
 }: iPanel<T>) {
   const panels: Panel<object>[] = [...entries].map((entry: T, index: number): Panel<object> => ({
-    props: entry,
-    renderPanel: <div>Panel Test</div>,
+    props: {entry},
+    renderPanel: AbilityPanel,
     title: "Panel Test"
   }));
   return <PanelStack2 stack={panels}/>
