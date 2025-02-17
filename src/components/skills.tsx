@@ -38,13 +38,18 @@ function AbilityPanels<T extends object>({
   title,
   color
 }: iPanel<T>) {
-  const panels: Panel<object>[] = [...entries].map(
+  const [initialPanel, ...stack]: Panel<object>[] = [...entries].map(
     (entry: T, index: number): Panel<object> => ({
     props: {entry},
     renderPanel: AbilityPanel,
-    title: "Panel Test"
+    title: `Panel Test ${index}`
   }));
-  return <PanelStack2 showPanelHeader={true} initialPanel={panels[0]} stack={panels}/>
+console.log({initialPanel, stack});
+  return <PanelStack2
+    showPanelHeader={true}
+    initialPanel={initialPanel}
+    stack={stack}
+  />
 }
 
 function SkillSection({
