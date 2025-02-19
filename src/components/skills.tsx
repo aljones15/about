@@ -1,7 +1,9 @@
 import React from "react";
 import {
+  Button,
   Callout, CardList,
   Card, Colors,
+  PanelStack,
   PanelStack2,
   type Panel,
   type PanelProps,
@@ -9,17 +11,31 @@ import {
  } from "@blueprintjs/core";
 import {iAbility, iPosition, iSkill, iFramework, iLanguage, iTool} from "../types";
 
+const testPanel: Panel<object> = {
+  props: {foo: true},
+  renderPanel: (props) => {
+    return <Button text="Text" />
+  },
+  title: "I.P.",
+  htmlTitle: "Test Panel"
+}
+
+const testComp = () => <Button text="TEST" />
+
 export default function Skills({positions}: {positions: Array<iPosition>}) {
   const languages = new Set(positions.flatMap(p => p.languages));
   const skills = new Set(positions.flatMap(p => p.skills));
   const tools = new Set(positions.flatMap(p => p.tools));
   const frameworks = new Set(positions.flatMap(p => p.frameworks));
+  const [stack, updateStack] = React.useState([testPanel]);
   return <Card compact={true} className="row">
+  {/*
     <SkillSection entries={frameworks} title="Frameworks" color="GREEN"/>
     <SkillSection entries={skills} title="Skills" color="GOLD"/>
     <SkillSection entries={languages} title="Languages" color="BLUE"/>
     <SkillSection entries={tools} title="Tools" color="RED"/>
-    <AbilityPanels<iFramework> entries={frameworks} title="Frameworks" color="GREEN" />
+  */}
+  <PanelStack2 stack={stack} showPanelHeader={false} renderActivePanelOnly={true} />
   </Card>
 }
 
@@ -33,6 +49,8 @@ const AbilityPanel: React.FC<PanelProps<object>> = props => {
   return (<div>Panel Test</div>);
 }
 
+
+
 function AbilityPanels<T extends object>({
   entries,
   title,
@@ -44,10 +62,9 @@ function AbilityPanels<T extends object>({
     renderPanel: AbilityPanel,
     title: `Panel Test ${index}`
   }));
-console.log({initialPanel, stack});
   return <PanelStack2
     showPanelHeader={true}
-    initialPanel={initialPanel}
+    initialPanel={testPanel}
     stack={stack}
   />
 }
