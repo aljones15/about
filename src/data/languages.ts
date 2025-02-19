@@ -36,7 +36,7 @@ export const R: iLanguage = {
 }
 
 export const css: iLanguage = {
-  name: "css",
+  name: "CSS",
   experience: 10
 }
 
