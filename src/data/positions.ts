@@ -1,4 +1,4 @@
-import { Position } from "../types";
+import { iPosition } from "../types";
 import {
   php, csharp, java,
   javascript, python, typescript
@@ -17,7 +17,7 @@ import {
   capacitor, wordpress
 } from "./frameworks";
 
-export const dbPosition: Position = {
+export const dbPosition: iPosition = {
   startDate: '2019-01-29',
   endDate: '2024-11-12',
   jobTitle: 'Fullstack Javascript Developer',
@@ -34,7 +34,7 @@ export const dbPosition: Position = {
   ]
 };
 
-export const upPosition: Position = {
+export const upPosition: iPosition = {
   startDate: '2017-01-02',
   endDate: '2019-02-01',
   jobTitle: 'Fullstack Javascript Developer',
@@ -51,7 +51,7 @@ export const upPosition: Position = {
   ]
 };
 
-export const agPosition: Position = {
+export const agPosition: iPosition = {
   startDate: '2015-11-01',
   endDate: '2017-01-02',
   jobTitle: 'Fullstack Developer',
@@ -68,7 +68,7 @@ export const agPosition: Position = {
   ]
 };
 
-export const bonPosition: Position = {
+export const bonPosition: iPosition = {
   startDate: '2014-11-01',
   endDate: '2015-11-01',
   jobTitle: 'Fullstack Developer',
@@ -85,7 +85,7 @@ export const bonPosition: Position = {
   ]
 };
 
-export const positions: Array<Position> = [
+export const positions: Array<iPosition> = [
   dbPosition, upPosition,
   agPosition, bonPosition
 ];

@@ -1,8 +1,16 @@
 import React from "react";
-import {Callout, CardList, Card, Colors} from "@blueprintjs/core";
-import {Position} from "../types";
+import {
+  Callout, CardList,
+  Card, Colors,
+  PanelStack,
+  PanelStack2,
+  type Panel,
+  type PanelProps,
+  Tag
+ } from "@blueprintjs/core";
+import {iAbility, iPosition, iSkill, iFramework, iLanguage, iTool} from "../types";
 
-export default function Skills({positions}: {positions: Array<Position>}) {
+export default function Skills({positions}: {positions: Array<iPosition>}) {
   const languages = new Set(positions.flatMap(p => p.languages));
   const skills = new Set(positions.flatMap(p => p.skills));
   const tools = new Set(positions.flatMap(p => p.tools));
@@ -40,4 +48,13 @@ function SkillSection({
 	</Callout>
       </Card>)}
   </CardList>
+}
+
+export function Skill({skill}: {skill: iSkill}) {
+  return <Tag
+    className="margin-lr-1px"
+    style={{background: Colors.GOLD2}}
+    round={false}>
+    {skill.name}
+  </Tag>
 }

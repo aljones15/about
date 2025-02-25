@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import iEducation from "../classes/Education";
-import {Certificate, Degree} from "../types";
+import {iCertificate, iDegree} from "../types";
 import {Card, CompoundTag, Tag, Section, SectionCard, Icon} from "@blueprintjs/core";
 import MonthYear from "./monthYear";
 
@@ -13,7 +13,7 @@ export default function Education({education}: {
   </div>
 }
 
-export function DegreeSection({degrees}: {degrees: Array<Degree>}) {
+export function DegreeSection({degrees}: {degrees: Array<iDegree>}) {
     const _degrees = degrees.slice();
     return <Card className="col-xs-4">
     <h3>Degrees</h3>
@@ -23,7 +23,7 @@ export function DegreeSection({degrees}: {degrees: Array<Degree>}) {
     </Card>
 }
 
-export function DegreeCard({degree}: {degree: Degree}) {
+export function DegreeCard({degree}: {degree: iDegree}) {
   return <Section
         title={degree.provider.name}
         icon="book"
@@ -50,7 +50,7 @@ export function DegreeCard({degree}: {degree: Degree}) {
     </Section>;
 }
 
-export function CertificateSection({certificates}) {
+export function CertificateSection({certificates}: {certificates: iCertificate[]}) {
   // copy latest certificates
   const _certs = certificates.slice();
   // latest first
@@ -65,7 +65,7 @@ export function CertificateSection({certificates}) {
     </Card>
 }
 
-export function CertificateCard({certificate}: {certificate: Certificate}) {
+export function CertificateCard({certificate}: {certificate: iCertificate}) {
   const [isOpen, setOpen] = useState(false);
   return <div className="col-xs-6" style={{marginBottom: "1rem"}}>
     <Section
