@@ -24,6 +24,18 @@ export default function Skills({positions}: {positions: Array<iPosition>}) {
       title="Languages"
       color="RED"
       entries={positions.flatMap(p => p.languages)} />
+    <AbilityStack<iSkill>
+      title="Skills"
+      color="RED"
+      entries={positions.flatMap(p => p.skills)} />
+    <AbilityStack<iTool>
+      title="Tools"
+      color="RED"
+      entries={positions.flatMap(p => p.tools)} />
+    <AbilityStack<iFramework>
+      title="Frameworks"
+      color="RED"
+      entries={positions.flatMap(p => p.frameworks)} />
   </Card>
 }
 
@@ -42,7 +54,7 @@ function AbilityStack<T extends iAbility>({
     }
   }));
   const [abilityStack, updateStack] = React.useState(abilityPanels);
-  return <PanelStack2 className="col-xs-12 position-call-height" stack={abilityStack} />
+  return <PanelStack2 className="col-xs-3 position-call-height" stack={abilityStack} />
 }
 
 function SkillSection({
