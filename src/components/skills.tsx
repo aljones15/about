@@ -15,7 +15,7 @@ export default function Skills({positions}: {positions: Array<iPosition>}) {
   const skills = new Set(positions.flatMap(p => p.skills));
   const tools = new Set(positions.flatMap(p => p.tools));
   const frameworks = new Set(positions.flatMap(p => p.frameworks));
-  return <Card compact={true} className="row full-height">
+  return <Card compact={true} className="row">
     <SkillSection entries={frameworks} title="Frameworks" color="GREEN"/>
     <SkillSection entries={skills} title="Skills" color="GOLD"/>
     <SkillSection entries={languages} title="Languages" color="BLUE"/>
@@ -38,7 +38,7 @@ function AbilityStack<T extends iAbility>({
 }) {
   const abilityPanels = entries.map(e => ({
     renderPanel(props) {
-      return <div>{e.name}</div>
+      return <div className="ability-panel">{e.name}</div>
     }
   }));
   const [abilityStack, updateStack] = React.useState(abilityPanels);
