@@ -10,27 +10,39 @@ import {
 import {iAbility, iPosition, iSkill, iFramework, iLanguage, iTool} from "../types";
 import { PanelStack2Example } from "./panelStack";
 
-const panel1 = props => <div className="panel-1-test">Panel 1</div>
-const panel2 = props => <div className="panel-2-test">Panel 2</div>
-
-const panels = [panel1, panel2].map(renderPanel => ({
-  renderPanel
-  })
-);
-
 export default function Skills({positions}: {positions: Array<iPosition>}) {
   const languages = new Set(positions.flatMap(p => p.languages));
   const skills = new Set(positions.flatMap(p => p.skills));
   const tools = new Set(positions.flatMap(p => p.tools));
   const frameworks = new Set(positions.flatMap(p => p.frameworks));
-  const [stack, updateStack] = React.useState(panels);
   return <Card compact={true} className="row full-height">
     <SkillSection entries={frameworks} title="Frameworks" color="GREEN"/>
     <SkillSection entries={skills} title="Skills" color="GOLD"/>
     <SkillSection entries={languages} title="Languages" color="BLUE"/>
     <SkillSection entries={tools} title="Tools" color="RED"/>
-    <PanelStack2 className="col-xs-3 position-call-height" stack={stack} />
+    <AbilityStack<iLanguage>
+      title="Languages"
+      color="RED"
+      entries={positions.flatMap(p => p.languages)} />
   </Card>
+}
+
+function AbilityStack<T extends iAbility>({
+  entries,
+  title,
+  color
+}: {
+  color: string;
+  entries: T[];
+  title: string;
+}) {
+  const abilityPanels = entries.map(e => ({
+    renderPanel(props) {
+      return <div>{e.name}</div>
+    }
+  }));
+  const [abilityStack, updateStack] = React.useState(abilityPanels);
+  return <PanelStack2 className="col-xs-12 position-call-height" stack={abilityStack} />
 }
 
 function SkillSection({
