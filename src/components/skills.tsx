@@ -51,7 +51,10 @@ function AbilityStack<T extends iAbility>({
   const abilityPanels = entries.map(e => ({
     renderPanel(props) {
       return <div className="ability-panel">{e.name}</div>
-    }
+    },
+    title: <Callout
+      style={{background: Colors[`${color}5`] + '80'}}
+      title={title} />
   }));
   const [abilityStack, updateStack] = React.useState(abilityPanels);
   return <PanelStack2 className="col-xs-3 position-call-height" stack={abilityStack} />
