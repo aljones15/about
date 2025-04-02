@@ -52,12 +52,18 @@ function AbilityStack<T extends iAbility>({
     renderPanel(props) {
       return <div className="ability-panel">{e.name}</div>
     },
-    title: <Callout
-      style={{background: Colors[`${color}5`] + '80'}}
-      title={title} />
+    title: <div>{title}</div>
   }));
   const [abilityStack, updateStack] = React.useState(abilityPanels);
-  return <PanelStack2 className="col-xs-3 position-call-height" stack={abilityStack} />
+  const handleClose = () => {
+    const [head, ...tail] = abilityStack;
+    updateStack([...tail, head]);
+  };
+  return <PanelStack2
+    className="col-xs-3 position-call-height"
+    onClose={handleClose}
+    showPanelHeader={true}
+    stack={abilityStack} />
 }
 
 function SkillSection({
