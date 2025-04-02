@@ -50,9 +50,14 @@ function AbilityStack<T extends iAbility>({
 }) {
   const abilityPanels = entries.map(e => ({
     renderPanel(props) {
-      return <div className="ability-panel">{e.name}</div>
+      return <div className="ability-panel">
+        <h4 className="text-center" style={{color: Colors.BLACK}}>
+	  {title}
+	</h4>
+        {e.name}
+      </div>
     },
-    title: <div>{title}</div>
+    title
   }));
   const [abilityStack, updateStack] = React.useState(abilityPanels);
   const handleClose = () => {
@@ -62,7 +67,7 @@ function AbilityStack<T extends iAbility>({
   return <PanelStack2
     className="col-xs-3 position-call-height"
     onClose={handleClose}
-    showPanelHeader={true}
+    showPanelHeader={false}
     stack={abilityStack} />
 }
 
