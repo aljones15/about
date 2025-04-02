@@ -6,7 +6,7 @@ import MonthYear from "./monthYear";
 import Years from "./Years";
 import { Tool } from "./tools";
 import { Language } from "./languages";
-import { Skill } from "./skills";
+import { Skill } from "./abilities";
 
 export default function Positions({positions}: {positions: Array<iPosition>}) {
   return <div className="positions">

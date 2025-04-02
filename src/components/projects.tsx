@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Tree, TreeNodeInfo } from "@blueprintjs/core";
 import { Framework } from "./frameworks";
 import { Language } from "./languages";
-import { Skill } from "./skills";
+import { Skill } from "./abilities";
 import { Tool } from "./tools";
 import { iProject } from "../types";
 
