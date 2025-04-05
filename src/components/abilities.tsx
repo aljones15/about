@@ -51,6 +51,7 @@ function AbilityStack<T extends iAbility>({
   const abilityPanels = entries.map(e => ({
     renderPanel(props) {
       return <div className="ability-panel">
+        <div onClick={props.closePanel}>Next</div>
         <h4 className="text-center" style={{color: Colors.BLACK}}>
 	  {title}
 	</h4>
