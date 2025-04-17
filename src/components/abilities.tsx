@@ -48,9 +48,15 @@ function AbilityStack<T extends iAbility>({
   entries: T[];
   title: string;
 }) {
-  const abilityPanels = entries.map(e => ({
+  const abilityPanels = entries.map((e, index) => ({
     renderPanel(props) {
+      const next = entries[index + 1] ?
+        entries[index + 1] : entries[0];
+      const previous = entries[index - 1] ?
+        entries[index - 1] : entries[entries.length - 1];
       return <div className="ability-panel">
+        {next && <div>Next:{next.name}</div>}
+        {previous && <div>PREVIOUS:{previous.name}</div>}
         <div onClick={props.closePanel}>Next</div>
         <h4 className="text-center" style={{color: Colors.BLACK}}>
 	  {title}
