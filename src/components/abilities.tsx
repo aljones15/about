@@ -16,10 +16,6 @@ export default function Skills({positions}: {positions: Array<iPosition>}) {
   const tools = new Set(positions.flatMap(p => p.tools));
   const frameworks = new Set(positions.flatMap(p => p.frameworks));
   return <Card compact={true} className="row">
-    <SkillSection entries={frameworks} title="Frameworks" color="GREEN"/>
-    <SkillSection entries={skills} title="Skills" color="GOLD"/>
-    <SkillSection entries={languages} title="Languages" color="BLUE"/>
-    <SkillSection entries={tools} title="Tools" color="RED"/>
     <AbilityStack<iLanguage>
       title="Languages"
       color="RED"
@@ -55,8 +51,10 @@ function AbilityStack<T extends iAbility>({
       const previous = entries[index - 1] ?
         entries[index - 1] : entries[entries.length - 1];
       return <div className="ability-panel">
-        {next && <div>Next:{next.name}</div>}
-        {previous && <div>PREVIOUS:{previous.name}</div>}
+        <div className="row">
+          <span className="col-xs-6">Next:{next.name}</span>
+          <span className="col-xs-6">PREVIOUS:{previous.name}</span>
+	</div>
         <div onClick={props.closePanel}>Next</div>
         <h4 className="text-center" style={{color: Colors.BLACK}}>
 	  {title}
@@ -72,7 +70,7 @@ function AbilityStack<T extends iAbility>({
     updateStack([...tail, head]);
   };
   return <PanelStack2
-    className="col-xs-3 position-call-height"
+    className="col-xs-3 v-height-100"
     onClose={handleClose}
     showPanelHeader={false}
     stack={abilityStack} />
