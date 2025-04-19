@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Alignment,
   Button,
   Callout, CardList,
   Card, Colors,
@@ -61,11 +62,15 @@ function AbilityStack<T extends iAbility>({
       return <Card className="ability-panel">
         <div className="row">
 	  <Button
+	    alignText={Alignment.LEFT}
 	    className="col-xs-6"
+	    minimal={true}
 	    icon="arrow-left"
 	    onClick={() => props.openPanel(previous)}
 	    text={previous.props.entry.name} />
 	  <Button
+	    alignText={Alignment.RIGHT}
+	    minimal={true}
 	    className="col-xs-6"
 	    rightIcon="arrow-right"
 	    text={next.props.entry.name}
