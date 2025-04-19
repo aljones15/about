@@ -59,17 +59,23 @@ function AbilityStack<T extends iAbility>({
 }) {
   const abilityPanels = entries.map((e, index) => ({
     renderPanel(props) {
-      const next = entries[index + 1] ?
-        entries[index + directions.forward] : entries[0];
-      const previous = entries[index - 1] ?
-        entries[index + directions.backward] : entries[entries.length - 1];
+      const nextIndex = abilityPanels[index + directions.forward] ?
+        index + directions.forward : 0;
+      const next = abilityPanels[nextIndex];
+      const previousIndex = abilityPanels[index + directions.backward] ?
+        index + directions.backward : entries.length - 1;
+      const previous = abilityPanels[previousIndex];
       return <div className="ability-panel">
         <div className="row">
-          <span className="col-xs-6" onClick={() => props.closePanel(directions.backward)}>
-	    {previous.name}
+          <span
+	    className="col-xs-6"
+	    onClick={() => props.openPanel(previous)}>
+	    {previous.props.entry.name}
 	  </span>
-	  <span className="col-xs-6" onClick={() => props.closePanel(directions.forward)}>
-	    {next.name}
+	  <span
+	    className="col-xs-6"
+	    onClick={() => props.openPanel(next)}>
+	    {next.props.entry.name}
 	  </span>
 	</div>
         <h4 className="text-center" style={{color: Colors.BLACK}}>
@@ -78,20 +84,22 @@ function AbilityStack<T extends iAbility>({
         {e.name}
       </div>
     },
-    title
+    title,
+    props: {entry: e, index}
   }));
   const [abilityStack, updateStack] = React.useState(abilityPanels);
-  const handleClose = (direction) => {
-    if(direction === directions.forward) {
+  const handleClose = (params) => {
       const [head, ...tail] = abilityStack;
-      updateStack([...tail, head]);      
-    }
-    const tail = abilityStack.pop();
-    updateStack([tail, ...abilityStack]);
+      updateStack([...tail, head]);
   };
+  const handleOpen = (nextPanel) => {
+    const nextStack = abilityStack.filter(p => p != nextPanel);
+    updateStack([nextPanel, ...nextStack]);
+  }
   return <PanelStack2
     className="col-xs-3 v-height-100"
     onClose={handleClose}
+    onOpen={handleOpen}
     showPanelHeader={false}
     stack={abilityStack} />
 }
