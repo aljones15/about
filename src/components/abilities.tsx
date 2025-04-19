@@ -43,6 +43,11 @@ function AbilityArrow({
 
 }
 
+const directions = {
+  forward: 1,
+  backward: -1
+};
+
 function AbilityStack<T extends iAbility>({
   entries,
   title,
@@ -55,15 +60,18 @@ function AbilityStack<T extends iAbility>({
   const abilityPanels = entries.map((e, index) => ({
     renderPanel(props) {
       const next = entries[index + 1] ?
-        entries[index + 1] : entries[0];
+        entries[index + directions.forward] : entries[0];
       const previous = entries[index - 1] ?
-        entries[index - 1] : entries[entries.length - 1];
+        entries[index + directions.backward] : entries[entries.length - 1];
       return <div className="ability-panel">
         <div className="row">
-          <span className="col-xs-6">{previous.name}</span>
-	  <span className="col-xs-6">{next.name}</span>
+          <span className="col-xs-6" onClick={() => props.closePanel(directions.backward)}>
+	    {previous.name}
+	  </span>
+	  <span className="col-xs-6" onClick={() => props.closePanel(directions.forward)}>
+	    {next.name}
+	  </span>
 	</div>
-        <div onClick={props.closePanel}>Next</div>
         <h4 className="text-center" style={{color: Colors.BLACK}}>
 	  {title}
 	</h4>
@@ -73,9 +81,13 @@ function AbilityStack<T extends iAbility>({
     title
   }));
   const [abilityStack, updateStack] = React.useState(abilityPanels);
-  const handleClose = () => {
-    const [head, ...tail] = abilityStack;
-    updateStack([...tail, head]);
+  const handleClose = (direction) => {
+    if(direction === directions.forward) {
+      const [head, ...tail] = abilityStack;
+      updateStack([...tail, head]);      
+    }
+    const tail = abilityStack.pop();
+    updateStack([tail, ...abilityStack]);
   };
   return <PanelStack2
     className="col-xs-3 v-height-100"
