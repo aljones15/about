@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Button,
   Callout, CardList,
   Card, Colors,
   PanelStack2,
@@ -35,14 +36,6 @@ export default function Skills({positions}: {positions: Array<iPosition>}) {
   </Card>
 }
 
-function AbilityArrow({
-  name,
-  index,
-  direction
-}) {
-
-}
-
 const directions = {
   forward: 1,
   backward: -1
@@ -65,24 +58,24 @@ function AbilityStack<T extends iAbility>({
       const previousIndex = abilityPanels[index + directions.backward] ?
         index + directions.backward : entries.length - 1;
       const previous = abilityPanels[previousIndex];
-      return <div className="ability-panel">
+      return <Card className="ability-panel">
         <div className="row">
-          <span
+	  <Button
 	    className="col-xs-6"
-	    onClick={() => props.openPanel(previous)}>
-	    {previous.props.entry.name}
-	  </span>
-	  <span
+	    icon="arrow-left"
+	    onClick={() => props.openPanel(previous)}
+	    text={previous.props.entry.name} />
+	  <Button
 	    className="col-xs-6"
-	    onClick={() => props.openPanel(next)}>
-	    {next.props.entry.name}
-	  </span>
+	    rightIcon="arrow-right"
+	    text={next.props.entry.name}
+	    onClick={() => props.openPanel(next)} />
 	</div>
         <h4 className="text-center" style={{color: Colors.BLACK}}>
 	  {title}
 	</h4>
         {e.name}
-      </div>
+      </Card>
     },
     title,
     props: {entry: e, index}
