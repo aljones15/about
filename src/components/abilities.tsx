@@ -93,8 +93,8 @@ function AbilityStack<T extends iAbility>({
       updateStack([...tail, head]);
   };
   const handleOpen = (nextPanel) => {
-    const nextStack = abilityStack.filter(p => p != nextPanel);
-    updateStack([nextPanel, ...nextStack]);
+    const rest = abilityStack.filter(p => p != nextPanel);
+    updateStack([...rest, nextPanel]);
   }
   return <PanelStack2
     className="col-xs-3 v-height-100"
