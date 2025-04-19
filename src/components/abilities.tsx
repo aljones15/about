@@ -19,20 +19,28 @@ export default function Skills({positions}: {positions: Array<iPosition>}) {
     <AbilityStack<iLanguage>
       title="Languages"
       color="RED"
-      entries={positions.flatMap(p => p.languages)} />
+      entries={[...languages]} />
     <AbilityStack<iSkill>
       title="Skills"
       color="RED"
-      entries={positions.flatMap(p => p.skills)} />
+      entries={[...skills]} />
     <AbilityStack<iTool>
       title="Tools"
       color="RED"
-      entries={positions.flatMap(p => p.tools)} />
+      entries={[...tools]} />
     <AbilityStack<iFramework>
       title="Frameworks"
       color="RED"
-      entries={positions.flatMap(p => p.frameworks)} />
+      entries={[...frameworks]} />
   </Card>
+}
+
+function AbilityArrow({
+  name,
+  index,
+  direction
+}) {
+
 }
 
 function AbilityStack<T extends iAbility>({
@@ -52,8 +60,8 @@ function AbilityStack<T extends iAbility>({
         entries[index - 1] : entries[entries.length - 1];
       return <div className="ability-panel">
         <div className="row">
-          <span className="col-xs-6">Next:{next.name}</span>
-          <span className="col-xs-6">PREVIOUS:{previous.name}</span>
+          <span className="col-xs-6">{previous.name}</span>
+	  <span className="col-xs-6">{next.name}</span>
 	</div>
         <div onClick={props.closePanel}>Next</div>
         <h4 className="text-center" style={{color: Colors.BLACK}}>
