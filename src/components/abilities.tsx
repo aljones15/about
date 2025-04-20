@@ -79,7 +79,9 @@ function AbilityStack<T extends iAbility>({
         <h4 className="text-center" style={{color: Colors.BLACK}}>
 	  {title}
 	</h4>
+	<Card>
         {e.name}
+	</Card>
       </Card>
     },
     title,
