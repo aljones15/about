@@ -1,6 +1,10 @@
-import {iAbility} from "../types";
+import {iAbility2} from "../types";
 
 
-export class Tool implements iAbility{
-  
+export class Tool implements iAbility2{
+    name: string;
+    experience: number;
+    constructor() {
+
+    }
 }

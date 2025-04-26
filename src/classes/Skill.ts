@@ -1,6 +1,8 @@
-import {iAbility} from '../types';
+import {iAbility2} from '../types';
 
-export class Skill implements iAbility {
+export class Skill implements iAbility2 {
+    name: string;
+    experience: number;
     constructor() {
 
     }

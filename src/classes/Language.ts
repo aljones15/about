@@ -1,6 +1,6 @@
-import {iAbility, iLanguage} from '../types';
+import {iAbility2, iLanguage} from '../types';
 
-class Language implements iLanguage {
+class Language implements iAbility2 {
     type: string;
     name: string;
     experience: number;

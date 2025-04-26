@@ -6,35 +6,33 @@ export interface iAddress {
   country: string;
 }
 
-export interface iCompany {
-  name: string;  
-  homepage?: string;
+export interface iAbout {
+    name: string;
+    homepage?: string;
+}
+
+export interface iAbility2 extends iAbout {
+    experience: number;
+}
+
+export interface iCompany extends iAbout {
   github?: string;
   linkedin?: string;
   about?: string
 }
 
-export interface iSkill {
-  name: string;
+export interface iSkill extends iAbility2 {
   about?: string;
-  experience: number;
 }
 
-export interface iLanguage {
-  name: string;
-  experience: number;
-  homepage?: string;
+export interface iLanguage extends iAbility2 {
 }
 
-export interface iTool {
-  name: string;
-  experience: number;
-  homepage?: string;
+export interface iTool extends iAbility2 {
+
 }
 
-export interface iFramework {
-  name: string;
-  experience: number;
+export interface iFramework extends iAbility2 {
 }
 
 export interface iPosition {
