@@ -79,9 +79,7 @@ function AbilityStack<T extends iAbility>({
         <h4 className="text-center" style={{color: Colors.BLACK}}>
 	  {title}
 	</h4>
-	<Card>
-        {e.name}
-	</Card>
+	<AbilityCard entry={e} />
       </Card>
     },
     title,
@@ -102,6 +100,13 @@ function AbilityStack<T extends iAbility>({
     onOpen={handleOpen}
     showPanelHeader={false}
     stack={abilityStack} />
+}
+
+function AbilityCard({entry}: {entry: iLanguage})
+function AbilityCard({entry}: {entry: iSkill})
+function AbilityCard({entry}: {entry: iTool})
+function AbilityCard({entry}: {entry: iFramework}) {
+  return <Card>{entry.name}</Card>
 }
 
 function SkillSection({

@@ -7,7 +7,7 @@ export interface iAddress {
 }
 
 export interface iCompany {
-  name: string;
+  name: string;  
   homepage?: string;
   github?: string;
   linkedin?: string;
