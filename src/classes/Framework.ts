@@ -8,8 +8,9 @@ export class Framework implements iAbility2 {
     comments: Array<string>;
     versions: Array<string>;
     projects: Array<iProject>;
+    stack: "front end" | "back end";
     ability: string;
-    constructor(name, experience, languages, homepage, comments, versions, projects) {
+    constructor(name, experience, languages, homepage, comments, versions, projects, stack) {
 	this.name = name;
 	this.experience = experience;
         this.languages = languages;
@@ -17,6 +18,7 @@ export class Framework implements iAbility2 {
 	this.comments = comments;
 	this.versions = versions;
 	this.projects = projects;
+	this.stack = stack;
 	this.ability = "Framework";
     }
 }
