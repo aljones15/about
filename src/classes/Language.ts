@@ -1,12 +1,18 @@
 import {iAbility2, iLanguage} from '../types';
 
 class Language implements iAbility2 {
-    type: string;
+    ability: string;
     name: string;
     experience: number;
-    constructor(name, experience) {
+    homepage: string;
+    comments: Array<string>;
+    versions: Array<string>;
+    constructor(name, experience, homepage, comments, versions) {
 	this.name = name;
 	this.experience = experience;
-	this.type = "Language";
+	this.homepage = homepage;
+	this.comments = comments;
+	this.versions = versions;
+	this.ability = "Language";
     }
 }
