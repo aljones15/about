@@ -133,4 +133,4 @@ export const tools: Tool[] = [
   appium, xcode, androidStudio, npm,
   visualStudio, rollup, vim, mssql,
   mongoDB, mariaDB, mysql
-]
+];
