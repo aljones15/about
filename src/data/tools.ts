@@ -1,102 +1,134 @@
-import { iTool } from "../types";
+import { Tool } from "../classes/Tool";
 
-export const git: iTool = {
+export const git: Tool = new Tool({
   name: "Git",
+  comments: [],
   experience: 10,
+  gui: false,
   homepage: "https://git-scm.com/"
-};
+});
 
-export const docker: iTool = {
+export const docker: Tool = new Tool({
   name: "Docker",
   experience: 8,
-  homepage: "https://www.docker.com/"
-};
+  homepage: "https://www.docker.com/",
+  comments: [],
+  gui: false
+});
 
-export const webdriver: iTool = {
+export const webdriver: Tool = new Tool({
   name: "WebDriver",
   experience: 4,
-  homepage: "https://webdriver.io/"
-}
+  homepage: "https://webdriver.io/",
+  comments: [],
+  gui: false
+});
 
-export const appium: iTool = {
+export const appium: Tool = new Tool({
   name: "Appium",
   experience: 2,
-  homepage: "https://appium.io/"
-}
+  homepage: "https://appium.io/",
+  comments: [],
+  gui: false
+});
 
-export const xcode: iTool = {
+export const xcode: Tool = new Tool({
   name: "Xcode",
   experience: 5,
-  homepage: "https://developer.apple.com/xcode/"
-}
+  homepage: "https://developer.apple.com/xcode/",
+  comments: [],
+  gui: true
+});
 
-export const androidStudio: iTool = {
+export const androidStudio: Tool = new Tool({
   name: "Android Studio",
   experience: 5,
-  homepage: "https://developer.android.com/studio"
-}
+  homepage: "https://developer.android.com/studio",
+  comments: [],
+  gui: true
+});
 
-export const webpack: iTool = {
+export const webpack: Tool = new Tool({
   name: "Webpack",
   experience: 8,
-  homepage: "https://webpack.js.org/"
-}
+  homepage: "https://webpack.js.org/",
+  comments: [],
+  gui: false
+});
 
-export const rollup: iTool = {
+export const rollup: Tool = new Tool({
   name: "Rollup",
   experience: 3,
-  homepage: "https://rollupjs.org/"
-}
+  homepage: "https://rollupjs.org/",
+  comments: [],
+  gui: false
+});
 
-export const npm: iTool = {
+export const npm: Tool = new Tool({
   name: "npm",
   experience: 10,
-  homepage: "https://docs.npmjs.com/"
-}
+  homepage: "https://docs.npmjs.com/",
+  comments: [],
+  gui: false
+});
 
-export const visualStudio: iTool = {
+export const visualStudio: Tool = new Tool({
   name: "Visual Studio",
   experience: 3,
+  gui: true,
+  comments: [],
   homepage: "https://visualstudio.microsoft.com/"
-}
+});
 
-export const vim: iTool = {
+export const vim: Tool = new Tool({
   name: "Vim",
   experience: 6,
-  homepage: "https://www.vim.org/"
-}
+  homepage: "https://www.vim.org/",
+  comments: [],
+  gui: true
+});
 
-export const mssql: iTool = {
+export const mssql: Tool = new Tool({
   name: "Microsoft SQL",
   experience: 3,
-  homepage: "https://www.microsoft.com/en-us/sql-server"
-}
+  homepage: "https://www.microsoft.com/en-us/sql-server",
+  comments: [],
+  gui: false
+});
 
-export const mongoDB: iTool = {
+export const mongoDB: Tool = new Tool({
   name: "Mongo DB",
   experience: 8,
-  homepage: "https://www.mongodb.com/"
-}
+  homepage: "https://www.mongodb.com/",
+  comments: [],
+  gui: false
+});
 
-export const mariaDB: iTool = {
+export const mariaDB: Tool = new Tool({
   name: "Maria DB",
   experience: 1,
-  homepage: "https://mariadb.org/"
-}
+  homepage: "https://mariadb.org/",
+  comments: [],
+  gui: false
+});
 
-export const mysql: iTool = {
+export const mysql: Tool = new Tool({
   name: "My SQL",
   experience: 2,
-  homepage: "https://www.mysql.com/"
-}
+  homepage: "https://www.mysql.com/",
+  comments: [],
+  gui: false
+});
 
-export const eslint: iTool = {
+export const eslint: Tool = new Tool({
   name: "Eslint",
   experience: 10,
-  homepage: "https://eslint.org/"
-}
+  homepage: "https://eslint.org/",
+  comments: [],
+  gui: false
+});
 
-export const tools: Array<iTool> = [
+export const tools: Tool[] = [
   git, docker, eslint, webdriver,
   appium, xcode, androidStudio, npm,
   visualStudio, rollup, vim, mssql,

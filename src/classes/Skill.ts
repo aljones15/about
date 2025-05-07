@@ -1,6 +1,6 @@
-import {iAbility2, iProject} from '../types';
+import {iAbility2, iSkill, iProject} from '../types';
 
-export class Skill implements iAbility2 {
+export class Skill implements iSkill, iAbility2 {
     name: string;
     experience: number;
     projects: iProject[];

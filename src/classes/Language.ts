@@ -1,6 +1,6 @@
 import {iAbility2, iLanguage} from '../types';
 
-class Language implements iAbility2 {
+class Language implements iLanguage, iAbility2 {
     ability: string;
     name: string;
     experience: number;

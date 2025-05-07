@@ -1,6 +1,6 @@
-import {iAbility2, iLanguage, iProject} from "../types";
+import {iFramework, iAbility, iLanguage, iProject} from "../types";
 
-export class Framework implements iAbility2 {
+export class Framework implements iFramework, iAbility {
     name: string;
     experience: number;
     languages: Array<iLanguage>;

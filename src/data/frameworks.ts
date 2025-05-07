@@ -1,4 +1,5 @@
 import { iFramework } from '../types';
+import { Framework } from '../classes/Framework';
 
 export const vue: iFramework = {
   name: 'Vue.JS',

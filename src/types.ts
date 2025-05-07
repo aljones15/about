@@ -7,32 +7,42 @@ export interface iAddress {
 }
 
 export interface iAbout {
+    about?: string;
     name: string;
     homepage?: string;
+    comments: string[];
 }
 
-export interface iAbility2 extends iAbout {
+export interface iExperience {
     experience: number;
+}
+
+export interface iAbility2 {
+    experience: number;
+    ability: string;
+    projects: iProject[];
 }
 
 export interface iCompany extends iAbout {
   github?: string;
   linkedin?: string;
-  about?: string
+  about: string
 }
 
-export interface iSkill extends iAbility2 {
-  about?: string;
-}
-
-export interface iLanguage extends iAbility2 {
-}
-
-export interface iTool extends iAbility2 {
+export interface iSkill extends iAbout, iExperience {
 
 }
 
-export interface iFramework extends iAbility2 {
+export interface iLanguage extends iAbout, iExperience {
+    functional: boolean;
+}
+
+export interface iTool extends iAbout, iExperience {
+    gui: boolean;
+}
+
+export interface iFramework extends iAbout, iExperience {
+    stack: "front end" | "back end";
 }
 
 export interface iPosition {
