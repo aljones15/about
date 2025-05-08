@@ -16,22 +16,6 @@ export const docker: Tool = new Tool({
   gui: false
 });
 
-export const webdriver: Tool = new Tool({
-  name: "WebDriver",
-  experience: 4,
-  homepage: "https://webdriver.io/",
-  comments: [],
-  gui: false
-});
-
-export const appium: Tool = new Tool({
-  name: "Appium",
-  experience: 2,
-  homepage: "https://appium.io/",
-  comments: [],
-  gui: false
-});
-
 export const xcode: Tool = new Tool({
   name: "Xcode",
   experience: 5,
@@ -129,8 +113,8 @@ export const eslint: Tool = new Tool({
 });
 
 export const tools: Tool[] = [
-  git, docker, eslint, webdriver,
-  appium, xcode, androidStudio, npm,
+  git, docker, eslint,
+  xcode, androidStudio, npm,
   visualStudio, rollup, vim, mssql,
   mongoDB, mariaDB, mysql
 ];

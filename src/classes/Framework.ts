@@ -7,10 +7,13 @@ export class Framework implements iFramework, iAbility {
     homepage: string;
     comments: Array<string>;
     versions: Array<string>;
-    projects: Array<iProject>;
+    projects: Array<iProject> = [];
     stack: "front end" | "back end";
-    ability: string;
-    constructor(name, experience, languages, homepage, comments, versions, projects, stack) {
+    ability: string = "Framework";
+    constructor({
+	name, experience, languages,
+	homepage, comments, versions,
+	projects, stack} :iFramework) {
 	this.name = name;
 	this.experience = experience;
         this.languages = languages;

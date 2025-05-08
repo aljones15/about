@@ -4,13 +4,13 @@ import {
   javascript, python, typescript
 } from "./languages";
 import {
-  vue, react, angular,
-  capacitor, express, wordpress,
-  jquery, node
+  appium, vue, react, angular,
+  capacitor, express, webdriver,
+  wordpress, jquery, node
 } from "./frameworks";
 import {
-  git, docker, eslint, webdriver, appium,
-  xcode, androidStudio, webpack, mongoDB,
+  git, docker, eslint, xcode,
+  androidStudio, webpack, mongoDB,
   rollup, npm, visualStudio, vim
 } from "./tools";
 import {
@@ -20,8 +20,7 @@ import {
 } from "./skills";
 
 import {
-  agPosition,
-  bonPosition,
+  nordicPosition,
   dbPosition,
   upPosition
 } from "./positions";
@@ -34,7 +33,7 @@ export const projects: Array<iProject> = [{
   developers: 2,
   startDate: "2014-11-14",
   endDate: "2015-08-12",
-  position: bonPosition,
+  position: nordicPosition,
   link: "https://www.converdiant.com/",
   skills: [rest, endTesting],
   frameworks: [angular, webdriver],
@@ -49,7 +48,7 @@ export const projects: Array<iProject> = [{
 }, {
   name: "Mecenat",
   languages: [javascript, csharp],
-  frameworks: [jquery],
+    frameworks: [jquery, webdriver],
   tools: [npm, visualStudio, git],
   skills: [architecture, rest, apis, unitTesting, integrationTesting],
   lead: false,
@@ -57,7 +56,7 @@ export const projects: Array<iProject> = [{
   developers: 2,
   startDate: "",
   endDate: "",
-  position: agPosition,
+  position: nordicPosition,
   link: "https://mecenat.com/se",
   description: [
     "Mecenant is mass communication tool using sendgrid for students",
@@ -75,7 +74,7 @@ export const projects: Array<iProject> = [{
   developers: 2,
   startDate: "",
   endDate: "",
-  position: agPosition,
+  position: nordicPosition,
   link: "https://sunbirdie.se",
   description: [
     "Sunbirdie is a booking site for golf lesson",

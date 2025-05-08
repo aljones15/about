@@ -5,7 +5,6 @@ import {
 } from "./languages"
 import {
   git, docker,
-  webdriver, appium,
   xcode, androidStudio
 } from "./tools";
 import {
@@ -13,8 +12,8 @@ import {
   unitTesting, integrationTesting, endTesting
 } from "./skills";
 import {
-  vue, react, angular,
-  capacitor, wordpress
+  appium, vue, react, angular,
+  capacitor, webdriver, wordpress
 } from "./frameworks";
 
 export const dbPosition: iPosition = {
@@ -22,7 +21,11 @@ export const dbPosition: iPosition = {
   endDate: '2024-11-12',
   jobTitle: 'Fullstack Javascript Developer',
   company: {
-    name: 'Digital Bazaar'
+    name: 'Digital Bazaar',
+    about: 'Blacksburg, VA based software company.',
+    comments: [
+      'Creator of Node Forge an open source cryptography library.'
+    ]
   },
   languages: [javascript],
   skills: [management, architecture, unitTesting, integrationTesting],
@@ -38,8 +41,12 @@ export const upPosition: iPosition = {
   startDate: '2017-01-02',
   endDate: '2019-02-01',
   jobTitle: 'Fullstack Javascript Developer',
-  company: {
-    name: 'Upwork'
+    company: {
+      about: 'One of the larger software contractor providers',
+      comments: [
+          'Freelancer'
+	],
+      name: 'Upwork',
   },
   languages: [javascript, java, typescript],
   frameworks: [appium, react, webdriver],
@@ -51,16 +58,20 @@ export const upPosition: iPosition = {
   ]
 };
 
-export const agPosition: iPosition = {
+export const nordicPosition: iPosition = {
   startDate: '2015-11-01',
-  endDate: '2017-01-02',
+  endDate: '2014-11-01',
   jobTitle: 'Fullstack Developer',
-  company: {
-    name: 'Agilitet'
+    company: {
+      about: 'Bangkok based developer specializing in backend development.',
+      comments: [
+          'Takes outsourced projects.'
+	],
+      name: 'Nordic Software'
   },
-  languages: [csharp, javascript, php],
+  languages: [csharp, javascript, python, php],
   frameworks: [angular, wordpress],
-  skills: [architecture],
+  skills: [architecture, unitTesting, integrationTesting, endTesting],
   tools: [git],
   duties: [
     "Creation of Fullstack Web applications using C# and Javascript",
@@ -68,24 +79,6 @@ export const agPosition: iPosition = {
   ]
 };
 
-export const bonPosition: iPosition = {
-  startDate: '2014-11-01',
-  endDate: '2015-11-01',
-  jobTitle: 'Fullstack Developer',
-  company: {
-    name: 'Bonzai'
-  },
-  languages: [csharp, javascript, python],
-  frameworks: [angular],
-  skills: [architecture, unitTesting, integrationTesting, endTesting],
-  tools: [git],
-  duties: [
-    "Creation of unit, integration, and end tests",
-    "Creation of fullstack applications in javascript & C#"
-  ]
-};
-
 export const positions: Array<iPosition> = [
-  dbPosition, upPosition,
-  agPosition, bonPosition
+  dbPosition, upPosition, nordicPosition
 ];

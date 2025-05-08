@@ -1,18 +1,22 @@
-import {iAbility2, iLanguage} from '../types';
+import {iAbility2, iLanguage, iPosition} from '../types';
 
-class Language implements iLanguage, iAbility2 {
-    ability: string;
+export class Language implements iLanguage, iAbility2 {
+    ability: string = 'Language';
     name: string;
     experience: number;
     homepage: string;
     comments: Array<string>;
+    functional: boolean;
     versions: Array<string>;
-    constructor(name, experience, homepage, comments, versions) {
+    positions: iPosition = [];
+    constructor({
+	name, experience, homepage,
+	functional, comments, versions}: iLanguage) {
 	this.name = name;
 	this.experience = experience;
 	this.homepage = homepage;
 	this.comments = comments;
 	this.versions = versions;
-	this.ability = "Language";
+	this.functional = functional;
     }
 }
