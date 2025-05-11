@@ -42,6 +42,8 @@ export interface iTool extends iAbout, iExperience {
 }
 
 export interface iFramework extends iAbout, iExperience {
+    languages: Array<iLanguage>;
+    versions: Array<string>;
     stack: "front end" | "back end";
 }
 

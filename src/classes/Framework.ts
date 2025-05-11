@@ -13,7 +13,8 @@ export class Framework implements iFramework, iAbility {
     constructor({
 	name, experience, languages,
 	homepage, comments, versions,
-	projects, stack} :iFramework) {
+	projects, stack
+    } :iFramework) {
 	this.name = name;
 	this.experience = experience;
         this.languages = languages;
