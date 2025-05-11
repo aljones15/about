@@ -41,7 +41,7 @@ export const capacitor: Framework = new Framework({
   stack: 'front end'
 });
 
-export const wordpress: Framework = new Framework{
+export const wordpress: Framework = new Framework({
   name: 'Wordpress',
   experience: 2,
   languages: [css, javascript, php],
