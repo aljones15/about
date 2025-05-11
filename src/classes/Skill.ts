@@ -3,16 +3,16 @@ import {iAbility2, iSkill, iProject} from '../types';
 export class Skill implements iSkill, iAbility2 {
     name: string;
     experience: number;
-    projects: iProject[] = [];
+    projects: iProject[];
     description: Array<string>;
     comments: Array<string>;
-    ability: string = "Skill";
-    constructor({name, experience, projects, description, comments}: iSkill) {
+    ability: string;
+    constructor({name, experience, description, comments}: iSkill) {
 	this.name = name;
 	this.experience = experience;
-	this.projects = projects;
 	this.description = description;
 	this.comments = comments;
 	this.ability = "Skill";
+        this.projects = [];
     }
 }
