@@ -2,50 +2,58 @@ import { Skill } from '../classes/Skill';
 
 export const management: Skill = new Skill({
   name: 'Management',
-    experience: 3,
-    comments: []
+  experience: 3,
+  comments: [],
+  description: ''
 });
 
 export const architecture: Skill = new Skill({
   name: 'Architecture',
   experience: 3,
-  comments: []
+  comments: [],
+  description: ''
 });
 
 export const unitTesting: Skill = new Skill({
   name: 'Unit Testing',
   experience: 10,
-  comments: []
+  comments: [],
+  description: ''
 });
 
 export const integrationTesting: Skill = new Skill({
   name: 'Integration Testing',
   experience: 8,
-  comments: []
+  comments: [],
+  description: ''
 });
 
 export const endTesting: Skill = new Skill({
   name: 'End Testing',
   experience: 5,
-  comments: []
+  comments: [],
+  description: ''
 });
 
 export const rest: Skill = new Skill({
   name: "REST",
   experience: 9,
-  comments: []
+  comments: [],
+  description: ''
 });
 
 export const apis: Skill = new Skill({
   name: "API",
   experience: 9,
-  comments: []
+  comments: [],
+  description: ''
 })
 
 export const plugins: Skill = new Skill({
   name: "Plugins",
   experience: 9,
-  comments: []
+  comments: [],
+  description: ''
 });
 
 export const skills: Array<Skill> = [

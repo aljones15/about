@@ -30,11 +30,12 @@ export interface iCompany extends iAbout {
 }
 
 export interface iSkill extends iAbout, iExperience {
-
+  description: string;
 }
 
 export interface iLanguage extends iAbout, iExperience {
     functional: boolean;
+    versions: Array<string>;
 }
 
 export interface iTool extends iAbout, iExperience {
