@@ -57,7 +57,7 @@ const webpackConfig = (env: NodeEnv) => ({
       historyApiFallback: true,
       open: {
         app: {
-          name: 'google-chrome',
+          name: 'google-chrome-stable',
           arguments: ['--incognito', '--new-window'],
         }
       }
