@@ -7,7 +7,7 @@ export class Tool implements iTool, iAbility2{
     homepage: string;
     comments: string[];
     gui: boolean;
-    ability: string;
+    ability: "Tool";
     constructor({
 	name, experience,
 	homepage, comments = [], gui = false

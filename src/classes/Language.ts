@@ -1,7 +1,7 @@
 import {iAbility2, iLanguage, iProject} from '../types';
 
 export class Language implements iLanguage, iAbility2 {
-    ability: string;
+    ability: "Language";
     name: string;
     experience: number;
     homepage: string;

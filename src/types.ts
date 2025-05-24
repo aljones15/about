@@ -19,7 +19,7 @@ export interface iExperience {
 
 export interface iAbility2 {
     experience: number;
-    ability: string;
+    ability: "Skill" | "Framework" | "Language" | "Tool";
     projects: iProject[];
 }
 

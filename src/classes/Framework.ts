@@ -9,7 +9,7 @@ export class Framework implements iFramework, iAbility2 {
     versions: Array<string>;
     projects: Array<iProject>;
     stack: "front end" | "back end";
-    ability: string;
+    ability: "Framework";
     constructor({
 	name, experience, languages,
 	homepage, comments, versions, stack
