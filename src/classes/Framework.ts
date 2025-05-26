@@ -3,7 +3,7 @@ import {iFramework, iAbility2, iLanguage, iProject} from "../types";
 export class Framework implements iFramework, iAbility2 {
     name: string;
     experience: number;
-    languages: Array<iLanguage>;
+    languages: Array<Language>;
     homepage: string;
     comments: Array<string>;
     versions: Array<string>;

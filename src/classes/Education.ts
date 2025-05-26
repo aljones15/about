@@ -1,6 +1,6 @@
 import {iCertificate, iDegree, iSchool} from "../types";
 
-export default class Education {
+export class Education {
   schools: Array<iSchool>;
   certificates: Array<iCertificate>;
   degrees: Array<iDegree>;

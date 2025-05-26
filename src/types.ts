@@ -17,8 +17,7 @@ export interface iExperience {
     experience: number;
 }
 
-export interface iAbility2 {
-    experience: number;
+export interface iAbility2 extends iExperience {
     ability: "Skill" | "Framework" | "Language" | "Tool";
     projects: iProject[];
 }
@@ -43,14 +42,17 @@ export interface iTool extends iAbout, iExperience {
 }
 
 export interface iFramework extends iAbout, iExperience {
-    languages: Array<iLanguage>;
-    versions: Array<string>;
+    languages: iLanguage[];
+    versions: string[];
     stack: "front end" | "back end";
 }
 
-export interface iPosition {
+export interface iDuration {
   startDate: string;
   endDate: string | null;
+}
+
+export interface iPosition extends iDuration {
   jobTitle: string;
   company: iCompany;
   languages: Array<iLanguage>;
@@ -60,11 +62,9 @@ export interface iPosition {
   duties: Array<string>;
 }
 
-export interface iSchool {
+export interface iSchool extends iDuration {
   name: string;
-  startDate: string;
   link: string;
-  endDate: string | null;
   location: string;
   accomplishments: Array<string>;
 }
@@ -87,14 +87,12 @@ export interface iDegree {
   issued: string;
 }
 
-export interface iProject {
+export interface iProject extends iDuration {
   name: string;
   position?: iPosition;
   student: boolean;
   lead: boolean;
   developers: number;
-  startDate: string;
-  endDate: string;
   description: Array<string>;
   link?: string;
   repo?: string;

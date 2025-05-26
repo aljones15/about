@@ -9,28 +9,30 @@ import {
   type PanelProps,
   Tag
  } from "@blueprintjs/core";
-import {iAbility, iPosition, iSkill, iFramework, iLanguage, iTool} from "../types";
-import { PanelStack2Example } from "./panelStack";
+import {Language, Framework, Skill, Tool} from "../classes";
+import {iPosition, iSkill} from "../types";
 
-export default function Skills({positions}: {positions: Array<iPosition>}) {
+type iAbility2 = Language | Framework | Skill | Tool;
+
+export default function Abilities({positions}: {positions: Array<iPosition>}) {
   const languages = new Set(positions.flatMap(p => p.languages));
   const skills = new Set(positions.flatMap(p => p.skills));
   const tools = new Set(positions.flatMap(p => p.tools));
   const frameworks = new Set(positions.flatMap(p => p.frameworks));
   return <Card compact={true} className="row">
-    <AbilityStack<iLanguage>
+    <AbilityStack<Language>
       title="Languages"
       color="RED"
       entries={[...languages]} />
-    <AbilityStack<iSkill>
+    <AbilityStack<Skill>
       title="Skills"
       color="RED"
       entries={[...skills]} />
-    <AbilityStack<iTool>
+    <AbilityStack<Tool>
       title="Tools"
       color="RED"
       entries={[...tools]} />
-    <AbilityStack<iFramework>
+    <AbilityStack<Framework>
       title="Frameworks"
       color="RED"
       entries={[...frameworks]} />
@@ -42,7 +44,7 @@ const directions = {
   backward: -1
 };
 
-function AbilityStack<T extends iAbility>({
+function AbilityStack<T extends iAbility2>({
   entries,
   title,
   color
@@ -102,8 +104,19 @@ function AbilityStack<T extends iAbility>({
     stack={abilityStack} />
 }
 
-function AbilityCard<T extends iAbility>({entry}: {entry: T}) {
-  return <Card>{entry.name}</Card>
+function AbilityCard<T extends iAbility2>({entry}: {entry: T}) {
+  switch(entry.ability) {
+    case "Language": {
+      return <Card>Language: {entry.name}</Card>
+    }
+    default: {
+      return <Card>{entry.name}</Card>
+    }
+  }
+}
+
+function LanguageCard({entry}: {entry: Language}) {
+
 }
 
 function SkillSection({

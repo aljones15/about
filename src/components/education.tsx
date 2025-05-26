@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import iEducation from "../classes/Education";
+import {Education} from "../classes/Education";
 import {iCertificate, iDegree} from "../types";
 import {Card, CompoundTag, Tag, Section, SectionCard, Icon} from "@blueprintjs/core";
 import MonthYear from "./monthYear";
 
-export default function Education({education}: {
-  education: iEducation,
+export default function EducationRow({education}: {
+  education: Education
 }) {
   return <div className="row education">
     <DegreeSection degrees={education.degrees} />
