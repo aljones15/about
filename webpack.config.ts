@@ -55,6 +55,9 @@ const webpackConfig = (env: NodeEnv) => ({
     ],
     devServer: {
       historyApiFallback: true,
+      client: {
+        overlay: false
+      },
       open: {
         app: {
           name: 'google-chrome-stable',
