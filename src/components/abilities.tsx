@@ -63,7 +63,7 @@ function AbilityStack<T extends iAbility>({
         <div className="row">
 	  <Button
 	    alignText={Alignment.LEFT}
-	    className="col-xs-6"
+	    className="col-md-6"
 	    minimal={true}
 	    icon="arrow-left"
 	    onClick={() => props.openPanel(previous)}
@@ -71,7 +71,7 @@ function AbilityStack<T extends iAbility>({
 	  <Button
 	    alignText={Alignment.RIGHT}
 	    minimal={true}
-	    className="col-xs-6"
+	    className="col-md-6"
 	    rightIcon="arrow-right"
 	    text={next.props.entry.name}
 	    onClick={() => props.openPanel(next)} />
