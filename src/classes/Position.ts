@@ -4,7 +4,7 @@ import { Framework } from "./Framework";
 import { Skill } from "./Skill";
 import { Tool } from "./Tool";
 
-export class Position {
+export class Position extends iPosition {
   jobTitle: string;
   company: iCompany;
   languages: Array<Language>;
