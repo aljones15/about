@@ -9,12 +9,12 @@ import {
   type PanelProps,
   Tag
  } from "@blueprintjs/core";
-import {Language, Framework, Skill, Tool} from "../classes";
-import {iPosition, iSkill} from "../types";
+import {Language, Framework, Skill, Tool, Position} from "../classes";
+import {iSkill} from "../types";
 
 type iAbility2 = Language | Framework | Skill | Tool;
 
-export default function Abilities({positions}: {positions: Array<iPosition>}) {
+export default function Abilities({positions}: {positions: Array<Position>}) {
   const languages = new Set(positions.flatMap(p => p.languages));
   const skills = new Set(positions.flatMap(p => p.skills));
   const tools = new Set(positions.flatMap(p => p.tools));
@@ -146,7 +146,7 @@ function SkillSection({
   </CardList>
 }
 
-export function Skill({skill}: {skill: iSkill}) {
+export function SkillTag({skill}: {skill: iSkill}) {
   return <Tag
     className="margin-lr-1px"
     style={{background: Colors.GOLD2}}

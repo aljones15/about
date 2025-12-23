@@ -1,4 +1,5 @@
 import {iFramework, iAbility2, iLanguage, iProject} from "../types";
+import Language from "./Language";
 
 export class Framework implements iFramework, iAbility2 {
     name: string;
@@ -13,7 +14,7 @@ export class Framework implements iFramework, iAbility2 {
     constructor({
 	name, experience, languages,
 	homepage, comments, versions, stack
-    } :iFramework) {
+    }) {
 	this.name = name;
 	this.experience = experience;
         this.languages = languages;
@@ -25,3 +26,5 @@ export class Framework implements iFramework, iAbility2 {
         this.projects = [];
     }
 }
+
+export default Framework;

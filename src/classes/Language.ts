@@ -11,7 +11,7 @@ export class Language implements iLanguage, iAbility2 {
     projects: iProject[];
     constructor({
 	name, experience, homepage,
-	functional, comments, versions}: iLanguage) {
+	functional, comments, versions}: iLanguage) {	
 	this.name = name;
 	this.experience = experience;
 	this.homepage = homepage;
@@ -22,3 +22,5 @@ export class Language implements iLanguage, iAbility2 {
         this.projects = [];
     }
 }
+
+export default Language;

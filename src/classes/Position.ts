@@ -1,10 +1,10 @@
-import { iPosition } from "../types";
+import { iPosition, iCompany } from "../types";
 import { Language } from "./Language";
 import { Framework } from "./Framework";
 import { Skill } from "./Skill";
 import { Tool } from "./Tool";
 
-export class Position extends iPosition {
+export class Position implements iPosition {
   jobTitle: string;
   company: iCompany;
   languages: Array<Language>;
@@ -18,7 +18,7 @@ export class Position extends iPosition {
     jobTitle, company, languages,
     frameworks, skills, tools,
     duties, startDate, endDate = null
-  }: iPosition) {
+  }) {
     this.jobTitle = jobTitle;
     this.company = company;
     this.languages = languages;
@@ -29,3 +29,5 @@ export class Position extends iPosition {
     this.endDate = endDate;
   }
 }
+
+export default Position;

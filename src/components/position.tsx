@@ -6,7 +6,7 @@ import MonthYear from "./monthYear";
 import Years from "./Years";
 import { Tool } from "./tools";
 import { Language } from "./languages";
-import { Skill } from "./abilities";
+import { SkillTag } from "./abilities";
 
 export default function Positions({positions}: {positions: Array<iPosition>}) {
   return <div className="positions">
@@ -38,7 +38,7 @@ function Position({position}: {position: iPosition}): React.ReactElement {
         <H5>Frameworks</H5>
 	{position.frameworks.map(f => <Framework framework={f} key={f.name} />)}
         <H5>Skills</H5>
-          {position.skills.map(s => <Skill key={s.name} skill={s} />)}
+          {position.skills.map(s => <SkillTag key={s.name} skill={s} />)}
       </Callout>
     </Card>
     <Card compact={true}>

@@ -21,3 +21,5 @@ export class Tool implements iTool, iAbility2{
         this.projects = [];
     }
 }
+
+export default Tool;

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Education} from "../classes/Education";
+import Education from "../classes/Education";
 import {iCertificate, iDegree} from "../types";
 import {Card, CompoundTag, Tag, Section, SectionCard, Icon} from "@blueprintjs/core";
 import MonthYear from "./monthYear";

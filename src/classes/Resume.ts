@@ -1,10 +1,11 @@
 import {iAddress, iCertificate, iDegree, iPosition, iProject, iSchool} from '../types';
 import Education from "./Education";
+import Position from "./Position";
 
 export class Resume {
   name: string;
   address: iAddress;
-  positions: Array<iPosition>;
+  positions: Array<Position>;
   schools: Array<iSchool>;
   certificates: Array<iCertificate>;
   projects: Array<iProject>;
@@ -24,3 +25,5 @@ export class Resume {
     this.certificates = certificates;
   }
 }
+
+export default Resume;

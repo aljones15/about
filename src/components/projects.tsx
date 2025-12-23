@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Tree, TreeNodeInfo } from "@blueprintjs/core";
 import { Framework } from "./frameworks";
 import { Language } from "./languages";
-import { Skill } from "./abilities";
+import { SkillTag } from "./abilities";
 import { Tool } from "./tools";
 import { iProject } from "../types";
 
@@ -71,7 +71,7 @@ function createInitialNode(project: iProject): TreeNodeInfo {
       icon: "exchange",
       childNodes: [{
         id: project.name + "skills",
-	label: <div>{project.skills.map(skill => <Skill
+	label: <div>{project.skills.map(skill => <SkillTag
 	  key={project.name + skill.name}
 	  skill={skill} />
 	)}</div>
