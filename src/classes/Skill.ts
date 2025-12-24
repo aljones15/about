@@ -5,7 +5,7 @@ export class Skill implements iSkill, iAbility2 {
     experience: number;
     projects: iProject[];
     description: string;
-    comments: Array<string>;
+    comments: string[];
     ability: "Skill";
     constructor({name, experience, description, comments}: iSkill) {	
 	this.name = name;

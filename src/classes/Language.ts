@@ -5,9 +5,9 @@ export class Language implements iLanguage, iAbility2 {
     name: string;
     experience: number;
     homepage: string;
-    comments: Array<string>;
+    comments: string[];
     functional: boolean;
-    versions: Array<string>;
+    versions: string[];
     projects: iProject[];
     constructor({
 	name, experience, homepage,

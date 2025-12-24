@@ -107,7 +107,7 @@ function AbilityStack<T extends iAbility2>({
 function AbilityCard<T extends iAbility2>({entry}: {entry: T}) {
   switch(entry.ability) {
     case "Language": {
-      return <Card>Language: {entry.name}</Card>
+      return <Card>{entry.name}</Card>
     }
     default: {
       return <Card>{entry.name}</Card>

@@ -4,11 +4,11 @@ import Language from "./Language";
 export class Framework implements iFramework, iAbility2 {
     name: string;
     experience: number;
-    languages: Array<Language>;
+    languages: Language[];
     homepage: string;
-    comments: Array<string>;
-    versions: Array<string>;
-    projects: Array<iProject>;
+    comments: string[];
+    versions: string[];
+    projects: iProject[];
     stack: "front end" | "back end";
     ability: "Framework";
     constructor({

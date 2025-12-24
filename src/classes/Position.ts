@@ -7,11 +7,11 @@ import { Tool } from "./Tool";
 export class Position implements iPosition {
   jobTitle: string;
   company: iCompany;
-  languages: Array<Language>;
-  frameworks: Array<Framework>;
-  skills: Array<Skill>;
-  tools: Array<Tool>;
-  duties: Array<string>;
+  languages: Language[];
+  frameworks: Framework[];
+  skills: Skill[];
+  tools: Tool[];
+  duties: string[];
   startDate: string;
   endDate: string | null;
   constructor({

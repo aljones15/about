@@ -5,11 +5,11 @@ import Position from "./Position";
 export class Resume {
   name: string;
   address: iAddress;
-  positions: Array<Position>;
-  schools: Array<iSchool>;
-  certificates: Array<iCertificate>;
-  projects: Array<iProject>;
-  degrees: Array<iDegree>;
+  positions: Position[];
+  schools: iSchool[];
+  certificates: iCertificate[];
+  projects: iProject[];
+  degrees: iDegree[];
   education: Education;
   constructor({
     name, address, degrees, positions,
