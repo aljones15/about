@@ -2,15 +2,25 @@ import { Language } from "../classes/Language";
 
 export const javascript: Language = new Language({
   name: 'Javascript',
-  comments: [],
+  comments: [
+    'Over a decade of front end javascript experience.',
+    'Close to a decade of backend javascript experience in node.js.'
+  ],
   experience: 10,
   functional: true,
-  versions: []
+  versions: [
+    'es6', 'node-12',
+    'node-14', 'node-16',
+    'node-18', 'node-20'
+  ]
 });
 
 export const typescript: Language = new Language({
   name: 'Typescript',
-  comments: [],
+  comments: [
+    'Over 3 years experience with strongly typed languages.',
+    'Basic typescript experience.'
+  ],
   experience: 1,
   functional: true,
   versions: []
@@ -18,7 +28,10 @@ export const typescript: Language = new Language({
 
 export const csharp: Language = new Language({
   name: 'C#',
-  comments: [],
+  comments: [
+    'Experience with REST APIs.',
+    'Experience with dependency injection.'
+  ],
   experience: 3,
   functional: false,
   versions: []
@@ -26,10 +39,12 @@ export const csharp: Language = new Language({
 
 export const python: Language = new Language({
   name: 'Python',
-  comments: [],
-  experience: 1,
+  comments: [
+  
+  ],
+  experience: 2,
   functional: true,
-  versions: []
+  versions: ['2', '3.12']
 });
 
 export const java: Language = new Language({
